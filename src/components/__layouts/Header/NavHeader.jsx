@@ -284,7 +284,7 @@ export function NavHeader() {
         <div className="w-full bg-white flex justify-between items-center px-3 sm:px-6 py-[15px]">
           <div className="block md:hidden">
             <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true" rel="nofollow" target="_blank" className="!no-underline">
-              <Button className="text-black px-[11px] py-[9px] nav__btn flex items-center gap-x-2">
+              <Button className="text-black px-[11px] py-[9px] nav__btn">
                 <span className="text-white text-sm font-semibold">
                   Get an Estimated
                 </span>
@@ -294,14 +294,14 @@ export function NavHeader() {
 
           <div className="block md:hidden">
             <a href="tel:(905) 973-6669" className="!no-underline">
-              <Button className="text-white px-[11px] py-[9px] nav__btn flex items-center gap-x-2">
+              <Button className="text-white px-[11px] py-[9px] nav__btn flex items-center gap-[5px]">
                 <Image
                   src="/assets/images/phone_icon.png"
                   alt="phone icon"
                   width={15}
                   height={15}
                 />
-                <span className="text-white text-[10px] sm:text-base font-bold">
+                <span className="text-white text-sm font-semibold">
                   (905) 973-6669
                 </span>
               </Button>

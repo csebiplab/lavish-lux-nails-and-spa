@@ -76,24 +76,26 @@ const ourServices = [
 const OurServices = () => {
   return (
     <div>
-      <div className="container  padding__bottom  pr-3 md:pr-0">
-        <div className="flex justify-center items-center ">
+      <div className="container padding__bottom">
+        <div className="w-full flex justify-center items-center">
           <HeadingIcon
             text={headingIconText.ourServicesAtLavish__headingIconText}
           />
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-5 gap-10">
-          <div className="xl:col-span-2 flex justify-center justify-start pt-[37px] md:pt-0">
+        <div className="grid grid-cols-1 5xl:grid-cols-6 gap-10">
+          <div className="5xl:col-span-3 flex justify-center justify-start pt-[37px] 5xl:pt-[28px]">
             <Image
               src="/assets/images/our_services.png"
               alt="about us image"
               width={440}
               height={330}
+              className="w-full flex justify-start"
             />
           </div>
           {/* large device  */}
-          <div className="hidden md:block xl:col-span-3">
-            <div className="flex gap-[25px] md:gap-[28px]">
+          <div className="hidden 5xl:block 5xl:col-span-3">
+            <div className=" w-full">
+            <div className=" flex justify-end gap-[25px] md:gap-[28px]">
               <div className="mt-[60px]">
                 {servicesData?.map((data) => {
                   return (
@@ -137,10 +139,12 @@ const OurServices = () => {
                 })}
               </div>
             </div>
+            </div>
+            
           </div>
 
           {/* small device  */}
-          <div className="block md:hidden flex flex-col items-center">
+          <div className="block 5xl:hidden flex flex-col items-center">
             {
                 ourServices?.map((data)=>{
                     return <div

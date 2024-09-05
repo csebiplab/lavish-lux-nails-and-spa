@@ -28,7 +28,7 @@ export async function generateMetadata() {
 
     if (homeRouteAllMetaData?.length === 0) {
       return {
-        title: "Maricela's Home",
+        title: "Lavish Lux Nails & Spa",
         description: "Maricela's Cleaning Magnificence offers top-tier commercial & residential cleaning services in Houston. Discover the best cleaning solutions.",
         keywords: "Maricela's Cleaning Magnificence offers top-tier commercial & residential cleaning services in Houston. Discover the best cleaning solutions.",
       };
@@ -59,7 +59,7 @@ export async function generateMetadata() {
     };
   } catch (error) {
     return {
-      title: "Maricela's Home",
+      title: "Lavish Lux Nails & Spa",
       description: "Maricela's Cleaning Magnificence offers top-tier commercial & residential cleaning services in Houston. Discover the best cleaning solutions.",
       keywords: "Maricela's Cleaning Magnificence offers top-tier commercial & residential cleaning services in Houston. Discover the best cleaning solutions.",
     };
