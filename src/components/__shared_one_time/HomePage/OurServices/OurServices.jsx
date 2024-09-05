@@ -1,0 +1,170 @@
+import HeadingIcon from "@/components/__ui/HeadingIcon";
+import { headingIconText } from "@/utils/heading-text";
+import Image from "next/image";
+import React from "react";
+
+import "./OurServices.css";
+
+const servicesData = [
+  {
+    id: 1,
+    img: "/assets/images/ourServices1.png",
+    title: "Pedicure",
+  },
+  {
+    id: 2,
+    img: "/assets/images/ourServices2.png",
+    title: "Artificial Nails",
+  },
+  {
+    id: 3,
+    img: "/assets/images/ourServices3.png",
+    title: "Additional Services",
+  },
+];
+const servicesData1 = [
+  {
+    id: 1,
+    img: "/assets/images/ourServices4.png",
+    title: "Manicure",
+  },
+  {
+    id: 2,
+    img: "/assets/images/ourServices5.png",
+    title: "Waxing",
+  },
+  {
+    id: 3,
+    img: "/assets/images/ourServices6.png",
+    title: "Design",
+  },
+];
+
+const ourServices = [
+    {
+        id: 1,
+        img: "/assets/images/ourServices1.png",
+        title: "Pedicure",
+      },
+      {
+        id: 2,
+        img: "/assets/images/ourServices2.png",
+        title: "Artificial Nails",
+      },
+      {
+        id: 3,
+        img: "/assets/images/ourServices3.png",
+        title: "Additional Services",
+      },
+      {
+        id: 4,
+        img: "/assets/images/ourServices4.png",
+        title: "Manicure",
+      },
+      {
+        id: 5,
+        img: "/assets/images/ourServices5.png",
+        title: "Waxing",
+      },
+      {
+        id: 6,
+        img: "/assets/images/ourServices6.png",
+        title: "Design",
+      },
+]
+
+const OurServices = () => {
+  return (
+    <div>
+      <div className="container  padding__bottom  pr-3 md:pr-0">
+        <div className="flex justify-center items-center ">
+          <HeadingIcon
+            text={headingIconText.ourServicesAtLavish__headingIconText}
+          />
+        </div>
+        <div className="grid grid-cols-1 xl:grid-cols-5 gap-10">
+          <div className="xl:col-span-2 flex justify-center justify-start pt-[37px] md:pt-0">
+            <Image
+              src="/assets/images/our_services.png"
+              alt="about us image"
+              width={440}
+              height={330}
+            />
+          </div>
+          {/* large device  */}
+          <div className="hidden md:block xl:col-span-3">
+            <div className="flex gap-[25px] md:gap-[28px]">
+              <div className="mt-[60px]">
+                {servicesData?.map((data) => {
+                  return (
+                    <div
+                      key={data?.id}
+                      className="cart__bg flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                    >
+                      <Image
+                        src={data?.img}
+                        alt={data?.title}
+                        width={126}
+                        height={126}
+                        className=""
+                      />
+                      <p className="text-2xl font-normal text-black">
+                        {data?.title}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div>
+                {servicesData1?.map((data) => {
+                  return (
+                    <div
+                      key={data?.id}
+                      className="cart__bg flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                    >
+                      <Image
+                        src={data?.img}
+                        alt={data?.title}
+                        width={126}
+                        height={126}
+                        className=""
+                      />
+                      <p className="text-2xl font-normal text-black">
+                        {data?.title}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* small device  */}
+          <div className="block md:hidden flex flex-col items-center">
+            {
+                ourServices?.map((data)=>{
+                    return <div
+                    key={data?.id}
+                    className="cart__bg flex flex-col items-center justify-center gap-[25px] mt-[20px]"
+                  >
+                    <Image
+                      src={data?.img}
+                      alt={data?.title}
+                      width={126}
+                      height={126}
+                      className=""
+                    />
+                    <p className="text-2xl font-normal text-black">
+                      {data?.title}
+                    </p>
+                  </div>
+                })
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OurServices;

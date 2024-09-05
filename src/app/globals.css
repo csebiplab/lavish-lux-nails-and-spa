@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * {
+  @apply text-dark;
+} */
+body {
+  @apply bg-[#FFF3FC] overflow-x-hidden;
+}
+footer * {
+  @apply text-white;
+}
+
+.container {
+  @apply max-w-screen-5xl px-3 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto;
+}
+
+.full__section_r_p {
+  @apply max-w-screen-5xl pr-3 md:pr-8 lg:pr-24 xl:pr-28 2xl:pr-32 3xl:pr-40 4xl:pr-52 5xl:pr-[285px] mx-auto;
+}
+
+.full__section_l_p {
+  @apply max-w-screen-5xl pl-3 md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto;
+}
+
+.padding__top{
+  @apply pt-14 md:pt-16 lg:pt-20 xl:pt-[90px] 2xl:pt-24 3xl:pt-[105px] 4xl:pt-28 5xl:pt-[120px]
+}
+.padding__bottom{
+  @apply pb-14 md:pb-16 lg:pb-20 xl:pb-[90px] 2xl:pb-24 3xl:pb-[105px] 4xl:pb-28 5xl:pb-[120px]
+}
+.padding__all{
+  @apply py-14 md:py-16 lg:py-20 xl:py-[90px] 2xl:py-24 3xl:py-[105px] 4xl:py-28 5xl:py-[120px]
+}
+
+/* section {
+  @apply container;
+} */
+
+a {
+  @apply text-black underline-offset-2 hover:underline decoration-primary select-none;
+}
+
+img {
+  @apply select-none;
+}
+
+.bar {
+  @apply h-[2px] w-40 bg-primary;
+}
+
+.btn {
+  @apply tracking-wider py-3 px-6 text-white font-medium text-lg bg-primary hover:bg-primary-600 active:bg-primary-700 duration-150;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
+}
+
+.bg__box {
+  background: rgba(196, 119, 177, 0.15);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  padding: 0 2px;
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  @apply bg-primary-300;
+}
+
+/* ========== vertical Text ========== */
+.vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  white-space: nowrap;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Big screen size Media Query */
+@media screen and (min-width: 1400px) {
+  .custom-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .custom-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .custom-container {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}

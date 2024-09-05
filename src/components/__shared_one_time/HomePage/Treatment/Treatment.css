@@ -1,0 +1,9 @@
+.treatment__bg{
+    border-radius: 8px 8px 0px 0px;
+    background: rgba(199, 164, 60, 0.80);
+}
+.treatment1__bg{
+    border-radius: 0px 0px 8px 8px;
+    border: 1px solid #C7A43C;
+    background: rgba(255, 255, 255, 0.50);
+}

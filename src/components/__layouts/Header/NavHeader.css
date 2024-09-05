@@ -1,0 +1,13 @@
+.bg__uppernav {
+    background: linear-gradient(90deg, #062524 0%, #188b89 100%);
+}
+  
+.main__header {
+    background: #FFF;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nav__btn{
+    background-color: #A0153E;
+    border-radius: 12px;
+}
