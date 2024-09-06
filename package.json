@@ -1,11 +1,11 @@
 {
-  "name": "maricelas_home",
+  "name": "lavish-lux",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 5432",
+    "start": "next start -p 3081",
     "lint": "next lint"
   },
   "dependencies": {
