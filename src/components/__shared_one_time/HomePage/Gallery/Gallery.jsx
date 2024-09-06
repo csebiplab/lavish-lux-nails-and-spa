@@ -23,11 +23,38 @@ const Gallery = () => {
   };
 
   return (
-    <div className="container">
-      {/* Small device */}
+    <div className="">
+      
       <div className="flex justify-center items-center">
         <HeadingIcon text={headingIconText.gallery__headingIconText} />
       </div>
+      {/* large device  */}
+      <div className="hidden 5xl:block pt-[25px]">
+          <div>
+            {/* first div  */}
+            <div className="grid grid-cols-3 gap-[27px]">
+                <div className="col-span-1">
+                    <Image src="/assets/gallery/gallery7.png" alt="gallery image" width={717} height={880} className="w-full h-[880px] "/>
+                </div>
+                <div className="col-span-1">
+                <Image src="/assets/gallery/gallery1.png" alt="gallery image" width={575} height={427} className="w-full h-[427px] pb-[26px] pt-3"/>
+                <Image src="/assets/gallery/gallery2.png" alt="gallery image" width={575} height={427} className="w-full h-[427px]"/>
+                </div>
+                <div className="col-span-1">
+                <Image src="/assets/gallery/gallery3.png" alt="gallery image" width={575} height={427} className="w-full h-[427px] pb-[26px] pt-3"/>
+                <Image src="/assets/gallery/gallery4.png" alt="gallery image" width={575} height={427} className="w-full h-[427px]"/>
+                </div>
+            </div>
+          </div>
+          {/* second div  */}
+          <div className="flex gap-[27px]">
+          <Image src="/assets/gallery/gallery6.png" alt="gallery image" width={485} height={494} className="w-[485px] h-[494px]"/>
+          <Image src="/assets/gallery/gallery8.png" alt="gallery image" width={832} height={494} className="w-[832] h-[494]"/>
+          <Image src="/assets/gallery/gallery5.png" alt="gallery image" width={551} height={494} className="w-[551] h-[494]"/>
+          </div>
+      </div>
+      {/* Small device */}
+      <div className="block md:hidden container">
       <div className="pt-[25px]">
         {galleryImages.slice(0, visibleImages).map((img, index) => (
           <div key={index} className="pt-[15px]">
@@ -70,6 +97,7 @@ const Gallery = () => {
           </button>
         </div>
       )}
+      </div>
     </div>
   );
 };
