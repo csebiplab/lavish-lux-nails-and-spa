@@ -16,7 +16,7 @@ const Banner = () => {
           href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
         >
           <button className="flex items-center gap-[6px] text-base font-semibold text-white p-[15px] bg-secondary rounded-lg">
-            Get an Estimate{" "}
+            Book Now
             <svg
               className="pt-[5px]"
               xmlns="http://www.w3.org/2000/svg"
