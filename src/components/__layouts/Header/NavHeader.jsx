@@ -253,6 +253,7 @@ export function NavHeader() {
             
         {/* small device start  */}
 
+        <div className="block md:hidden">
         <div
           id="hideOnScroll"
           className={`block md:hidden pt-1 bg-white ${
@@ -275,7 +276,7 @@ export function NavHeader() {
         <div className="w-full bg-white flex justify-between items-center px-[30px] py-[15px]">
           <div className="block md:hidden">
             <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true" rel="nofollow" target="_blank" className="!no-underline">
-              <Button className="text-black px-[40px] py-[9px] nav__btn">
+              <Button className="text-black px-[20px] py-[9px] nav__btn">
                 <span className="text-white text-sm font-semibold">
                   Book Now
                 </span>
@@ -336,6 +337,7 @@ export function NavHeader() {
               className="h-[61px] w-[214px]"
             />
           </div>
+        </div>
         </div>
 
         {/* small device end  */}

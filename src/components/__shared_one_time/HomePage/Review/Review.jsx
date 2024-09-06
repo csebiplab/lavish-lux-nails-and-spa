@@ -75,9 +75,9 @@ const Review = () => {
             {reviews.map(({ address, author, reviewText }, i) => (
               <SwiperSlide
                 key={i}
-                className={`text-center py-4 lg:py-10 md:pr-[21px] !w-full !md:h-full`}
+                className={`text-center py-4 lg:py-10 md:pr-[21px] !h-auto !md:h-full`}
               >
-                <div className="cart__bg !w-full md:w-[500px] !h-[250px] md:h-full p-[14px] md:mx-0 mx-auto">
+                <div className="cart__bg w-[370px] md:w-[583px] 5xl:w-[436px] !h-[250px] md:h-full p-[14px] md:mx-0 mx-auto">
                   <Image
                     src={google}
                     width={89.92}
