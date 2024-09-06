@@ -245,15 +245,6 @@ export function NavHeader() {
                     </div>
                   </div>
 
-                  {/* <div>
-              <Image
-                src="/assets/images/header-logo.jpg"
-                width={65}
-                height={80}
-                alt="brand"
-                className="h-[80px] w-[65px]"
-              />
-            </div> */}
                 </div>
               </div>
             </div>
@@ -281,12 +272,12 @@ export function NavHeader() {
           
         </div>
 
-        <div className="w-full bg-white flex justify-between items-center px-3 sm:px-6 py-[15px]">
+        <div className="w-full bg-white flex justify-between items-center px-[30px] py-[15px]">
           <div className="block md:hidden">
             <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true" rel="nofollow" target="_blank" className="!no-underline">
-              <Button className="text-black px-[11px] py-[9px] nav__btn">
+              <Button className="text-black px-[40px] py-[9px] nav__btn">
                 <span className="text-white text-sm font-semibold">
-                  Get an Estimated
+                  Book Now
                 </span>
               </Button>
             </Link>
@@ -357,8 +348,8 @@ export function NavHeader() {
         className="p-4 overflow-y-auto pb-24 !z-[1000000000000000000]"
       >
         <div className="mb-6 flex items-center justify-between">
-          <Typography variant="p" color="blue-gray">
-            Maricela's
+          <Typography variant="paragraph" color="blue-gray">
+            Lavish Lux
           </Typography>
           <IconButton
             variant="text"
