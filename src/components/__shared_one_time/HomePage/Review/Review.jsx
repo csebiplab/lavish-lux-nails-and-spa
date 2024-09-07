@@ -8,6 +8,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/virtual";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import { SwiperNavButtons } from "./SwiperSliderButton";
 import Image from "next/image";
 import HeadingIcon from "@/components/__ui/HeadingIcon";
@@ -29,6 +30,30 @@ const breakpoints = {
 };
 
 const reviews = [
+  {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
+    reviewText:
+      "Great place to relax and get pampered. Great service and professional staff. Highly recommend you come and experience this place.",
+    author: "Sandra Serrao",
+    address: "Mississauga",
+  },
+  {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
+    reviewText:
+      "Great atmosphere, staff, and service! Great place to be pampered! 👍 Services Pedicure, Manicure",
+    author: "Jennifer Xuan",
+    address: "Mississauga",
+  },
+  {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
+    reviewText:
+      "Got manicure and pedicure done and they did an amazing job! Staff is very friendly and very detailed oriented. Services Pedicure, Manicure",
+    author: "jay pat",
+    address: "Mississauga",
+  },
   {
     google: "/assets/images/google.png",
     star: "/assets/images/five_star.png",
