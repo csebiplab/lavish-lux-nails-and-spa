@@ -89,7 +89,7 @@ const OurServices = () => {
               alt="about us image"
               width={440}
               height={330}
-              className="w-full flex justify-start"
+              className="w-full flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
             />
           </div>
           {/* large device  */}
