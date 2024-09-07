@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutUs from './AboutUs/AboutUs';
-import Review from './Review/Review';
 import Services from './Services/Services';
 import FeelOurLuxurious from './FeelOurLuxurious/FeelOurLuxurious';
 import OurServices from './OurServices/OurServices';
@@ -8,6 +7,7 @@ import Gallery from './Gallery/Gallery';
 import Treatment from './Treatment/Treatment';
 import BookAnAppointment from './BookAnAppointment/BookAnAppointment';
 import Banner from './Banner/Banner';
+import Review from './Review/Review';
 
 const Homepage = () => {
     return (
@@ -39,7 +39,7 @@ const Homepage = () => {
             <section>
                 <Gallery/>
             </section>
-            
+
             <section>
                 <Review/>
             </section>
