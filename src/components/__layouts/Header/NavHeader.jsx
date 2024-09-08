@@ -309,7 +309,7 @@ export function NavHeader() {
                     </li>
                   </ul>
                   <div>
-                    <button className="flex items-center gap-[7px] bg-secondary p-[12px] text-white rounded-lg">
+                    {/* <button className="flex items-center gap-[7px] bg-secondary p-[12px] text-white rounded-lg">
                       <Image
                         src="/assets/images/phone.png"
                         alt="phone icon"
@@ -317,7 +317,19 @@ export function NavHeader() {
                         height={23}
                       />
                       (905) 973-6669
-                    </button>
+                    </button> */}
+                    <Link
+                      href="tel:(905) 973-6669"
+                      rel="nofollow"
+                      target="_blank"
+                    >
+                      <Image
+                        src="/assets/buttons/large_d_p_b.png"
+                        alt="book now"
+                        width={205}
+                        height={50}
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -350,8 +362,8 @@ export function NavHeader() {
             </div>
           </div>
 
-          <div className="w-full bg-white flex justify-between items-center px-[30px] py-[15px]">
-            <div className="block md:hidden">
+          <div className="w-full bg-white flex justify-between items-center px-[15px] py-[15px]">
+            {/* <div className="block md:hidden">
               <Link
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                 rel="nofollow"
@@ -380,8 +392,31 @@ export function NavHeader() {
                   </span>
                 </Button>
               </a>
-            </div>
+            </div> */}
 
+            {/* button  */}
+            <div className="flex items-center gap-[15px]">
+              <Link
+                rel="nofollow"
+                target="_blank"
+                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+              >
+                <Image
+                  src="/assets/buttons/book_now.png"
+                  alt="book now"
+                  width={145}
+                  height={32}
+                />
+              </Link>
+              <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+                <Image
+                  src="/assets/buttons/phone_number.png"
+                  alt="book now"
+                  width={145}
+                  height={32}
+                />
+              </Link>
+            </div>
             <div className="block md:hidden">
               <IconButton
                 variant="text"

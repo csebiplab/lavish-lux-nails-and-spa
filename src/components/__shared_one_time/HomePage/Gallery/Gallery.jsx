@@ -125,11 +125,7 @@ const Gallery = () => {
         </div>
         {/* button  */}
         <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-          <Link
-            href="/"
-            rel="nofollow"
-            target="_blank"
-          >
+          {/* <Link href="/" rel="nofollow" target="_blank">
             <button
               type="submit"
               className="flex items-center gap-[15px] text-base font-semibold text-white bg-secondary py-[6px] px-[17px] rounded-lg"
@@ -154,7 +150,17 @@ const Gallery = () => {
                 />
               </svg>
             </button>
-          </Link>
+          </Link> */}
+          <button
+            >
+              <Image
+                src="/assets/buttons/large_d_gallery.png"
+                alt="book now"
+                width={200}
+                height={50}
+              />
+            </button>
+          
         </div>
       </div>
       {/* Small device */}
@@ -176,7 +182,7 @@ const Gallery = () => {
         {/* Load More Button */}
         {visibleImages < galleryImages.length && (
           <div className="pt-[15px] flex justify-center">
-            <button
+            {/* <button
               onClick={loadMoreImages}
               className="flex items-center gap-[5px] bg-secondary text-white py-2 px-4 rounded-[10px]"
             >
@@ -198,6 +204,16 @@ const Gallery = () => {
                   stroke="white"
                 />
               </svg>
+            </button> */}
+            <button
+            onClick={loadMoreImages}
+            >
+              <Image
+                src="/assets/buttons/load_more_sm.png"
+                alt="book now"
+                width={129}
+                height={32}
+              />
             </button>
           </div>
         )}
