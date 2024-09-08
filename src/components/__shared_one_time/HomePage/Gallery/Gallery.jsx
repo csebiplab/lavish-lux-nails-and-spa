@@ -24,7 +24,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="">
+    <div id="gallery">
       <div className="flex justify-center items-center">
         <HeadingIcon text={headingIconText.gallery__headingIconText} />
       </div>

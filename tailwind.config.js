@@ -88,6 +88,11 @@ module.exports = withMT({
                 ...theme('colors'),
                 'foreground': 'var(--foreground)',
             }),
+            fontFamily: {
+                naomi: ['var(--font-naomi)'],
+                lucida: ['var(--font-lucidaGrande)'],
+              },
+              
         },
     },
     plugins: [

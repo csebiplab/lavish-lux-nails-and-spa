@@ -76,7 +76,7 @@ const ourServices = [
 
 const OurServices = () => {
   return (
-    <div>
+    <div id="service">
       <div className="container padding__bottom">
         <div className="w-full flex justify-center items-center">
           <HeadingIcon

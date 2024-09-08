@@ -21,19 +21,6 @@ import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import "./NavHeader.css";
 
-// our services nav menu
-const our_service_menu_items = {
-  // interior: [
-  //   {
-  //     title: "Cleaning Services in Richmond",
-  //     route: "/cleaning-services-in-richmond",
-  //   },
-  //   {
-  //     title: "House Cleaning Services in Katy TX",
-  //     route: "/house-cleaning-services-in-katy-tx",
-  //   },
-  // ],
-};
 
 function OurServiceManu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -233,9 +220,9 @@ export function NavHeader() {
                     fill="#C7A43C"
                   />
                 </svg>
-                <ul className="full__section_l_p pt-[25px] flex items-center gap-[68px]">
-                  <li className="text-lg font-semibold text-black">About</li>
-                  <li className="text-lg font-semibold text-black">Services</li>
+                <ul className="full__section_l_p pt-[25px] flex items-center gap-[50px]">
+                  <Link href="#about"><li className="text-lg font-semibold text-black">About</li></Link>
+                  <Link href="#service"><li className="text-lg font-semibold text-black">Services</li></Link>
                   <li className="text-lg font-semibold text-black">Book Now</li>
                 </ul>
               </div>
@@ -300,13 +287,15 @@ export function NavHeader() {
                   />
                 </svg>
                 <div className="full__section_r_p pt-[10px] flex items-center justify-between gap-[40px]">
-                  <ul className="flex items-center gap-[68px]">
+                  <ul className="flex items-center gap-[50px]">
+                    <Link href="#gallery">
                     <li className="text-lg font-semibold text-black">
                       Gallery
                     </li>
-                    <li className="text-lg font-semibold text-black">
+                    </Link>
+                    <Link href="#contact"><li className="text-lg font-semibold text-black">
                       Contact Us
-                    </li>
+                    </li></Link>
                   </ul>
                   <div>
                     {/* <button className="flex items-center gap-[7px] bg-secondary p-[12px] text-white rounded-lg">

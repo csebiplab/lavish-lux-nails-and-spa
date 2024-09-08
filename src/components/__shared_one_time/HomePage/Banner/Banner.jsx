@@ -18,7 +18,7 @@ const Banner = () => {
               height={638}
             />
             <div className="absolute top-[305px] left-[400px]">
-              <h1 className="text-left text-[75px] font-normal leading-tight text-primary">
+              <h1 className="font-family-secondary text-left text-[75px] font-normal leading-tight text-primary">
                 Lavish Lux Nails & Spa <br /> Best Nail Salon in <br />{" "}
                 Mississauga
               </h1>

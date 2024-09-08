@@ -16,7 +16,7 @@ const BookAnAppointment = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div id="contact">
       {/* small device  */}
       <div className="block md:hidden">
         <div className="px-[20px] ">
