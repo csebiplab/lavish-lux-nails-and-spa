@@ -21,19 +21,6 @@ import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import "./NavHeader.css";
 
-// our services nav menu
-const our_service_menu_items = {
-  // interior: [
-  //   {
-  //     title: "Cleaning Services in Richmond",
-  //     route: "/cleaning-services-in-richmond",
-  //   },
-  //   {
-  //     title: "House Cleaning Services in Katy TX",
-  //     route: "/house-cleaning-services-in-katy-tx",
-  //   },
-  // ],
-};
 
 function OurServiceManu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -233,9 +220,9 @@ export function NavHeader() {
                     fill="#C7A43C"
                   />
                 </svg>
-                <ul className="full__section_l_p pt-[25px] flex items-center gap-[68px]">
-                  <li className="text-lg font-semibold text-black">About</li>
-                  <li className="text-lg font-semibold text-black">Services</li>
+                <ul className="full__section_l_p pt-[25px] flex items-center gap-[50px]">
+                  <Link href="#about"><li className="text-lg font-semibold text-black">About</li></Link>
+                  <Link href="#service"><li className="text-lg font-semibold text-black">Services</li></Link>
                   <li className="text-lg font-semibold text-black">Book Now</li>
                 </ul>
               </div>
@@ -300,16 +287,18 @@ export function NavHeader() {
                   />
                 </svg>
                 <div className="full__section_r_p pt-[10px] flex items-center justify-between gap-[40px]">
-                  <ul className="flex items-center gap-[68px]">
+                  <ul className="flex items-center gap-[50px]">
+                    <Link href="#gallery">
                     <li className="text-lg font-semibold text-black">
                       Gallery
                     </li>
-                    <li className="text-lg font-semibold text-black">
+                    </Link>
+                    <Link href="#contact"><li className="text-lg font-semibold text-black">
                       Contact Us
-                    </li>
+                    </li></Link>
                   </ul>
                   <div>
-                    <button className="flex items-center gap-[7px] bg-secondary p-[12px] text-white rounded-lg">
+                    {/* <button className="flex items-center gap-[7px] bg-secondary p-[12px] text-white rounded-lg">
                       <Image
                         src="/assets/images/phone.png"
                         alt="phone icon"
@@ -317,7 +306,19 @@ export function NavHeader() {
                         height={23}
                       />
                       (905) 973-6669
-                    </button>
+                    </button> */}
+                    <Link
+                      href="tel:(905) 973-6669"
+                      rel="nofollow"
+                      target="_blank"
+                    >
+                      <Image
+                        src="/assets/buttons/large_d_p_b.png"
+                        alt="book now"
+                        width={205}
+                        height={50}
+                      />
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -350,8 +351,8 @@ export function NavHeader() {
             </div>
           </div>
 
-          <div className="w-full bg-white flex justify-between items-center px-[30px] py-[15px]">
-            <div className="block md:hidden">
+          <div className="w-full bg-white flex justify-between items-center px-[15px] py-[15px]">
+            {/* <div className="block md:hidden">
               <Link
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                 rel="nofollow"
@@ -380,8 +381,31 @@ export function NavHeader() {
                   </span>
                 </Button>
               </a>
-            </div>
+            </div> */}
 
+            {/* button  */}
+            <div className="flex items-center gap-[15px]">
+              <Link
+                rel="nofollow"
+                target="_blank"
+                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+              >
+                <Image
+                  src="/assets/buttons/book_now.png"
+                  alt="book now"
+                  width={145}
+                  height={32}
+                />
+              </Link>
+              <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+                <Image
+                  src="/assets/buttons/phone_number.png"
+                  alt="book now"
+                  width={145}
+                  height={32}
+                />
+              </Link>
+            </div>
             <div className="block md:hidden">
               <IconButton
                 variant="text"

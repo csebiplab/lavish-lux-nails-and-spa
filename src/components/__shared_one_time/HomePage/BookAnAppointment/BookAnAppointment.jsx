@@ -3,6 +3,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./BookAnAppointment.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const BookAnAppointment = () => {
   const {
@@ -15,7 +16,7 @@ const BookAnAppointment = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div id="contact">
       {/* small device  */}
       <div className="block md:hidden">
         <div className="px-[20px] ">
@@ -148,7 +149,7 @@ const BookAnAppointment = () => {
             </div>
 
             <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-              <Link
+              {/* <Link
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                 rel="nofollow"
                 target="_blank"
@@ -176,6 +177,18 @@ const BookAnAppointment = () => {
                     />
                   </svg>
                 </button>
+              </Link> */}
+              <Link
+                rel="nofollow"
+                target="_blank"
+                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+              >
+                <Image
+                  src="/assets/buttons/book_now_book_appointment.png"
+                  alt="book now"
+                  width={129}
+                  height={32}
+                />
               </Link>
             </div>
           </form>
@@ -187,10 +200,13 @@ const BookAnAppointment = () => {
         <div className="">
           <div className="grid grid-cols-3 ">
             <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg">
-              <h5 className="text-[75px] font-normal text-primary pt-[28px] pb-[15px]">
+              <h5 className="text-[75px] font-normal text-primary pt-[50px] pb-[15px]">
                 Book An Appointment
               </h5>
-              <form onSubmit={handleSubmit(onSubmit)} className="w-[616px] pt-[15px]">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="w-[616px] pt-[15px]"
+              >
                 {/* first div service */}
                 <div className="">
                   <label
@@ -208,9 +224,9 @@ const BookAnAppointment = () => {
                   {errors.services && <span>This field is required</span>}
                 </div>
                 {/* second div  */}
-                <div className="flex justify-between gap-[15px] pt-[15px]">
+                <div className="w-full flex justify-between gap-[15px] pt-[15px]">
                   {/* day */}
-                  <div className="">
+                  <div className="w-1/2 ">
                     <label
                       className="text-lg font-semibold text-dark-50"
                       htmlFor="day"
@@ -226,7 +242,7 @@ const BookAnAppointment = () => {
                     {errors.day && <span>This field is required</span>}
                   </div>
                   {/* hour */}
-                  <div className="">
+                  <div className="w-1/2">
                     <label
                       className="text-lg font-semibold text-dark-50"
                       htmlFor="hour"
@@ -243,9 +259,9 @@ const BookAnAppointment = () => {
                   </div>
                 </div>
                 {/* third div  */}
-                <div className="flex justify-between gap-[15px] pt-[15px]">
+                <div className="w-full flex justify-between gap-[15px] pt-[15px]">
                   {/* name */}
-                  <div className="">
+                  <div className="w-1/2 ">
                     <label
                       className="text-lg font-semibold text-dark-50"
                       htmlFor="name"
@@ -261,7 +277,7 @@ const BookAnAppointment = () => {
                     {errors.name && <span>This field is required</span>}
                   </div>
                   {/* phone */}
-                  <div className="">
+                  <div className="w-1/2">
                     <label
                       className="text-lg font-semibold text-dark-50"
                       htmlFor="phone"
@@ -311,7 +327,7 @@ const BookAnAppointment = () => {
                 </div>
 
                 <div className="flex justify-start items-center py-[30px]">
-                  <Link
+                  {/* <Link
                     href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                     rel="nofollow"
                     target="_blank"
@@ -340,6 +356,18 @@ const BookAnAppointment = () => {
                         />
                       </svg>
                     </button>
+                  </Link> */}
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+                  >
+                    <Image
+                      src="/assets/buttons/large_d_book_appointment.png"
+                      alt="book now"
+                      width={200}
+                      height={50}
+                    />
                   </Link>
                 </div>
               </form>

@@ -6,8 +6,16 @@
   @apply text-dark;
 } */
 body {
-  @apply bg-[#FFF3FC] overflow-x-hidden;
+  @apply font-lucida bg-[#FFF3FC] overflow-x-hidden;
 }
+
+.font-family-primary {
+  @apply  font-lucida;
+}
+.font-family-secondary {
+  @apply font-naomi;
+}
+
 footer * {
   @apply text-white;
 }

@@ -24,7 +24,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="">
+    <div id="gallery">
       <div className="flex justify-center items-center">
         <HeadingIcon text={headingIconText.gallery__headingIconText} />
       </div>
@@ -38,8 +38,8 @@ const Gallery = () => {
                 src="/assets/gallery/gallery11.png"
                 alt="gallery image"
                 width={545}
-                height={672}
-                className="w-full h-[672px] "
+                height={660}
+                className="w-full h-[656px] "
               />
             </div>
             <div className="col-span-1 pt-3">
@@ -93,43 +93,39 @@ const Gallery = () => {
           </div>
         </div>
         {/* second div  */}
-        <div className="flex gap-[20px] border-2 ">
+        <div className="flex -mt-3">
           <Image
             src="/assets/gallery/gallery1.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery2.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery3.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery4.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
         </div>
         {/* button  */}
         <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-          <Link
-            href="/"
-            rel="nofollow"
-            target="_blank"
-          >
+          {/* <Link href="/" rel="nofollow" target="_blank">
             <button
               type="submit"
               className="flex items-center gap-[15px] text-base font-semibold text-white bg-secondary py-[6px] px-[17px] rounded-lg"
@@ -154,7 +150,17 @@ const Gallery = () => {
                 />
               </svg>
             </button>
-          </Link>
+          </Link> */}
+          <button
+            >
+              <Image
+                src="/assets/buttons/large_d_gallery.png"
+                alt="book now"
+                width={200}
+                height={50}
+              />
+            </button>
+          
         </div>
       </div>
       {/* Small device */}
@@ -176,7 +182,7 @@ const Gallery = () => {
         {/* Load More Button */}
         {visibleImages < galleryImages.length && (
           <div className="pt-[15px] flex justify-center">
-            <button
+            {/* <button
               onClick={loadMoreImages}
               className="flex items-center gap-[5px] bg-secondary text-white py-2 px-4 rounded-[10px]"
             >
@@ -198,6 +204,16 @@ const Gallery = () => {
                   stroke="white"
                 />
               </svg>
+            </button> */}
+            <button
+            onClick={loadMoreImages}
+            >
+              <Image
+                src="/assets/buttons/load_more_sm.png"
+                alt="book now"
+                width={129}
+                height={32}
+              />
             </button>
           </div>
         )}
