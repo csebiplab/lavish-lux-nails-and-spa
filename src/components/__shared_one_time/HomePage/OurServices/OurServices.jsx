@@ -19,7 +19,8 @@ const servicesData = [
   {
     id: 3,
     img: "/assets/images/ourServices3.png",
-    title: "Additional Services",
+    // title: "Additional Services",
+    title: "Additional",
   },
 ];
 const servicesData1 = [
@@ -144,7 +145,58 @@ const OurServices = () => {
           </div>
 
           {/* small device  */}
-          <div className="block 5xl:hidden flex flex-col items-center">
+
+          <div className="block 5xl:hidden 5xl:col-span-3">
+            <div className="w-full">
+            <div className="flex justify-end gap-[20px] md:gap-[28px]">
+              <div className="mt-[60px]">
+                {servicesData?.map((data) => {
+                  return (
+                    <div
+                      key={data?.id}
+                      className="cart__bg_sm flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                    >
+                      <Image
+                        src={data?.img}
+                        alt={data?.title}
+                        width={93}
+                        height={93}
+                        className="w-[93px] h-[93px]"
+                      />
+                      <p className="text-2xl font-normal text-black">
+                        {data?.title}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div>
+                {servicesData1?.map((data) => {
+                  return (
+                    <div
+                      key={data?.id}
+                      className="cart__bg_sm flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                    >
+                      <Image
+                        src={data?.img}
+                        alt={data?.title}
+                        width={93}
+                        height={93}
+                        className="w-[93px] h-[93px]"
+                      />
+                      <p className="text-2xl font-normal text-black">
+                        {data?.title}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            </div>
+            
+          </div>
+
+          {/* <div className="block 5xl:hidden flex flex-col items-center">
             {
                 ourServices?.map((data)=>{
                     return <div
@@ -164,7 +216,7 @@ const OurServices = () => {
                   </div>
                 })
             }
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

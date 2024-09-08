@@ -38,8 +38,8 @@ const Gallery = () => {
                 src="/assets/gallery/gallery11.png"
                 alt="gallery image"
                 width={545}
-                height={672}
-                className="w-full h-[672px] "
+                height={660}
+                className="w-full h-[656px] "
               />
             </div>
             <div className="col-span-1 pt-3">
@@ -93,34 +93,34 @@ const Gallery = () => {
           </div>
         </div>
         {/* second div  */}
-        <div className="flex gap-[20px] border-2 ">
+        <div className="flex -mt-3">
           <Image
             src="/assets/gallery/gallery1.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery2.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery3.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery4.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[464px] h-[326px]"
+            className="w-[480px] h-[326px]"
           />
         </div>
         {/* button  */}
