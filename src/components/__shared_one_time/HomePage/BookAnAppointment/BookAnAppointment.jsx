@@ -201,7 +201,7 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <input
-                    className="mt-[10px] w-full py-[19px] px-[36px] input__bg"
+                    className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                     placeholder="Please Select Your Services"
                     {...register("services", { required: true })}
                   />
@@ -219,7 +219,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[19px] px-[35px] input__bg"
+                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                       placeholder="Select Day"
                       {...register("day", { required: true })}
                     />
@@ -235,7 +235,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[19px] px-[35px] input__bg"
+                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                       placeholder="--:--:--"
                       {...register("hour", { required: true })}
                     />
@@ -254,7 +254,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[19px] px-[36px] input__bg"
+                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                       placeholder="Enter Your Name"
                       {...register("name", { required: true })}
                     />
@@ -270,7 +270,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[19px] px-[36px] input__bg"
+                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                       placeholder="Enter Your Number"
                       {...register("phone", { required: true })}
                     />
@@ -287,7 +287,7 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <input
-                    className="mt-[10px] w-full py-[19px] px-[36px] input__bg"
+                    className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                     placeholder="Enter Your Email"
                     {...register("email", { required: true })}
                   />
@@ -303,14 +303,14 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <textarea
-                    className="mt-[10px] w-full py-[19px] px-[36px] input__bg"
+                    className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
                     placeholder="Enter Your Message"
                     {...register("message", { required: true })}
                   />
                   {errors.message && <span>This field is required</span>}
                 </div>
 
-                <div className="flex justify-start items-center pt-[35px] pb-[38px]">
+                <div className="flex justify-start items-center py-[30px]">
                   <Link
                     href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                     rel="nofollow"

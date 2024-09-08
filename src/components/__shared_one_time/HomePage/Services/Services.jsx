@@ -17,6 +17,10 @@ const breakpoints = {
     spaceBetween: 20,
   },
   768: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  1040: {
     slidesPerView: 3,
     spaceBetween: 20,
   },
@@ -37,6 +41,24 @@ const services = [
   },
   {
     id : 3,
+    img : "/assets/images/services3.png",
+    title : "Nail Artistry",
+    desc : "Elevate your nail aesthetics with our exceptional artistry, where every design is a bespoke reflection of your unique style."
+  },
+  {
+    id : 4,
+    img : "/assets/images/services1.png",
+    title : "Tranquil Atmosphere",
+    desc : "Experience pure tranquility at our nail spa sanctuary, where every moment is a serene escape from the chaos of daily life."
+  },
+  {
+    id : 5,
+    img : "/assets/images/services2.png",
+    title : "Hygiene",
+    desc : "Indulge with confidence, knowing that our top-tier hygiene standards are designed to protect and delight you."
+  },
+  {
+    id : 6,
     img : "/assets/images/services3.png",
     title : "Nail Artistry",
     desc : "Elevate your nail aesthetics with our exceptional artistry, where every design is a bespoke reflection of your unique style."

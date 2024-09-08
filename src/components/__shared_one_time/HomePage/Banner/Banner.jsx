@@ -11,13 +11,14 @@ const Banner = () => {
         <div className="large_banner_bg ">
           <div className="relative container h-full flex justify-center items-center">
             <Image
-              src="/assets/images/large_hero.png"
+              // src="/assets/images/large_hero.png"
+              src="/assets/images/large_device_banner.png"
               alt="large device hero image"
               width={1350}
               height={668}
             />
-            <div className="absolute top-[400px] left-[400px]">
-              <h1 className="text-left text-[75px] font-400 text-primary">
+            <div className="absolute top-[305px] left-[400px]">
+              <h1 className="text-left text-[75px] font-400 leading-tight text-primary">
                 Lavish Lux Nails & Spa <br /> Best Nail Salon in <br /> Mississauga
               </h1>
               <div className="pt-[25px]">
