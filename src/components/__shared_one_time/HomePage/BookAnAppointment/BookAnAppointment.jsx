@@ -2,6 +2,8 @@
 import { AiOutlineCalendar } from "react-icons/ai";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import TimePicker from "react-time-picker";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./BookAnAppointment.css";
@@ -11,6 +13,7 @@ import { AiOutlineDown } from "react-icons/ai";
 
 const BookAnAppointment = () => {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
   const {
     register,
     handleSubmit,
@@ -101,21 +104,31 @@ const BookAnAppointment = () => {
     </div>
 
             {/* hour */}
-            <div className="px-[20px] pt-[20px]">
-              <label
-                className="text-lg font-semibold text-dark-50"
-                htmlFor="hour"
-              >
-                Hour
-              </label>{" "}
-              <br />
-              <input
-                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
-                placeholder="--:--:--"
-                {...register("hour", { required: true })}
+
+            <div className="px-[20px] pt-[20px] relative">
+            <label className="text-lg font-semibold text-dark-50" htmlFor="hour">
+              Hour
+            </label>
+            <br />
+            <div className="relative mt-[10px]">
+              <TimePicker
+                onChange={setSelectedTime}
+                value={selectedTime}
+                clockIcon={null} 
+                className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
+                format="HH:mm:ss"
+                disableClock={true} 
+                clearIcon={null} 
               />
-              {errors.hour && <span>This field is required</span>}
+              <AiOutlineClockCircle
+                className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                onClick={() => document.querySelector(".react-time-picker__wrapper input").focus()}
+              />
             </div>
+            {errors?.hour && <span>This field is required</span>}
+            </div>
+
+
             {/* name */}
             <div className="px-[20px] pt-[20px]">
               <label
