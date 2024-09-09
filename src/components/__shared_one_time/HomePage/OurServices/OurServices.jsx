@@ -111,7 +111,7 @@ const OurServices = () => {
                         height={126}
                         className=""
                       />
-                      <p className="text-2xl font-normal text-black">
+                      <p className="font-family-secondary text-2xl font-normal text-black">
                         {data?.title}
                       </p>
                     </div>
@@ -132,7 +132,7 @@ const OurServices = () => {
                         height={126}
                         className=""
                       />
-                      <p className="text-2xl font-normal text-black">
+                      <p className="font-family-secondary text-2xl font-normal text-black">
                         {data?.title}
                       </p>
                     </div>
@@ -163,7 +163,7 @@ const OurServices = () => {
                         height={93}
                         className="w-[93px] h-[93px]"
                       />
-                      <p className="text-2xl font-normal text-black">
+                      <p className="font-family-secondary text-2xl font-normal text-black">
                         {data?.title}
                       </p>
                     </div>
@@ -184,7 +184,7 @@ const OurServices = () => {
                         height={93}
                         className="w-[93px] h-[93px]"
                       />
-                      <p className="text-2xl font-normal text-black">
+                      <p className="font-family-secondary text-2xl font-normal text-black">
                         {data?.title}
                       </p>
                     </div>

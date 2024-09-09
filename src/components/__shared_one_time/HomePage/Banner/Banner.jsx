@@ -70,7 +70,7 @@ const Banner = () => {
 
       {/* small device  */}
       <div className="block md:hidden small_bg flex flex-col items-center justify-center">
-        <h1 className="text-[38px] font-normal text-center text-primary px-[6px] pb-[35px]">
+        <h1 className="font-family-secondary text-[38px] font-normal text-center text-primary px-[6px] pb-[35px]">
           Lavish Lux Nails & Spa <br />
           Best Nail Salon <br /> in Mississauga
         </h1>
