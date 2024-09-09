@@ -45,11 +45,11 @@ const FeelOurLuxurious = () => {
       </div>
       <div>
         <Image
-          src="/assets/services/feelOurLuxurious.jpg"
+          src="/assets/images/feel_our_lavish.jpg"
           alt="FeelOurLuxurious image"
           width={432}
           height={287}
-          className="w-[432px] md:w-[1020px] xl:w-full h-[287px] md:h-[506px] xl:h-[738px]"
+          className="w-full h-[352px] md:h-[506px] 5xl:h-[682px]"
         />
       </div>
       {/* ==================== swiper slider ================ */}

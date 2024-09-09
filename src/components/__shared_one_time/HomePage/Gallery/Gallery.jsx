@@ -29,7 +29,7 @@ const Gallery = () => {
         <HeadingIcon text={headingIconText.gallery__headingIconText} />
       </div>
       {/* large device  */}
-      <div className="hidden 5xl:block pt-[25px]">
+      <div className="hidden xl:block pt-[25px]">
         <div>
           {/* first div  */}
           <div className="grid grid-cols-4 gap-[20px]">
