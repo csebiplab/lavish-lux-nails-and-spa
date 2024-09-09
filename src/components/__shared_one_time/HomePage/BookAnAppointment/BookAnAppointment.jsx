@@ -1,5 +1,8 @@
 "use client";
-import React from "react";
+import { AiOutlineCalendar } from "react-icons/ai";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./BookAnAppointment.css";
 import Link from "next/link";
@@ -7,6 +10,7 @@ import Image from "next/image";
 import { AiOutlineDown } from "react-icons/ai";
 
 const BookAnAppointment = () => {
+  const [selectedDate, setSelectedDate] = useState(null);
   const {
     register,
     handleSubmit,
@@ -72,21 +76,30 @@ const BookAnAppointment = () => {
             </div>
 
             {/* day */}
-            <div className="px-[20px] pt-[20px]">
-              <label
-                className="text-lg font-semibold text-dark-50"
-                htmlFor="day"
-              >
-                Day
-              </label>{" "}
-              <br />
-              <input
-                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
-                placeholder="Select Day"
-                {...register("day", { required: true })}
-              />
-              {errors.day && <span>This field is required</span>}
-            </div>
+
+            <div className="px-[20px] pt-[20px] relative">
+      <label className="text-lg font-semibold text-dark-50" htmlFor="day">
+        Day
+      </label>
+      <br />
+      <div className="w-full relative mt-[10px] input__bg">
+        {/* Date Input Field */}
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          placeholderText="Select Day"
+          className="py-[10px] px-[20px] outline-none"
+          dateFormat="MM/dd/yyyy"
+        />
+        {/* Calendar Icon Inside Input Field */}
+        <AiOutlineCalendar
+          className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+          onClick={() => document.querySelector(".react-datepicker__input-container input").focus()}
+        />
+      </div>
+      {errors?.day && <span>This field is required</span>}
+    </div>
+
             {/* hour */}
             <div className="px-[20px] pt-[20px]">
               <label
