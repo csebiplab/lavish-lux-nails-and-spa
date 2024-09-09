@@ -22,72 +22,6 @@ import React, { useState, useEffect } from "react";
 import "./NavHeader.css";
 
 
-function OurServiceManu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  const renderItems = (data = []) => {
-    return data?.map(({ route, title }, key) => (
-      <Link href={route} key={key}>
-        <MenuItem className="rounded-md">
-          <Typography color="blue-gray">{title}</Typography>
-        </MenuItem>
-      </Link>
-    ));
-  };
-
-  return (
-    <>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-        className="bg-gray-100"
-      >
-        <MenuHandler>
-          <div className="font-medium text-lg">
-            <ListItem
-              className="flex justify-center items-center gap-2 rounded-full py-1  pr-4 font-bold  text-lg    text-black"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              Services
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-          </div>
-        </MenuHandler>
-        <MenuList className="hidden max-w-[100vw] w-screen lg:block border-0 outline-0 bg-gray-100">
-          <div className="container grid grid-cols-3 gap-y-2">
-            <div>
-              <p className="mb-1 text-primary font-semibold">Interior</p>
-              <ul>{renderItems(our_service_menu_items.interior)}</ul>
-            </div>
-          </div>
-        </MenuList>
-      </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>
-          <p className="text-primary mb-1 font-semibold">Interior</p>
-          <ul>{renderItems(our_service_menu_items.interior)}</ul>
-          <hr className="my-1" />
-        </Collapse>
-      </div>
-    </>
-  );
-}
-
 // our services nav list end
 
 function NavList() {
@@ -101,7 +35,7 @@ function NavList() {
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
         <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          About
+          <Link href="#about">About</Link>
         </ListItem>
       </Typography>
 
@@ -113,7 +47,7 @@ function NavList() {
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
         <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Services
+          <Link href="#service">Services</Link>
         </ListItem>
       </Typography>
       <Typography
@@ -128,10 +62,6 @@ function NavList() {
         </ListItem>
       </Typography>
 
-      {/* <div className="mt-[6px]">
-        <OurServiceManu />
-      </div> */}
-
       <Typography
         as={Link}
         href="/gallery"
@@ -140,7 +70,7 @@ function NavList() {
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
         <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Gallery
+          <Link href="#gallery">Gallery</Link>
         </ListItem>
       </Typography>
 
@@ -152,7 +82,7 @@ function NavList() {
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
         <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Contact Us
+          <Link href="#contact">Contact Us</Link>
         </ListItem>
       </Typography>
     </List>
