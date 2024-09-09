@@ -39,7 +39,7 @@ const images = [
 
 const FeelOurLuxurious = () => {
   return (
-    <div>
+    <div className="container">
       <div className="flex justify-center items-center pb-[25px]">
         <HeadingIcon text={headingIconText.feelOurLuxurious__headingIconText} />
       </div>
@@ -53,7 +53,7 @@ const FeelOurLuxurious = () => {
         />
       </div>
       {/* ==================== swiper slider ================ */}
-      <div className="container -mt-[50px] md:-mt-[60px] 5xl:-mt-[100px]">
+      <div className=" -mt-[50px] md:-mt-[60px] 5xl:-mt-[100px]">
         <Swiper
           modules={[Autoplay]}
           loop={true}

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import "./BookAnAppointment.css";
 import Link from "next/link";
 import Image from "next/image";
+import { AiOutlineDown } from "react-icons/ai";
 
 const BookAnAppointment = () => {
   const {
@@ -36,7 +37,8 @@ const BookAnAppointment = () => {
           </h5>
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* services */}
-            <div className="px-[30px]">
+
+            <div className="relative px-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="services"
@@ -44,15 +46,33 @@ const BookAnAppointment = () => {
                 Services
               </label>{" "}
               <br />
-              <input
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
-                placeholder="Please Select Your Services"
-                {...register("services", { required: true })}
-              />
+              <div className="relative">
+                <select
+                  className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
+                  {...register("services", { required: true })}
+                >
+                  <option className="text-xs" value="">
+                    Please Select Your Services
+                  </option>
+                  <option className="text-xs" value="service1">
+                    Service 1
+                  </option>
+                  <option className="text-xs" value="service2">
+                    Service 2
+                  </option>
+                  <option className="text-xs" value="service3">
+                    Service 3
+                  </option>
+                  {/* Add more options as needed */}
+                </select>
+                {/* Dropdown Icon */}
+                <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
+              </div>
               {errors.services && <span>This field is required</span>}
             </div>
+
             {/* day */}
-            <div className="px-[30px] pt-[20px]">
+            <div className="px-[20px] pt-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="day"
@@ -61,14 +81,14 @@ const BookAnAppointment = () => {
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                 placeholder="Select Day"
                 {...register("day", { required: true })}
               />
               {errors.day && <span>This field is required</span>}
             </div>
             {/* hour */}
-            <div className="px-[30px] pt-[20px]">
+            <div className="px-[20px] pt-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="hour"
@@ -77,14 +97,14 @@ const BookAnAppointment = () => {
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                 placeholder="--:--:--"
                 {...register("hour", { required: true })}
               />
               {errors.hour && <span>This field is required</span>}
             </div>
             {/* name */}
-            <div className="px-[30px] pt-[20px]">
+            <div className="px-[20px] pt-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="name"
@@ -93,14 +113,14 @@ const BookAnAppointment = () => {
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                 placeholder="Enter Your Name"
                 {...register("name", { required: true })}
               />
               {errors.name && <span>This field is required</span>}
             </div>
             {/* phone */}
-            <div className="px-[30px] pt-[20px]">
+            <div className="px-[20px] pt-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="phone"
@@ -109,14 +129,14 @@ const BookAnAppointment = () => {
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                 placeholder="Enter Your Number"
                 {...register("phone", { required: true })}
               />
               {errors.phone && <span>This field is required</span>}
             </div>
             {/* email */}
-            <div className="px-[30px] pt-[20px]">
+            <div className="px-[20px] pt-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="email"
@@ -125,14 +145,14 @@ const BookAnAppointment = () => {
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                 placeholder="Enter Your Email"
                 {...register("email", { required: true })}
               />
               {errors.email && <span>This field is required</span>}
             </div>
             {/* message */}
-            <div className="px-[30px] pt-[20px]">
+            <div className="px-[20px] pt-[20px]">
               <label
                 className="text-lg font-semibold text-dark-50"
                 htmlFor="mesage"
@@ -141,7 +161,7 @@ const BookAnAppointment = () => {
               </label>{" "}
               <br />
               <textarea
-                className="mt-[10px] w-full py-[19px] px-[29px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                 placeholder="Enter Your Message"
                 {...register("message", { required: true })}
               />

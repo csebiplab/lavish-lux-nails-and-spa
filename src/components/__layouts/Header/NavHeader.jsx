@@ -49,7 +49,7 @@ function NavList() {
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
         <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Book Now
+          <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true">Book Now</Link>
         </ListItem>
       </Typography>
 
@@ -145,7 +145,8 @@ export function NavHeader() {
                 <ul className="full__section_l_p pt-[20px] 5xl:pt-[25px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                   <Link href="#about"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">About</li></Link>
                   <Link href="#service"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">Services</li></Link>
-                  <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">Book Now</li>
+                  <Link rel="nofollow" target="_blank" href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">Book Now</li></Link>
+                  
                 </ul>
               </div>
               {/* second div  */}
