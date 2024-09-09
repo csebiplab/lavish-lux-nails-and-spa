@@ -31,7 +31,7 @@ const BookAnAppointment = () => {
           ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px]">
-          <h5 className="text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
+          <h5 className="font-family-secondary text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
             Book An Appointment
           </h5>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -199,8 +199,8 @@ const BookAnAppointment = () => {
       <div className="hidden 5xl:block">
         <div className="">
           <div className="grid grid-cols-3 ">
-            <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg">
-              <h5 className="text-[75px] font-normal text-primary pt-[50px] pb-[15px]">
+            <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large">
+              <h5 className="font-family-secondary text-[75px] font-normal text-primary pt-[50px] pb-[15px]">
                 Book An Appointment
               </h5>
               <form
@@ -377,7 +377,7 @@ const BookAnAppointment = () => {
                 className=""
                 src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d92504.42903421116!2d-79.74413579894721!3d43.569812810480904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2s1100%20Burnhamthorpe%20Rd%20W%20Unit%2016%2C%20Mississauga%2C%20ON%20L5C%204G4%2C%20Canada!3m2!1d43.5698424!2d-79.6617351!5e0!3m2!1sen!2sbd!4v1725532208708!5m2!1sen!2sbd"
                 width="868"
-                height="570"
+                height="470"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

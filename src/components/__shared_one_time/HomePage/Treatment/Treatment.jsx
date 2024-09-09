@@ -10,7 +10,7 @@ const Treatment = () => {
                 {/* fisrt div  */}
             <div>
             <div className='flex items-center justify-between treatment__bg py-[8px] px-[20px]'>
-                <p className="text-[35px] font-normal text-white">TREATMENT</p>
+                <p className="font-family-secondary text-[35px] font-normal text-white">TREATMENT</p>
                 <Image src="/assets/images/right_arrow.png" alt='arrow icon' width={34} height={22}/>
             </div>
             <div className='flex items-center justify-between treatment1__bg py-[19px] px-[23px]'>
@@ -24,7 +24,7 @@ const Treatment = () => {
             {/* second div  */}
             <div className='py-[15px]'>
             <div className='flex items-center justify-between treatment__bg py-[8px] px-[20px]'>
-                <p className="text-[35px] font-normal text-white">EVENTS</p>
+                <p className="font-family-secondary text-[35px] font-normal text-white">EVENTS</p>
                 <Image src="/assets/images/right_arrow.png" alt='arrow icon' width={34} height={22}/>
             </div>
             <div className='flex items-center justify-between treatment1__bg py-[19px] px-[23px]'>
@@ -36,7 +36,7 @@ const Treatment = () => {
             {/* third div  */}
             <div>
             <div className='flex items-center justify-between treatment__bg py-[8px] px-[20px]'>
-                <p className="text-[35px] font-normal text-white">SHOP</p>
+                <p className="font-family-secondary text-[35px] font-normal text-white">SHOP</p>
                 <Image src="/assets/images/right_arrow.png" alt='arrow icon' width={34} height={22}/>
             </div>
             <div className='flex items-center justify-between treatment1__bg py-[19px] px-[23px]'>
@@ -54,7 +54,7 @@ const Treatment = () => {
                    {/* fisrt div  */}
             <div className='w-1/3'>
             <div className='flex items-center justify-between treatment__bg py-[8px] px-[20px]'>
-                <p className="text-[35px] font-normal text-white">TREATMENT</p>
+                <p className="font-family-secondary text-[35px] font-normal text-white">TREATMENT</p>
                 <Image src="/assets/images/right_arrow.png" alt='arrow icon' width={34} height={22}/>
             </div>
             <div className='flex items-center justify-between treatment1__bg py-[19px] px-[23px]'>
@@ -68,7 +68,7 @@ const Treatment = () => {
             {/* second div  */}
             <div className='w-1/3'>
             <div className='flex items-center justify-between treatment__bg py-[8px] px-[20px]'>
-                <p className="text-[35px] font-normal text-white">EVENTS</p>
+                <p className="font-family-secondary text-[35px] font-normal text-white">EVENTS</p>
                 <Image src="/assets/images/right_arrow.png" alt='arrow icon' width={34} height={22}/>
             </div>
             <div className='flex items-center justify-between treatment1__bg py-[19px] px-[23px]'>
@@ -80,7 +80,7 @@ const Treatment = () => {
             {/* third div  */}
             <div className='w-1/3'>
             <div className='flex items-center justify-between treatment__bg py-[8px] px-[20px]'>
-                <p className="text-[35px] font-normal text-white">SHOP</p>
+                <p className="font-family-secondary text-[35px] font-normal text-white">SHOP</p>
                 <Image src="/assets/images/right_arrow.png" alt='arrow icon' width={34} height={22}/>
             </div>
             <div className='flex items-center justify-between treatment1__bg py-[19px] px-[23px]'>

@@ -95,7 +95,7 @@ const Services = () => {
                 <div className="">
                   <Image src={img} alt={title} width={62} height={62} className="border border-primary p-[5px] rounded-full bg-primary-50 w-[62px] h-[62px] mx-auto"/>
                   <div className="text-center">
-                    <p className="text-4xl font-normal text-black py-[16px]">{title}</p>
+                    <p className="font-family-secondary text-4xl font-normal text-black py-[16px]">{title}</p>
                     <p className="text-lg font-normal text-dark-50">{desc}</p>
                   </div>
                 </div>
