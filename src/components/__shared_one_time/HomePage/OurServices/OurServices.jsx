@@ -83,8 +83,8 @@ const OurServices = () => {
             text={headingIconText.ourServicesAtLavish__headingIconText}
           />
         </div>
-        <div className="grid grid-cols-1 5xl:grid-cols-6 gap-10">
-          <div className="5xl:col-span-3 flex justify-center justify-start pt-[37px] 5xl:pt-[28px]">
+        <div className="grid grid-cols-1 xl:grid-cols-6 gap-10">
+          <div className="xl:col-span-3 flex justify-center justify-start pt-[37px] xl:pt-[28px]">
             <Image
               src="/assets/images/our_services.png"
               alt="about us image"
@@ -94,9 +94,9 @@ const OurServices = () => {
             />
           </div>
           {/* large device  */}
-          <div className="hidden 5xl:block 5xl:col-span-3">
-            <div className=" w-full">
-            <div className=" flex justify-end gap-[25px] md:gap-[28px]">
+          <div className="hidden xl:block xl:col-span-3">
+            <div className="w-full">
+            <div className=" flex justify-end gap-[25px] lg:gap-[28px]">
               <div className="mt-[60px]">
                 {servicesData?.map((data) => {
                   return (
@@ -146,7 +146,7 @@ const OurServices = () => {
 
           {/* small device  */}
 
-          <div className="block 5xl:hidden 5xl:col-span-3">
+          <div className="block xl:hidden xl:col-span-3">
             <div className="w-full">
             <div className="flex justify-end gap-[20px] md:gap-[28px]">
               <div className="mt-[60px]">

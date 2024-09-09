@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="">
       {/* large device  */}
-      <div className="hidden 5xl:block">
+      <div className="hidden xl:block">
         <div className="footer__bg container py-[100px]">
           <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
             <span>
@@ -174,7 +174,7 @@ const Footer = () => {
       </div>
 
       {/* medium device  */}
-      <div className="hidden md:block 5xl:hidden">
+      <div className="hidden lg:block xl:hidden">
         <div className="footer__bg container py-[100px]">
           <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
             <span>

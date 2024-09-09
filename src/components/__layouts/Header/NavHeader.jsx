@@ -1,18 +1,11 @@
 "use client";
 
-import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
-  Button,
-  Collapse,
   Drawer,
   IconButton,
   List,
   ListItem,
-  Menu,
-  MenuHandler,
-  MenuItem,
-  MenuList,
-  Navbar,
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
@@ -21,8 +14,6 @@ import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import "./NavHeader.css";
 
-
-// our services nav list end
 
 function NavList() {
   return (
@@ -58,7 +49,7 @@ function NavList() {
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
         <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Book Now
+          <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true">Book Now</Link>
         </ListItem>
       </Typography>
 
@@ -124,11 +115,11 @@ export function NavHeader() {
         {/* large device  start*/}
 
         <div className="custom-container">
-          <div className="hidden 5xl:block main__header py-[10px]">
+          <div className="hidden xl:block main__header py-[6px] 5xl:py-[10px]">
             <div className="flex justify-between items-center gap-[60px]">
               {/* first div  */}
               <div>
-                <p className="full__section_l_p pb-[8px] flex items-center gap-[10px] text-secondary text-base font-medium">
+                <p className="full__section_l_p pb-[6px] 5xl:pb-[8px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
                   {" "}
                   <Image
                     src="/assets/images/canada.png"
@@ -140,20 +131,22 @@ export function NavHeader() {
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="auth"
+                  width="auto"
                   height="18"
                   viewBox="0 0 709 18"
                   fill="none"
+                  className="w-[400px] 3xl:w-[500px] 5xl:w-[700px]"
                 >
                   <path
                     d="M708.572 9L699.912 0.339746L691.252 9L699.912 17.6603L708.572 9ZM-0.0878906 10.5H699.912V7.5H-0.0878906V10.5Z"
                     fill="#C7A43C"
                   />
                 </svg>
-                <ul className="full__section_l_p pt-[25px] flex items-center gap-[50px]">
-                  <Link href="#about"><li className="text-lg font-semibold text-black">About</li></Link>
-                  <Link href="#service"><li className="text-lg font-semibold text-black">Services</li></Link>
-                  <li className="text-lg font-semibold text-black">Book Now</li>
+                <ul className="full__section_l_p pt-[20px] 5xl:pt-[25px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
+                  <Link href="#about"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">About</li></Link>
+                  <Link href="#service"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">Services</li></Link>
+                  <Link rel="nofollow" target="_blank" href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">Book Now</li></Link>
+                  
                 </ul>
               </div>
               {/* second div  */}
@@ -163,11 +156,12 @@ export function NavHeader() {
                   width={347}
                   height={98}
                   alt="nav logo"
+                  className="w-[340px] 5xl:w-[347px] h-[90px] 5xl:h-[98px]"
                 />
               </div>
               {/* third div  */}
               <div>
-                <div className="full__section_r_p pb-[12px] flex items-center gap-[16px]">
+                <div className="full__section_r_p pb-[9px] 5xl:pb-[12px] flex items-center gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
                   <p className="text-sm font-semibold text-secondary">
                     Follow Us:
                   </p>
@@ -216,14 +210,14 @@ export function NavHeader() {
                     fill="#C7A43C"
                   />
                 </svg>
-                <div className="full__section_r_p pt-[10px] flex items-center justify-between gap-[40px]">
-                  <ul className="flex items-center gap-[50px]">
+                <div className="full__section_r_p pt-[8px] 5xl:pt-[10px] flex items-center justify-between gap-[30px] 5xl:gap-[40px]">
+                  <ul className="flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                     <Link href="#gallery">
-                    <li className="text-lg font-semibold text-black">
+                    <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
                       Gallery
                     </li>
                     </Link>
-                    <Link href="#contact"><li className="text-lg font-semibold text-black">
+                    <Link href="#contact"><li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
                       Contact Us
                     </li></Link>
                   </ul>
@@ -247,6 +241,7 @@ export function NavHeader() {
                         alt="book now"
                         width={205}
                         height={50}
+                        className="w-[180px] 5xl:w-[205px] h-[50px]"
                       />
                     </Link>
                   </div>
@@ -260,7 +255,7 @@ export function NavHeader() {
 
         {/* small device start  */}
 
-        <div className="block md:hidden">
+        <div className="block xl:hidden">
           <div
             id="hideOnScroll"
             className={`block md:hidden pt-1 bg-white ${
