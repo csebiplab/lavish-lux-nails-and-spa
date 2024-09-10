@@ -86,6 +86,34 @@ const Footer = () => {
             </div>
             {/* third div  */}
             <div className="col-span-3">
+              <div className="border-[4px] rounded-[8px] border-primary ">
+                <p className="text-[25px] font-semibold text-white text-center pb-[28px] pt-[8px]">
+                  Open Hours
+                </p>
+                <span>
+                  <svg
+                    className="px-[20px] 5xl:px-[50px]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="auto"
+                    height="24"
+                    viewBox="0 0 424 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z"
+                      fill="#C7A43C"
+                    />
+                  </svg>
+                </span>
+                <p className="text-lg font-medium text-white text-center pb-[23px]">
+                  Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am
+                  ~ 6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
+                </p>
+              </div>
+            </div>
+            
+            {/* fourth div  */}
+            <div className="col-span-3">
               <p className="text-[25px] font-semibold text-white pb-[28px]">
                 Contact Us
               </p>
@@ -116,33 +144,6 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-            </div>
-            {/* fourth div  */}
-            <div className="col-span-3">
-              <div className="border-[4px] rounded-[8px] border-primary ">
-                <p className="text-[25px] font-semibold text-white text-center pb-[28px] pt-[8px]">
-                  Open Hours
-                </p>
-                <span>
-                  <svg
-                    className="px-[20px] 5xl:px-[50px]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="auto"
-                    height="24"
-                    viewBox="0 0 424 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z"
-                      fill="#C7A43C"
-                    />
-                  </svg>
-                </span>
-                <p className="text-lg font-medium text-white text-center pb-[23px]">
-                  Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am
-                  ~ 6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
-                </p>
-              </div>
             </div>
           </div>
         </div>

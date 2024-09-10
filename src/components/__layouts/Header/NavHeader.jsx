@@ -184,11 +184,11 @@ export function NavHeader() {
               </div>
               {/* third div  */}
               <div>
-                <div className="full__section_r_p pb-[6px] 5xl:pb-[8px] flex gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
+                <div className="full__section_r_p pb-[6px] 5xl:pb-[8px] flex justify-end gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
                   <p className="text-sm font-semibold text-secondary ">
                     Follow Us:
                   </p>
-                  <div className="flex gap-[30px]">
+                  <div className="flex  gap-[30px]">
                     <FaFacebook className="h-[22px] w-[22px] text-secondary"/>
                     <FaXTwitter className="h-[22px] w-[22px] text-secondary"/>
                     <FaInstagram className="h-[22px] w-[22px] text-secondary"/>
