@@ -1,15 +1,18 @@
 "use client";
-import { AiOutlineCalendar } from "react-icons/ai";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import TimePicker from "react-time-picker";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import "./BookAnAppointment.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
 import { AiOutlineDown } from "react-icons/ai";
+
+// date picker
+import { AiOutlineCalendar } from "react-icons/ai";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+// hour picker
+import { AiOutlineClockCircle } from "react-icons/ai";
+import TimePicker from "react-time-picker";
 
 const BookAnAppointment = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -81,53 +84,66 @@ const BookAnAppointment = () => {
             {/* day */}
 
             <div className="px-[20px] pt-[20px] relative">
-      <label className="text-lg font-semibold text-dark-50" htmlFor="day">
-        Day
-      </label>
-      <br />
-      <div className="w-full relative mt-[10px] input__bg">
-        {/* Date Input Field */}
-        <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          placeholderText="Select Day"
-          className="py-[10px] px-[20px] outline-none"
-          dateFormat="MM/dd/yyyy"
-        />
-        {/* Calendar Icon Inside Input Field */}
-        <AiOutlineCalendar
-          className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-          onClick={() => document.querySelector(".react-datepicker__input-container input").focus()}
-        />
-      </div>
-      {errors?.day && <span>This field is required</span>}
-    </div>
+              <label
+                className="text-lg font-semibold text-dark-50"
+                htmlFor="day"
+              >
+                Day
+              </label>
+              <br />
+              <div className="w-full relative mt-[10px] input__bg">
+                {/* Date Input Field */}
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date) => setSelectedDate(date)}
+                  placeholderText="Select Day"
+                  className="py-[10px] px-[20px] outline-none"
+                  dateFormat="MM/dd/yyyy"
+                />
+                {/* Calendar Icon Inside Input Field */}
+                <AiOutlineCalendar
+                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                  onClick={() =>
+                    document
+                      .querySelector(".react-datepicker__input-container input")
+                      .focus()
+                  }
+                />
+              </div>
+              {errors?.day && <span>This field is required</span>}
+            </div>
 
             {/* hour */}
 
             <div className="px-[20px] pt-[20px] relative">
-            <label className="text-lg font-semibold text-dark-50" htmlFor="hour">
-              Hour
-            </label>
-            <br />
-            <div className="relative mt-[10px]">
-              <TimePicker
-                onChange={setSelectedTime}
-                value={selectedTime}
-                clockIcon={null} 
-                className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
-                format="HH:mm:ss"
-                disableClock={true} 
-                clearIcon={null} 
-              />
-              <AiOutlineClockCircle
-                className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                onClick={() => document.querySelector(".react-time-picker__wrapper input").focus()}
-              />
+              <label
+                className="text-lg font-semibold text-dark-50"
+                htmlFor="hour"
+              >
+                Hour
+              </label>
+              <br />
+              <div className="relative mt-[10px]">
+                <TimePicker
+                  onChange={setSelectedTime}
+                  value={selectedTime}
+                  clockIcon={null}
+                  className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
+                  format="HH:mm:ss"
+                  disableClock={true}
+                  clearIcon={null}
+                />
+                <AiOutlineClockCircle
+                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                  onClick={() =>
+                    document
+                      .querySelector(".react-time-picker__wrapper input")
+                      .focus()
+                  }
+                />
+              </div>
+              {errors?.hour && <span>This field is required</span>}
             </div>
-            {errors?.hour && <span>This field is required</span>}
-            </div>
-
 
             {/* name */}
             <div className="px-[20px] pt-[20px]">
@@ -195,35 +211,6 @@ const BookAnAppointment = () => {
             </div>
 
             <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-              {/* <Link
-                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
-                rel="nofollow"
-                target="_blank"
-              >
-                <button
-                  type="submit"
-                  className="flex items-center gap-[5px] text-sm font-medium text-white bg-secondary py-[6px] px-[17px] rounded-lg"
-                >
-                  Book Now{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="15"
-                    viewBox="0 0 22 15"
-                    fill="none"
-                  >
-                    <path
-                      d="M21.1984 7.52539C18.2713 7.52539 15.8984 10.4915 15.8984 14.1504"
-                      stroke="white"
-                    />
-                    <path d="M0 7.52539H21.2" stroke="white" />
-                    <path
-                      d="M15.8984 0.900391C15.8984 4.55926 18.2713 7.52533 21.1984 7.52539"
-                      stroke="white"
-                    />
-                  </svg>
-                </button>
-              </Link> */}
               <Link
                 rel="nofollow"
                 target="_blank"
@@ -431,7 +418,7 @@ const BookAnAppointment = () => {
                 className="w-[516px] 2xl:w-[616px] pt-[15px]"
               >
                 {/* first div service */}
-                <div className="">
+                <div className="relative">
                   <label
                     className="text-lg font-semibold text-dark-50"
                     htmlFor="services"
@@ -439,48 +426,92 @@ const BookAnAppointment = () => {
                     Services
                   </label>{" "}
                   <br />
-                  <input
-                    className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
-                    placeholder="Please Select Your Services"
-                    {...register("services", { required: true })}
-                  />
+                  <div className="relative">
+                    <select
+                      className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
+                      {...register("services", { required: true })}
+                    >
+                      <option className="text-xs" value="">
+                        Please Select Your Services
+                      </option>
+                      <option className="text-xs" value="service1">
+                        Service 1
+                      </option>
+                      <option className="text-xs" value="service2">
+                        Service 2
+                      </option>
+                      <option className="text-xs" value="service3">
+                        Service 3
+                      </option>
+                    </select>
+                    <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
+                  </div>
                   {errors.services && <span>This field is required</span>}
                 </div>
                 {/* second div  */}
                 <div className="w-full flex justify-between gap-[15px] pt-[15px]">
                   {/* day */}
-                  <div className="w-1/2 ">
-                    <label
-                      className="text-lg font-semibold text-dark-50"
-                      htmlFor="day"
-                    >
-                      Day
-                    </label>{" "}
-                    <br />
-                    <input
-                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
-                      placeholder="Select Day"
-                      {...register("day", { required: true })}
-                    />
-                    {errors.day && <span>This field is required</span>}
-                  </div>
+                  <div className="w-1/2 relative">
+              <label
+                className="text-lg font-semibold text-dark-50"
+                htmlFor="day"
+              >
+                Day
+              </label>
+              <br />
+              <div className="w-full relative mt-[10px] input__bg">
+                {/* Date Input Field */}
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={(date) => setSelectedDate(date)}
+                  placeholderText="Select Day"
+                  className="py-[10px] pl-[20px] rounded-lg outline-none"
+                  dateFormat="MM/dd/yyyy"
+                />
+                {/* Calendar Icon Inside Input Field */}
+                <AiOutlineCalendar
+                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                  onClick={() =>
+                    document
+                      .querySelector(".react-datepicker__input-container input")
+                      .focus()
+                  }
+                />
+              </div>
+              {errors?.day && <span>This field is required</span>}
+            </div>
                   {/* hour */}
-                  <div className="w-1/2">
-                    <label
-                      className="text-lg font-semibold text-dark-50"
-                      htmlFor="hour"
-                    >
-                      Hour
-                    </label>{" "}
-                    <br />
-                    <input
-                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
-                      placeholder="--:--:--"
-                      {...register("hour", { required: true })}
-                    />
-                    {errors.hour && <span>This field is required</span>}
-                  </div>
+                  <div className="w-1/2 relative">
+              <label
+                className="text-lg font-semibold text-dark-50"
+                htmlFor="hour"
+              >
+                Hour
+              </label>
+              <br />
+              <div className="relative mt-[10px]">
+                <TimePicker
+                  onChange={setSelectedTime}
+                  value={selectedTime}
+                  clockIcon={null}
+                  className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
+                  format="HH:mm:ss"
+                  disableClock={true}
+                  clearIcon={null}
+                />
+                <AiOutlineClockCircle
+                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                  onClick={() =>
+                    document
+                      .querySelector(".react-time-picker__wrapper input")
+                      .focus()
+                  }
+                />
+              </div>
+              {errors?.hour && <span>This field is required</span>}
+            </div>
                 </div>
+
                 {/* third div  */}
                 <div className="w-full flex justify-between gap-[15px] pt-[15px]">
                   {/* name */}
@@ -493,7 +524,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
+                      className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
                       placeholder="Enter Your Name"
                       {...register("name", { required: true })}
                     />
@@ -509,7 +540,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
+                      className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
                       placeholder="Enter Your Number"
                       {...register("phone", { required: true })}
                     />
@@ -526,7 +557,7 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <input
-                    className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
+                    className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
                     placeholder="Enter Your Email"
                     {...register("email", { required: true })}
                   />
@@ -542,7 +573,7 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <textarea
-                    className="mt-[10px] w-full py-[12px] px-[30px] input__bg"
+                    className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
                     placeholder="Enter Your Message"
                     {...register("message", { required: true })}
                   />

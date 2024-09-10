@@ -23,33 +23,7 @@ const Banner = () => {
                 Mississauga
               </h1>
               <div className="pt-[25px]">
-                {/* <Link
-                  rel="nofollow"
-                  target="_blank"
-                  href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
-                >
-                  <button className="flex items-center gap-[6px] text-base font-semibold text-white p-[15px] bg-secondary rounded-lg">
-                    Book Now
-                    <svg
-                      className="pt-[5px]"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="34"
-                      height="22"
-                      viewBox="0 0 34 22"
-                      fill="none"
-                    >
-                      <path
-                        d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
-                        stroke="white"
-                      />
-                      <path d="M0 10.625H34" stroke="white" />
-                      <path
-                        d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
-                        stroke="white"
-                      />
-                    </svg>
-                  </button>
-                </Link> */}
+                
                 <Link
                   rel="nofollow"
                   target="_blank"
@@ -74,33 +48,7 @@ const Banner = () => {
           Lavish Lux Nails & Spa <br />
           Best Nail Salon <br /> in Mississauga
         </h1>
-        {/* <Link
-          rel="nofollow"
-          target="_blank"
-          href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
-        >
-          <button className="flex items-center gap-[6px] text-base font-semibold text-white p-[15px] bg-secondary rounded-lg">
-            Book Now
-            <svg
-              className="pt-[5px]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="22"
-              viewBox="0 0 34 22"
-              fill="none"
-            >
-              <path
-                d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
-                stroke="white"
-              />
-              <path d="M0 10.625H34" stroke="white" />
-              <path
-                d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
-                stroke="white"
-              />
-            </svg>
-          </button>
-        </Link> */}
+        
         <Link
           rel="nofollow"
           target="_blank"
