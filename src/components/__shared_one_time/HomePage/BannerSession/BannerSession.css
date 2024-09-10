@@ -1,0 +1,8 @@
+.bannerSession__bg{
+    background-image: url("/assets/images/banner_session.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 460px;
+}

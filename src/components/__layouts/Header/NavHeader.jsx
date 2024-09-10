@@ -1,6 +1,10 @@
 "use client";
 
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { FaGoogle } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import {
   Drawer,
   IconButton,
@@ -8,6 +12,7 @@ import {
   ListItem,
   Typography,
 } from "@material-tailwind/react";
+import { FaFacebook } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -121,14 +126,14 @@ export function NavHeader() {
           <div className="hidden xl:block main__header py-[6px] 5xl:py-[10px]">
             <div className="flex justify-between items-center gap-[60px]">
               {/* first div  */}
-              <div>
-                <p className="full__section_l_p pb-[6px] 5xl:pb-[8px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
+              <div className="">
+                <p className=" full__section_l_p pb-[6px] 5xl:pb-[8px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
                   {" "}
                   <Image
                     src="/assets/images/canada.png"
                     alt="canada icon"
                     width={27}
-                    height={32}
+                    height={27}
                   />{" "}
                   Best Nail Salon in Mississauga
                 </p>
@@ -145,7 +150,7 @@ export function NavHeader() {
                     fill="#C7A43C"
                   />
                 </svg>
-                <ul className="full__section_l_p pt-[20px] 5xl:pt-[25px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
+                <ul className="full__section_l_p pt-[8px] 5xl:pt-[10px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                   <Link href="#about">
                     <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
                       About
@@ -179,41 +184,17 @@ export function NavHeader() {
               </div>
               {/* third div  */}
               <div>
-                <div className="full__section_r_p pb-[9px] 5xl:pb-[12px] flex items-center gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
-                  <p className="text-sm font-semibold text-secondary">
+                <div className="full__section_r_p pb-[6px] 5xl:pb-[8px] flex gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
+                  <p className="text-sm font-semibold text-secondary ">
                     Follow Us:
                   </p>
-                  <div className="flex items-center gap-[30px]">
-                    <Image
-                      src="/assets/images/f.png"
-                      alt="facebook icon"
-                      width={26}
-                      height={26}
-                    />
-                    <Image
-                      src="/assets/images/x.png"
-                      alt="x icon"
-                      width={26}
-                      height={26}
-                    />
-                    <Image
-                      src="/assets/images/i.png"
-                      alt="instragram icon"
-                      width={26}
-                      height={26}
-                    />
-                    <Image
-                      src="/assets/images/l.png"
-                      alt="linkedin icon"
-                      width={26}
-                      height={26}
-                    />
-                    <Image
-                      src="/assets/images/g.png"
-                      alt="google icon"
-                      width={26}
-                      height={26}
-                    />
+                  <div className="flex gap-[30px]">
+                    <FaFacebook className="h-[22px] w-[22px] text-secondary"/>
+                    <FaXTwitter className="h-[22px] w-[22px] text-secondary"/>
+                    <FaInstagram className="h-[22px] w-[22px] text-secondary"/>
+                    <FaLinkedin className="h-[22px] w-[22px] text-secondary"/>
+                    <FaGoogle className="h-[22px] w-[22px] text-secondary"/>
+                    
                   </div>
                 </div>
                 <svg
@@ -251,17 +232,17 @@ export function NavHeader() {
                     >
                       {
                         phoneNumber ? <Image
-                        src="/assets/button/phone_default.jpg"
+                        src="/assets/button/default_nav_btn.png"
                         alt="book now"
                         width={205}
-                        height={50}
-                        className="w-[180px] 5xl:w-[205px] h-[50px]"
+                        height={40}
+                        className="w-[180px] 5xl:w-[205px] h-[40px]"
                       /> : <Image
-                      src="/assets/button/phone_hover.jpg"
+                      src="/assets/button/hover_nav_btn.png"
                       alt="book now"
                       width={205}
-                      height={50}
-                      className="w-[180px] 5xl:w-[205px] h-[50px]"
+                      height={40}
+                      className="w-[180px] 5xl:w-[205px] h-[40px]"
                     />
                       }
                       
