@@ -94,15 +94,15 @@ const Footer = () => {
                   <Image src="/assets/icons/map.png" alt="map icon" width={21} height={21}/>
                   <Link
                     className="text-white"
-                    href="1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
-                    1100 Burnhamthorpe Rd W Unit 16, <br/> Mississauga, ON L5C 4G4,
+                    1100 Burnhamthorpe Rd W Unit 16, <br className="hidden 5xl:block"/> Mississauga, ON L5C 4G4,
                     Canada
                   </Link>
                 </li>
                 <li className="flex items-center gap-[24px] text-lg font-medium py-[26px]">
                   <Image src="/assets/icons/phone.png" alt="phone icon" width={21} height={21}/>
-                  <Link className="text-white" href="(905) 973-6669">
+                  <Link className="text-white" href="tel : (905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
@@ -110,7 +110,7 @@ const Footer = () => {
                   <Image src="/assets/icons/email.png" alt="email icon" width={21} height={21}/>
                   <Link
                     className="text-white"
-                    href="manager@lavishluxnailsandspa.com"
+                    href="mail : manager@lavishluxnailsandspa.com"
                   >
                     manager@lavishluxnailsandspa.com
                   </Link>
@@ -259,15 +259,15 @@ const Footer = () => {
                   <Image src="/assets/icons/map.png" alt="map icon" width={21} height={21}/>
                   <Link
                     className="text-white"
-                    href="1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
-                    1100 Burnhamthorpe Rd W Unit 16, <br/> Mississauga, ON L5C 4G4,
+                    1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4,
                     Canada
                   </Link>
                 </li>
                 <li className="flex items-center gap-[24px] text-lg font-medium py-[26px]">
                   <Image src="/assets/icons/phone.png" alt="phone icon" width={21} height={21}/>
-                  <Link className="text-white" href="(905) 973-6669">
+                  <Link className="text-white" href="tel : (905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
@@ -275,7 +275,7 @@ const Footer = () => {
                   <Image src="/assets/icons/email.png" alt="email icon" width={21} height={21}/>
                   <Link
                     className="text-white"
-                    href="manager@lavishluxnailsandspa.com"
+                    href="mail : manager@lavishluxnailsandspa.com"
                   >
                     manager@lavishluxnailsandspa.com
                   </Link>
