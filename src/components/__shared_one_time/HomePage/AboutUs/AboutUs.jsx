@@ -7,8 +7,8 @@ const AboutUs = () => {
     return (
         <div id="about">
             <div className='full__section_l_p padding__top padding__bottom  pr-3 md:pr-0'>
-                <div className='grid grid-cols-1 xl:grid-cols-5 gap-[46px]'>
-                    <div className="order-2 xl:order-1 xl:col-span-2 ">
+                <div className='grid grid-cols-1 xl:grid-cols-6 gap-[46px]'>
+                    <div className="order-2 xl:order-1 xl:col-span-3 ">
 
                         <div className='h-full flex flex-col justify-start xl:justify-center items-center'>
                         <div className="flex justify-center md:justify-start items-center">
@@ -20,7 +20,7 @@ const AboutUs = () => {
                     </div>
                     <div className="order-1 xl:order-2 xl:col-span-3">
                         <div>
-                            <Image src="/assets/images/aboutUs.png" alt="about us image" width={440} height={330} className='w-full md:w-[440px] xl:w-[943px] h-[600px]  2xl:h-[650px]'/>
+                            <Image src="/assets/images/aboutUs.png" alt="about us image" width={440} height={330} className='w-full md:w-[440px] xl:w-[943px] h-[450px] xl:h-[500] 2xl:h-[550px] 5xl:h-[650px]'/>
                         </div>
                     </div>
                 </div>

@@ -246,14 +246,25 @@ export function NavHeader() {
                       href="tel:(905) 973-6669"
                       rel="nofollow"
                       target="_blank"
+                      onMouseEnter={()=>setPhoneNumber(false)}
+                      onMouseLeave={()=>setPhoneNumber(true)}
                     >
-                      <Image
-                        src="/assets/buttons/large_d_p_b.png"
+                      {
+                        phoneNumber ? <Image
+                        src="/assets/button/phone_default.jpg"
                         alt="book now"
                         width={205}
                         height={50}
                         className="w-[180px] 5xl:w-[205px] h-[50px]"
-                      />
+                      /> : <Image
+                      src="/assets/button/phone_hover.jpg"
+                      alt="book now"
+                      width={205}
+                      height={50}
+                      className="w-[180px] 5xl:w-[205px] h-[50px]"
+                    />
+                      }
+                      
                     </Link>
                   </div>
                 </div>
