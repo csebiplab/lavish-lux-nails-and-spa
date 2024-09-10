@@ -87,10 +87,10 @@ const OurServices = () => {
           <div className="xl:col-span-3 flex justify-center justify-start pt-[37px] xl:pt-[28px]">
             <Image
               src="/assets/images/our_services.png"
-              alt="about us image"
-              width={440}
-              height={330}
-              className="w-full flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
+              alt="our service image"
+              width={747}
+              height={570}
+              className="w-full h-[570px] flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
             />
           </div>
           {/* large device  */}
