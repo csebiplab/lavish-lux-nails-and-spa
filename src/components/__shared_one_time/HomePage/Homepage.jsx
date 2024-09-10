@@ -8,6 +8,7 @@ import Treatment from './Treatment/Treatment';
 import BookAnAppointment from './BookAnAppointment/BookAnAppointment';
 import Banner from './Banner/Banner';
 import Review from './Review/Review';
+// import BannerSession from './BannerSession/BannerSession';
 
 const Homepage = () => {
     return (
@@ -15,6 +16,10 @@ const Homepage = () => {
             <section>
                 <Banner/>
             </section>
+
+            {/* <section>
+                <BannerSession/>
+            </section> */}
             
             <section>
                 <Treatment/>

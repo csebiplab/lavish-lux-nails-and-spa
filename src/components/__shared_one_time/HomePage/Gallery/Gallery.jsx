@@ -18,6 +18,7 @@ const galleryImages = [
 
 const Gallery = () => {
   const [visibleImages, setVisibleImages] = useState(4);
+  const [loadMore, setLoadMore] = useState(true);
 
   const loadMoreImages = () => {
     setVisibleImages(galleryImages.length);
@@ -99,68 +100,52 @@ const Gallery = () => {
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[480px] h-[326px]"
+            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery2.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[480px] h-[326px]"
+            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery3.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[480px] h-[326px]"
+            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
           />
           <Image
             src="/assets/gallery/gallery4.png"
             alt="gallery image"
             width={464}
             height={326}
-            className="w-[480px] h-[326px]"
+            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
           />
         </div>
         {/* button  */}
         <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-          {/* <Link href="/" rel="nofollow" target="_blank">
-            <button
-              type="submit"
-              className="flex items-center gap-[15px] text-base font-semibold text-white bg-secondary py-[6px] px-[17px] rounded-lg"
-            >
-              Load More
-              <svg
-                className="mt-1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="35"
-                height="22"
-                viewBox="0 0 35 22"
-                fill="none"
-              >
-                <path
-                  d="M34.2992 10.625C29.6121 10.625 25.8125 15.382 25.8125 21.25"
-                  stroke="white"
-                />
-                <path d="M0.351562 10.625H34.2985" stroke="white" />
-                <path
-                  d="M25.8125 0C25.8125 5.868 29.6121 10.6249 34.2992 10.625"
-                  stroke="white"
-                />
-              </svg>
-            </button>
-          </Link> */}
           <button
-            >
+            onMouseEnter={() => setLoadMore(false)}
+            onMouseLeave={() => setLoadMore(true)}
+          >
+            {loadMore ? (
               <Image
-                src="/assets/buttons/large_d_gallery.png"
+                src="/assets/button/load_deault.jpg"
                 alt="book now"
                 width={200}
                 height={50}
               />
-            </button>
-          
+            ) : (
+              <Image
+                src="/assets/button/load_hover.jpg"
+                alt="book now"
+                width={200}
+                height={50}
+              />
+            )}
+          </button>
         </div>
       </div>
       {/* Small device */}
@@ -182,38 +167,34 @@ const Gallery = () => {
         {/* Load More Button */}
         {visibleImages < galleryImages.length && (
           <div className="pt-[15px] flex justify-center">
-            {/* <button
-              onClick={loadMoreImages}
-              className="flex items-center gap-[5px] bg-secondary text-white py-2 px-4 rounded-[10px]"
-            >
-              Load More{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="14"
-                viewBox="0 0 22 14"
-                fill="none"
-              >
-                <path
-                  d="M21.1984 6.81641C18.2713 6.81641 15.8984 9.78252 15.8984 13.4414"
-                  stroke="white"
-                />
-                <path d="M0 6.81641H21.2" stroke="white" />
-                <path
-                  d="M15.8984 0.191406C15.8984 3.85028 18.2713 6.81635 21.1984 6.81641"
-                  stroke="white"
-                />
-              </svg>
-            </button> */}
-            <button
-            onClick={loadMoreImages}
-            >
+            {/* <button onClick={loadMoreImages}>
               <Image
                 src="/assets/buttons/load_more_sm.png"
                 alt="book now"
                 width={129}
                 height={32}
               />
+            </button> */}
+            <button
+              onClick={loadMoreImages}
+              onMouseEnter={() => setLoadMore(false)}
+              onMouseLeave={() => setLoadMore(true)}
+            >
+              {loadMore ? (
+                <Image
+                  src="/assets/button/load_deault.jpg"
+                  alt="book now"
+                  width={200}
+                  height={50}
+                />
+              ) : (
+                <Image
+                  src="/assets/button/load_hover.jpg"
+                  alt="book now"
+                  width={200}
+                  height={50}
+                />
+              )}
             </button>
           </div>
         )}

@@ -58,12 +58,12 @@ const FeelOurLuxurious = () => {
           modules={[Autoplay]}
           loop={true}
           autoplay={{
-            delay: 3000,
+            delay: 0,
             pauseOnMouseEnter: false,
             disableOnInteraction: false,
             stopOnLastSlide: false,
           }}
-          speed={3000}
+          speed={6000}
           allowTouchMove={false}
           breakpoints={breakpoints}
           spaceBetween={12}

@@ -11,7 +11,7 @@
 
 /* large device  */
 .large_banner_bg{
-    background-image: url("/assets/images/large__banner.jpg");
+    background-image: url("/assets/images/large_device_bg_image.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
