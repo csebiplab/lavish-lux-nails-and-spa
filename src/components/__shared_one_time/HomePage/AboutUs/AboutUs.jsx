@@ -20,7 +20,7 @@ const AboutUs = () => {
                     </div>
                     <div className="order-1 xl:order-2 xl:col-span-3">
                         <div>
-                            <Image src="/assets/images/aboutUs.png" alt="about us image" width={440} height={330} className='w-full md:w-[440px] xl:w-[943px] h-[450px] xl:h-[500] 2xl:h-[550px] 5xl:h-[650px]'/>
+                            <Image src="/assets/images/aboutUs.png" alt="about us image" width={440} height={330} className='w-full md:w-[440px] xl:w-[943px] h-[350px] xl:h-[500] 2xl:h-[550px] 5xl:h-[650px]'/>
                         </div>
                     </div>
                 </div>

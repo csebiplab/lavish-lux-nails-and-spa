@@ -30,16 +30,8 @@ const BookAnAppointment = () => {
     <div id="contact">
       {/* small device  */}
       <div className="block md:hidden">
-        <div className="px-[20px] ">
-          <iframe
-            className="w-full h-[240px]"
-            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d92504.42903421116!2d-79.74413579894721!3d43.569812810480904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2s1100%20Burnhamthorpe%20Rd%20W%20Unit%2016%2C%20Mississauga%2C%20ON%20L5C%204G4%2C%20Canada!3m2!1d43.5698424!2d-79.6617351!5e0!3m2!1sen!2sbd!4v1725532208708!5m2!1sen!2sbd"
-            width="370"
-            height="240"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="px-[20px]">
+          <iframe className="w-full h-[240px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd" width="370" height="240" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px]">
           <h5 className="font-family-secondary text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
@@ -73,9 +65,7 @@ const BookAnAppointment = () => {
                   <option className="text-xs" value="service3">
                     Service 3
                   </option>
-                  {/* Add more options as needed */}
                 </select>
-                {/* Dropdown Icon */}
                 <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
               </div>
               {errors.services && <span>This field is required</span>}
@@ -239,6 +229,7 @@ const BookAnAppointment = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+          <iframe className="w-full h-[240px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd" width="370" height="240" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px] mx-[100px]">
           <h5 className="font-family-secondary text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
@@ -581,36 +572,6 @@ const BookAnAppointment = () => {
                 </div>
 
                 <div className="flex justify-start items-center py-[30px]">
-                  {/* <Link
-                    href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
-                    rel="nofollow"
-                    target="_blank"
-                  >
-                    <button
-                      type="submit"
-                      className="flex items-center gap-[15px] text-sm font-medium text-white bg-secondary py-[6px] px-[17px] rounded-lg"
-                    >
-                      Book Now{" "}
-                      <svg
-                        className="mt-1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="35"
-                        height="22"
-                        viewBox="0 0 35 22"
-                        fill="none"
-                      >
-                        <path
-                          d="M34.2992 10.625C29.6121 10.625 25.8125 15.382 25.8125 21.25"
-                          stroke="white"
-                        />
-                        <path d="M0.351562 10.625H34.2985" stroke="white" />
-                        <path
-                          d="M25.8125 0C25.8125 5.868 29.6121 10.6249 34.2992 10.625"
-                          stroke="white"
-                        />
-                      </svg>
-                    </button>
-                  </Link> */}
                   <Link
                     rel="nofollow"
                     target="_blank"
@@ -627,15 +588,7 @@ const BookAnAppointment = () => {
               </form>
             </div>
             <div className="col-span-1 flex items-center justify-end -ml-[220px]">
-              <iframe
-                className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]"
-                src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d92504.42903421116!2d-79.74413579894721!3d43.569812810480904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2s1100%20Burnhamthorpe%20Rd%20W%20Unit%2016%2C%20Mississauga%2C%20ON%20L5C%204G4%2C%20Canada!3m2!1d43.5698424!2d-79.6617351!5e0!3m2!1sen!2sbd!4v1725532208708!5m2!1sen!2sbd"
-                width="868"
-                height="470"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <iframe className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd" width="868" height="470" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
