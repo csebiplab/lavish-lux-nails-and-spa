@@ -41,35 +41,44 @@ const BookAnAppointment = () => {
             {/* services */}
 
             <div className="relative px-[20px]">
-              <label
-                className="text-lg font-semibold text-dark-50"
-                htmlFor="services"
-              >
-                Services
-              </label>{" "}
-              <br />
-              <div className="relative">
-                <select
-                  className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
-                  {...register("services", { required: true })}
-                >
-                  <option className="text-xs" value="">
-                    Please Select Your Services
-                  </option>
-                  <option className="text-xs" value="service1">
-                    Service 1
-                  </option>
-                  <option className="text-xs" value="service2">
-                    Service 2
-                  </option>
-                  <option className="text-xs" value="service3">
-                    Service 3
-                  </option>
-                </select>
-                <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
-              </div>
-              {errors.services && <span>This field is required</span>}
-            </div>
+                  <label
+                    className="text-lg font-semibold text-dark-50"
+                    htmlFor="services"
+                  >
+                    Services
+                  </label>{" "}
+                  <br />
+                  <div className="relative">
+                    <select
+                      className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
+                      {...register("services", { required: true })}
+                    >
+                      <option className="text-xs" value="">
+                        Please Select Your Services
+                      </option>
+                      <option className="text-xs" value="service1">
+                        Pedicure
+                      </option>
+                      <option className="text-xs" value="service2">
+                       Artificial Nails
+                      </option>
+                      <option className="text-xs" value="service3">
+                       Additional Services
+                      </option>
+                      <option className="text-xs" value="service4">
+                       Manicure
+                      </option>
+                      <option  className="text-xs" value="service5">
+                       Waxing
+                      </option>
+                      <option className="text-xs" value="service6">
+                        Design
+                      </option>
+                    </select>
+                    <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
+                  </div>
+                  {errors.services && <span>This field is required</span>}
+                </div>
 
             {/* day */}
 
@@ -426,19 +435,30 @@ const BookAnAppointment = () => {
                         Please Select Your Services
                       </option>
                       <option className="text-xs" value="service1">
-                        Service 1
+                        Pedicure
                       </option>
                       <option className="text-xs" value="service2">
-                        Service 2
+                       Artificial Nails
                       </option>
                       <option className="text-xs" value="service3">
-                        Service 3
+                       Additional Services
+                      </option>
+                      <option className="text-xs" value="service4">
+                       Manicure
+                      </option>
+                      <option  className="text-xs" value="service5">
+                       Waxing
+                      </option>
+                      <option className="text-xs" value="service6">
+                        Design
                       </option>
                     </select>
                     <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
                   </div>
                   {errors.services && <span>This field is required</span>}
                 </div>
+
+                
                 {/* second div  */}
                 <div className="w-full flex justify-between gap-[15px] pt-[15px]">
                   {/* day */}

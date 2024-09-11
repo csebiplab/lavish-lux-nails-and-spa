@@ -1,10 +1,8 @@
 "use client";
 
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { FaGoogle } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { AiFillTikTok } from "react-icons/ai";
 import {
   Drawer,
   IconButton,
@@ -189,11 +187,12 @@ export function NavHeader() {
                     Follow Us:
                   </p>
                   <div className="flex  gap-[30px]">
-                    <FaFacebook className="h-[22px] w-[22px] text-secondary"/>
-                    <FaXTwitter className="h-[22px] w-[22px] text-secondary"/>
-                    <FaInstagram className="h-[22px] w-[22px] text-secondary"/>
-                    <FaLinkedin className="h-[22px] w-[22px] text-secondary"/>
-                    <FaGoogle className="h-[22px] w-[22px] text-secondary"/>
+
+                    <Link rel="nofollow" target="_blank" href="https://www.facebook.com/profile.php?id=61559301724341"><FaFacebook className="h-[22px] w-[22px] text-secondary"/></Link>
+
+                    <Link rel="nofollow" target="_blank" href="https://www.tiktok.com/@lavishluxnailsspa"><AiFillTikTok className="h-[22px] w-[22px] text-secondary"/></Link>
+
+                    <Link rel="nofollow" target="_blank" href="https://www.instagram.com/lavishluxnailspa_sauga/"><FaInstagram className="h-[22px] w-[22px] text-secondary"/></Link>
                     
                   </div>
                 </div>
