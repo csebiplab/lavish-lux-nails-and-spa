@@ -15,6 +15,7 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import TimePicker from "react-time-picker";
 
 const BookAnAppointment = () => {
+  const [open, setOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const {
@@ -31,7 +32,15 @@ const BookAnAppointment = () => {
       {/* small device  */}
       <div className="block md:hidden">
         <div className="px-[20px]">
-          <iframe className="w-full h-[240px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd" width="370" height="240" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            className="w-full h-[240px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
+            width="370"
+            height="240"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px]">
           <h5 className="font-family-secondary text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
@@ -41,44 +50,50 @@ const BookAnAppointment = () => {
             {/* services */}
 
             <div className="relative px-[20px]">
-                  <label
-                    className="text-lg font-semibold text-dark-50"
-                    htmlFor="services"
+              <label
+                className="text-lg font-semibold text-dark-50"
+                htmlFor="services"
+              >
+                Services
+              </label>{" "}
+              <br />
+              <div className="relative">
+                <select
+                  className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
+                  {...register("services", { required: true })}
+                >
+                  <option className="text-xs" value="">
+                    Please Select Your Services
+                  </option>
+                  <option
+                    className="text-xs !hover:bg-red-500"
+                    value="service1"
                   >
-                    Services
-                  </label>{" "}
-                  <br />
-                  <div className="relative">
-                    <select
-                      className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
-                      {...register("services", { required: true })}
-                    >
-                      <option className="text-xs" value="">
-                        Please Select Your Services
-                      </option>
-                      <option className="text-xs" value="service1">
-                        Pedicure
-                      </option>
-                      <option className="text-xs" value="service2">
-                       Artificial Nails
-                      </option>
-                      <option className="text-xs" value="service3">
-                       Additional Services
-                      </option>
-                      <option className="text-xs" value="service4">
-                       Manicure
-                      </option>
-                      <option  className="text-xs" value="service5">
-                       Waxing
-                      </option>
-                      <option className="text-xs" value="service6">
-                        Design
-                      </option>
-                    </select>
-                    <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
-                  </div>
-                  {errors.services && <span>This field is required</span>}
-                </div>
+                    Pedicure
+                  </option>
+                  <option className="text-xs" value="service2">
+                    Artificial Nails
+                  </option>
+                  <option className="text-xs" value="service3">
+                    Additional Services
+                  </option>
+                  <option className="text-xs" value="service4">
+                    Manicure
+                  </option>
+                  <option className="text-xs" value="service5">
+                    Waxing
+                  </option>
+                  <option className="text-xs" value="service6">
+                    Design
+                  </option>
+                </select>
+                
+                <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
+              </div>
+              {errors.services && <span>This field is required</span>}
+            </div>
+
+            
 
             {/* day */}
 
@@ -238,7 +253,15 @@ const BookAnAppointment = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <iframe className="w-full h-[240px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd" width="370" height="240" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            className="w-full h-[240px]"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
+            width="370"
+            height="240"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px] mx-[100px]">
           <h5 className="font-family-secondary text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
@@ -428,6 +451,9 @@ const BookAnAppointment = () => {
                   <br />
                   <div className="relative">
                     <select
+                      onfocus="this.size=7;"
+                      onblur="this.size=0;"
+                      onchange="this.size=1; this.blur()"
                       className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
                       {...register("services", { required: true })}
                     >
@@ -438,16 +464,16 @@ const BookAnAppointment = () => {
                         Pedicure
                       </option>
                       <option className="text-xs" value="service2">
-                       Artificial Nails
+                        Artificial Nails
                       </option>
                       <option className="text-xs" value="service3">
-                       Additional Services
+                        Additional Services
                       </option>
                       <option className="text-xs" value="service4">
-                       Manicure
+                        Manicure
                       </option>
-                      <option  className="text-xs" value="service5">
-                       Waxing
+                      <option className="text-xs" value="service5">
+                        Waxing
                       </option>
                       <option className="text-xs" value="service6">
                         Design
@@ -458,69 +484,70 @@ const BookAnAppointment = () => {
                   {errors.services && <span>This field is required</span>}
                 </div>
 
-                
                 {/* second div  */}
                 <div className="w-full flex justify-between gap-[15px] pt-[15px]">
                   {/* day */}
                   <div className="w-1/2 relative">
-              <label
-                className="text-lg font-semibold text-dark-50"
-                htmlFor="day"
-              >
-                Day
-              </label>
-              <br />
-              <div className="w-full relative mt-[10px] input__bg">
-                {/* Date Input Field */}
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date) => setSelectedDate(date)}
-                  placeholderText="Select Day"
-                  className="py-[10px] pl-[20px] rounded-lg outline-none"
-                  dateFormat="MM/dd/yyyy"
-                />
-                {/* Calendar Icon Inside Input Field */}
-                <AiOutlineCalendar
-                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                  onClick={() =>
-                    document
-                      .querySelector(".react-datepicker__input-container input")
-                      .focus()
-                  }
-                />
-              </div>
-              {errors?.day && <span>This field is required</span>}
-            </div>
+                    <label
+                      className="text-lg font-semibold text-dark-50"
+                      htmlFor="day"
+                    >
+                      Day
+                    </label>
+                    <br />
+                    <div className="w-full relative mt-[10px] input__bg">
+                      {/* Date Input Field */}
+                      <DatePicker
+                        selected={selectedDate}
+                        onChange={(date) => setSelectedDate(date)}
+                        placeholderText="Select Day"
+                        className="py-[10px] pl-[20px] rounded-lg outline-none"
+                        dateFormat="MM/dd/yyyy"
+                      />
+                      {/* Calendar Icon Inside Input Field */}
+                      <AiOutlineCalendar
+                        className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                        onClick={() =>
+                          document
+                            .querySelector(
+                              ".react-datepicker__input-container input"
+                            )
+                            .focus()
+                        }
+                      />
+                    </div>
+                    {errors?.day && <span>This field is required</span>}
+                  </div>
                   {/* hour */}
                   <div className="w-1/2 relative">
-              <label
-                className="text-lg font-semibold text-dark-50"
-                htmlFor="hour"
-              >
-                Hour
-              </label>
-              <br />
-              <div className="relative mt-[10px]">
-                <TimePicker
-                  onChange={setSelectedTime}
-                  value={selectedTime}
-                  clockIcon={null}
-                  className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
-                  format="HH:mm:ss"
-                  disableClock={true}
-                  clearIcon={null}
-                />
-                <AiOutlineClockCircle
-                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                  onClick={() =>
-                    document
-                      .querySelector(".react-time-picker__wrapper input")
-                      .focus()
-                  }
-                />
-              </div>
-              {errors?.hour && <span>This field is required</span>}
-            </div>
+                    <label
+                      className="text-lg font-semibold text-dark-50"
+                      htmlFor="hour"
+                    >
+                      Hour
+                    </label>
+                    <br />
+                    <div className="relative mt-[10px]">
+                      <TimePicker
+                        onChange={setSelectedTime}
+                        value={selectedTime}
+                        clockIcon={null}
+                        className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
+                        format="HH:mm:ss"
+                        disableClock={true}
+                        clearIcon={null}
+                      />
+                      <AiOutlineClockCircle
+                        className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                        onClick={() =>
+                          document
+                            .querySelector(".react-time-picker__wrapper input")
+                            .focus()
+                        }
+                      />
+                    </div>
+                    {errors?.hour && <span>This field is required</span>}
+                  </div>
                 </div>
 
                 {/* third div  */}
@@ -608,7 +635,15 @@ const BookAnAppointment = () => {
               </form>
             </div>
             <div className="col-span-1 flex items-center justify-end -ml-[220px]">
-              <iframe className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd" width="868" height="470" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
+                width="868"
+                height="470"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>

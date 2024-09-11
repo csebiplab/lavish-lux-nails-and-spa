@@ -90,7 +90,7 @@ const OurServices = () => {
               alt="our service image"
               width={747}
               height={570}
-              className="w-full xl:h-[640px] 5xl:h-[660px] flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
+              className="w-full xl:h-[580px] 5xl:h-[660px] flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
             />
           </div>
           {/* large device  */}

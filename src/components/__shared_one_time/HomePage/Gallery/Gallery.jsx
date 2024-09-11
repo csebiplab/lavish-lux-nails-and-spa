@@ -14,7 +14,11 @@ const galleryImages = [
   "/assets/gallery/gallery6.png",
   "/assets/gallery/gallery7.png",
   "/assets/gallery/gallery8.png",
+  "/assets/gallery/gallery9.png",
+  "/assets/gallery/gallery10.png",
+  "/assets/gallery/gallery11.png",
 ];
+
 
 const Gallery = () => {
   const [visibleImages, setVisibleImages] = useState(4);
@@ -94,7 +98,7 @@ const Gallery = () => {
           </div>
         </div>
         {/* second div  */}
-        <div className="flex -mt-3">
+        <div className=" flex -mt-3">
           <Image
             src="/assets/gallery/gallery1.png"
             alt="gallery image"
