@@ -6,7 +6,7 @@
   @apply text-dark;
 } */
 body {
-  @apply font-lucida bg-[#FFF3FC] overflow-x-hidden;
+  @apply font-lucida bg-[#FFF9E7] overflow-x-hidden;
 }
 
 .font-family-primary {
@@ -142,3 +142,5 @@ img {
     margin: 0 auto;
   }
 }
+
+
