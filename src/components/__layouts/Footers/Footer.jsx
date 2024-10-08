@@ -5,12 +5,68 @@ import Image from "next/image";
 
 import "./footer.css";
 
+const servicesData = [
+  {
+    id : 1,
+    service : "Manicure",
+    img : "/assets/lavish/footer_icon/manicure.png"
+  },
+  {
+    id : 2,
+    service : "Pedicure",
+    img : "/assets/lavish/footer_icon/pedicure.png"
+  },
+  {
+    id : 3,
+    service : "Waxing",
+    img : "/assets/lavish/footer_icon/waxing.png"
+  },
+  {
+    id : 4,
+    service : "Design",
+    img : "/assets/lavish/footer_icon/design.png"
+  },
+  {
+    id : 5,
+    service : "Artificial Nails",
+    img : "/assets/lavish/footer_icon/artificialNails.png"
+  },
+  {
+    id : 6,
+    service : "Additional Services",
+    img : "/assets/lavish/footer_icon/additionalServices.png"
+  },
+]
+
+const navigationData = [
+  {
+    id : 1,
+    navigation : "Blogs"
+  },
+  {
+    id : 2,
+    navigation : "Contact Us"
+  },
+  {
+    id : 3,
+    navigation : "Testimonial"
+  },
+  {
+    id : 4,
+    navigation : "Gallery"
+  },
+  {
+    id : 5,
+    navigation : "Sitemap"
+  },
+]
+
 const Footer = () => {
   return (
     <footer className="">
       {/* large device  */}
       <div className="hidden xl:block">
-        <div className="footer__bg container py-[100px]">
+        <div className="footer__bg container py-[20px] 5xl:py-[24px]">
           <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
             <span>
               <svg
@@ -32,7 +88,7 @@ const Footer = () => {
               alt="footer logo"
               width={401}
               height={113}
-              className="w-[401px] h-[113px] mx-auto pb-[22px]"
+              className="w-full mx-auto pb-[12px] 5xl:pb-[15px]"
             />
             <span>
               <svg
@@ -50,44 +106,47 @@ const Footer = () => {
               </svg>
             </span>
           </div>
-          <p className="text-lg font-normal text-white text-center pb-[55px]">
+          <p className="text-base 5xl:text-lg font-normal text-white text-center pb-[25px] 5xl:pb-[35px]">
             Find the best nail salon in Mississauga for impeccable manicures &
             pedicures. Expert service & stunning results await! Book now.
           </p>
           <div className="grid grid-cols-10 gap-10 5xl:gap-[54px]">
             {/* first div  */}
             <div className="col-span-2">
-              <p className="text-[25px] font-semibold text-white pb-[28px]">
-                Navigation
-              </p>
-              <ul className="text-white">
-                <li className="text-lg font-medium">Blogs</li>
-                <li className="text-lg font-medium py-[26px]">Contact Us</li>
-                <li className="text-lg font-medium">Testimonial</li>
-                <li className="text-lg font-medium py-[26px]">Gallery</li>
-                <li className="text-lg font-medium">Sitemap</li>
-              </ul>
-            </div>
-            {/* second div  */}
-            <div className="col-span-2">
-              <p className="text-[25px] font-semibold text-white pb-[28px]">
+              <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Ours Services
               </p>
-              <ul className="text-white">
-                <li className="text-lg font-medium">Manicure</li>
-                <li className="text-lg font-medium py-[26px]">Pedicure</li>
-                <li className="text-lg font-medium">Waxing</li>
-                <li className="text-lg font-medium py-[26px]">Design</li>
-                <li className="text-lg font-medium">Artificial Nails</li>
-                <li className="text-lg font-medium pt-[26px]">
-                  Additional Services
-                </li>
-              </ul>
+              <div className="text-white">
+                {
+                  servicesData?.map((data)=>{
+                    return <ul key={data?.id}>
+                      <li className="flex items-center gap-[6px] leading-normal py-[10px] 5xl:py-[13px] text-base 5xl:text-lg text-white font-medium"><Image src={data?.img} alt={data?.service} width={21} height={21}/> {data?.service}</li>
+                    </ul>
+                  })
+                }
+              </div>
+            </div>
+
+            {/* second div  */}
+            
+            <div className="col-span-2">
+              <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
+                Navigation
+              </p>
+              <div>
+                {
+                  navigationData?.map((data)=>{
+                    return <ul key={data?.id}>
+                        <li className="text-base 5xl:text-lg text-white font-medium leading-normal py-[10px] 5xl:py-[13px]">{data?.navigation}</li>
+                    </ul>
+                  })
+                }
+              </div>
             </div>
             {/* third div  */}
             <div className="col-span-3">
               <div className="border-[4px] rounded-[8px] border-primary ">
-                <p className="text-[25px] font-semibold text-white text-center pb-[28px] pt-[8px]">
+                <p className="text-[22px] 5xl:text-[25px] font-semibold text-white text-center pb-[18px] 5xl:pb-[28px] pt-[8px]">
                   Open Hours
                 </p>
                 <span>
@@ -105,7 +164,7 @@ const Footer = () => {
                     />
                   </svg>
                 </span>
-                <p className="text-lg font-medium text-white text-center pb-[23px]">
+                <p className="text-base 5xl:text-lg font-medium leading-normal text-white text-center pb-[18px] 5xl:pb-[23px]">
                   Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am
                   ~ 6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
                 </p>
@@ -114,11 +173,11 @@ const Footer = () => {
             
             {/* fourth div  */}
             <div className="col-span-3">
-              <p className="text-[25px] font-semibold text-white pb-[28px]">
+              <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Contact Us
               </p>
               <ul>
-                <li className="flex items-center gap-[24px] text-lg font-medium">
+                <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal">
                   <Image src="/assets/icons/map.png" alt="map icon" width={21} height={21}/>
                   <Link
                     className="text-white"
@@ -128,13 +187,13 @@ const Footer = () => {
                     Canada
                   </Link>
                 </li>
-                <li className="flex items-center gap-[24px] text-lg font-medium py-[26px]">
+                <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal py-[20px] 5xl:py-[26px]">
                   <Image src="/assets/icons/phone.png" alt="phone icon" width={21} height={21}/>
                   <Link className="text-white" href="tel : (905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
-                <li className="flex items-center gap-[24px] text-lg font-medium">
+                <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal">
                   <Image src="/assets/icons/email.png" alt="email icon" width={21} height={21}/>
                   <Link
                     className="text-white"
@@ -313,7 +372,7 @@ const Footer = () => {
             </div>
         </div>
         {/* footer bottom  */}
-        <div className="bg-primary py-[17px] container flex justify-between items-center">
+        <div className="bg-primary py-[9px] container flex justify-between items-center">
           <div className="flex items-center gap-[15px]">
             <p className="text-base font-semibold text-white">
               WEBSITE DESIGN AND SEO BY :-
