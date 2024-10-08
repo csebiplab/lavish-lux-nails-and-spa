@@ -4,25 +4,15 @@ import Services from './Services/Services';
 import FeelOurLuxurious from './FeelOurLuxurious/FeelOurLuxurious';
 import OurServices from './OurServices/OurServices';
 import Gallery from './Gallery/Gallery';
-import Treatment from './Treatment/Treatment';
 import BookAnAppointment from './BookAnAppointment/BookAnAppointment';
-import Banner from './Banner/Banner';
 import Review from './Review/Review';
-// import BannerSession from './BannerSession/BannerSession';
+import BannerSession from './BannerSession/BannerSession';
 
 const Homepage = () => {
     return (
         <div className="custom-container">
             <section>
-                <Banner/>
-            </section>
-
-            {/* <section>
                 <BannerSession/>
-            </section> */}
-            
-            <section>
-                <Treatment/>
             </section>
 
             <section>

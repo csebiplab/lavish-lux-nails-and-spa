@@ -22,7 +22,7 @@ export default async function DashboardLayout({ children }) {
         <html>
             {/* <body className={ubuntu.className}> */}
             <body>
-                <ThemeProvider attribute="class" disableTransitionOnChange>
+                <ThemeProvider attribute="class" disableTransitiononChange>
                     <div className="flex flex-row p-3 gap-3 h-screen">
                         <aside
                             className="max-h-screen w-60 p-5 bg-gray-3 border border-gray-2  

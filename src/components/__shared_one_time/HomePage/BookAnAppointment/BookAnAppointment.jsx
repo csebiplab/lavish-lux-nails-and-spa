@@ -37,9 +37,9 @@ const BookAnAppointment = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
             width="370"
             height="240"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px]">
@@ -258,9 +258,9 @@ const BookAnAppointment = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
             width="370"
             height="240"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px] mx-[100px]">
@@ -451,9 +451,9 @@ const BookAnAppointment = () => {
                   <br />
                   <div className="relative">
                     <select
-                      onfocus="this.size=7;"
-                      onblur="this.size=0;"
-                      onchange="this.size=1; this.blur()"
+                      onFocus="this.size=7;"
+                      onBlur="this.size=0;"
+                      onChange="this.size=1; this.blur()"
                       className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
                       {...register("services", { required: true })}
                     >
@@ -640,9 +640,9 @@ const BookAnAppointment = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
                 width="868"
                 height="470"
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
