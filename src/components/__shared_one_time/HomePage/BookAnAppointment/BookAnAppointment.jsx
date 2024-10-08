@@ -431,19 +431,19 @@ const BookAnAppointment = () => {
       {/* large device  */}
       <div className="hidden xl:block">
         <div className="">
-          <div className="grid grid-cols-3 ">
-            <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large">
-              <h5 className="font-family-secondary text-[75px] font-normal text-primary pt-[50px] pb-[15px]">
+          <div className="grid grid-cols-3">
+            <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]">
+              <h5 className="font-family-secondary text-[42px] xl:text-[55px] 5xl:text-[75px] font-normal text-white leading-normal">
                 Book An Appointment
               </h5>
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="w-[516px] 2xl:w-[616px] pt-[15px]"
+                className="w-[516px] 2xl:w-[616px]"
               >
                 {/* first div service */}
                 <div className="relative">
                   <label
-                    className="text-lg font-semibold text-dark-50"
+                    className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                     htmlFor="services"
                   >
                     Services
@@ -485,11 +485,11 @@ const BookAnAppointment = () => {
                 </div>
 
                 {/* second div  */}
-                <div className="w-full flex justify-between gap-[15px] pt-[15px]">
+                <div className="w-full flex justify-between gap-[15px] pt-[10px] 5xl:pt-[15px]">
                   {/* day */}
                   <div className="w-1/2 relative">
                     <label
-                      className="text-lg font-semibold text-dark-50"
+                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                       htmlFor="day"
                     >
                       Day
@@ -521,7 +521,7 @@ const BookAnAppointment = () => {
                   {/* hour */}
                   <div className="w-1/2 relative">
                     <label
-                      className="text-lg font-semibold text-dark-50"
+                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                       htmlFor="hour"
                     >
                       Hour
@@ -551,18 +551,18 @@ const BookAnAppointment = () => {
                 </div>
 
                 {/* third div  */}
-                <div className="w-full flex justify-between gap-[15px] pt-[15px]">
+                <div className="w-full flex justify-between gap-[15px]  pt-[10px] 5xl:pt-[15px]">
                   {/* name */}
                   <div className="w-1/2 ">
                     <label
-                      className="text-lg font-semibold text-dark-50"
+                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                       htmlFor="name"
                     >
                       Name
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
+                      className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                       placeholder="Enter Your Name"
                       {...register("name", { required: true })}
                     />
@@ -571,14 +571,14 @@ const BookAnAppointment = () => {
                   {/* phone */}
                   <div className="w-1/2">
                     <label
-                      className="text-lg font-semibold text-dark-50"
+                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                       htmlFor="phone"
                     >
                       Phone
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
+                      className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                       placeholder="Enter Your Number"
                       {...register("phone", { required: true })}
                     />
@@ -586,39 +586,39 @@ const BookAnAppointment = () => {
                   </div>
                 </div>
                 {/* email */}
-                <div className="pt-[15px]">
+                <div className=" pt-[10px] 5xl:pt-[15px]">
                   <label
-                    className="text-lg font-semibold text-dark-50"
+                    className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                     htmlFor="email"
                   >
                     Email
                   </label>{" "}
                   <br />
                   <input
-                    className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
+                    className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                     placeholder="Enter Your Email"
                     {...register("email", { required: true })}
                   />
                   {errors.email && <span>This field is required</span>}
                 </div>
                 {/* message */}
-                <div className="pt-[15px]">
+                <div className=" pt-[10px] 5xl:pt-[15px]">
                   <label
-                    className="text-lg font-semibold text-dark-50"
+                    className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                     htmlFor="mesage"
                   >
                     Message
                   </label>{" "}
                   <br />
                   <textarea
-                    className="mt-[10px] w-full py-[12px] px-[20px] input__bg"
+                    className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
                     placeholder="Enter Your Message"
                     {...register("message", { required: true })}
                   />
                   {errors.message && <span>This field is required</span>}
                 </div>
 
-                <div className="flex justify-start items-center py-[30px]">
+                <div className="flex justify-start items-center pt-[25px] 5xl:pt-[35px]">
                   <Link
                     rel="nofollow"
                     target="_blank"
@@ -634,6 +634,7 @@ const BookAnAppointment = () => {
                 </div>
               </form>
             </div>
+
             <div className="col-span-1 flex items-center justify-end -ml-[220px]">
               <iframe
                 className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]"

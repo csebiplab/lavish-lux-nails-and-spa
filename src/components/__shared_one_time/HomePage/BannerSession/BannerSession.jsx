@@ -5,7 +5,8 @@ import Image from "next/image";
 const BannerSession = () => {
   return (
     <div>
-      <div className="bannerSession__bg container">
+      {/* large device  */}
+      <div className="hidden md:block bannerSession__bg container">
         <div className="relative h-full flex flex-col items-center justify-center">
           <Image
             src="/assets/lavish/images/hero__content.png"
@@ -15,14 +16,18 @@ const BannerSession = () => {
             className="w-full"
           />
           <div className="absolute top-[100px] 5xl:top-[160px] left-[100px]">
-            <h1 className="font-family-secondary text-[75px] font-normal text-white leading-[75px]">
+            <h1 className="font-family-secondary text-[42px] xl:text-[55px] 5xl:text-[75px] font-normal text-white leading-[42px] xl:leading-[55px] 5xl:leading-[75px]">
               Lavish Lux Nails & Spa <br />{" "}
-              <span className="text-[45px]">
+              <span className="text-[28px] xl:text-[36px] 5xl:text-[45px]">
                 Best Nail Salon in Mississauga
               </span>
             </h1>
           </div>
         </div>
+      </div>
+      {/* medium device  */}
+      <div className="block md:hidden">
+
       </div>
     </div>
   );
