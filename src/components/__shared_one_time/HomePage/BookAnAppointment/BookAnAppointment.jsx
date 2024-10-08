@@ -433,7 +433,7 @@ const BookAnAppointment = () => {
         <div className="">
           <div className="grid grid-cols-3">
             <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]">
-              <h5 className="font-family-secondary text-[60px] 5xl:text-[75px] font-normal text-white leading-normal">
+              <h5 className="font-family-secondary text-[42px] xl:text-[55px] 5xl:text-[75px] font-normal text-white leading-normal">
                 Book An Appointment
               </h5>
               <form
