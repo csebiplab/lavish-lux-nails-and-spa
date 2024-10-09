@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className="full__section_l_p padding__top padding__bottom  pr-3 md:pr-0">
         <div className="grid grid-cols-1 xl:grid-cols-6 5xl:grid-cols-7 gap-[15px]">
           <div className="order-2 xl:order-1 xl:col-span-3 ">
-            <div className="flex flex-col justify-start xl:justify-center items-center md:items-start">
+            <div className="h-full flex flex-col justify-start 5xl:justify-center items-center md:items-start">
               <div className="">
                 <HeadingIcon text={headingIconText.aboutUs__headingIconText} />
               </div>
@@ -34,7 +34,7 @@ const AboutUs = () => {
                 alt="about us image"
                 width={822}
                 height={566}
-                className="w-full "
+                className="w-full"
               />
             </div>
           </div>

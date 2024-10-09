@@ -128,9 +128,8 @@ export function NavHeader() {
               <div className="">
                 <p className=" full__section_l_p pb-[6px] 5xl:pb-[8px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
                   {" "}
-                  <FaCanadianMapleLeaf className="w-[27px] h-[27px]"/>
+                  <FaCanadianMapleLeaf className="w-[27px] h-[27px]" />
                   Best Nail Salon in Mississauga
-                  
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,13 +183,29 @@ export function NavHeader() {
                     Follow Us:
                   </p>
                   <div className="flex  gap-[30px]">
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href="https://www.facebook.com/profile.php?id=61559301724341"
+                    >
+                      <FaFacebook className="h-[22px] w-[22px] text-secondary" />
+                    </Link>
 
-                    <Link rel="nofollow" target="_blank" href="https://www.facebook.com/profile.php?id=61559301724341"><FaFacebook className="h-[22px] w-[22px] text-secondary"/></Link>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href="https://www.tiktok.com/@lavishluxnailsspa"
+                    >
+                      <AiFillTikTok className="h-[22px] w-[22px] text-secondary" />
+                    </Link>
 
-                    <Link rel="nofollow" target="_blank" href="https://www.tiktok.com/@lavishluxnailsspa"><AiFillTikTok className="h-[22px] w-[22px] text-secondary"/></Link>
-
-                    <Link rel="nofollow" target="_blank" href="https://www.instagram.com/lavishluxnailspa_sauga/"><FaInstagram className="h-[22px] w-[22px] text-secondary"/></Link>
-                    
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href="https://www.instagram.com/lavishluxnailspa_sauga/"
+                    >
+                      <FaInstagram className="h-[22px] w-[22px] text-secondary" />
+                    </Link>
                   </div>
                 </div>
                 <svg
@@ -218,30 +233,22 @@ export function NavHeader() {
                       </li>
                     </Link>
                   </ul>
-                  <div>
+                  <div className="">
                     <Link
                       href="tel:(905) 973-6669"
                       rel="nofollow"
                       target="_blank"
-                      onMouseEnter={()=>setPhoneNumber(false)}
-                      onMouseLeave={()=>setPhoneNumber(true)}
                     >
-                      {
-                        phoneNumber ? <Image
-                        src="/assets/button/large_default_phone_num.png"
-                        alt="book now"
-                        width={205}
-                        height={40}
-                        className="w-[180px] 5xl:w-[205px] h-[40px]"
-                      /> : <Image
-                      src="/assets/button/hover_nav_btn.png"
-                      alt="book now"
-                      width={205}
-                      height={40}
-                      className="w-[180px] 5xl:w-[205px] h-[40px]"
-                    />
-                      }
-                      
+                      <button className="bg-secondary hover:bg-primary text-base 5xl:text-lg font-semibold text-white py-[12px] px-[13px] flex items-center gap-[6px] clip-path-custom">
+                        <Image
+                          src="/assets/lavish/icons/nav_phone.png"
+                          alt="book now"
+                          width={24}
+                          height={24}
+                          className="w-[24px] h-[24px]"
+                        />
+                        <span>(905) 973-6669</span>
+                      </button>
                     </Link>
                   </div>
                 </div>
@@ -306,7 +313,7 @@ export function NavHeader() {
                 rel="nofollow"
                 target="_blank"
                 onMouseEnter={() => setPhoneNumber(false)}
-                onMouseLeave={()=> setPhoneNumber(true)}
+                onMouseLeave={() => setPhoneNumber(true)}
               >
                 {phoneNumber ? (
                   <Image

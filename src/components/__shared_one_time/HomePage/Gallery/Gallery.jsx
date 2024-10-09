@@ -7,17 +7,17 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 const galleryImages = [
-  "/assets/gallery/gallery1.png",
-  "/assets/gallery/gallery2.png",
-  "/assets/gallery/gallery3.png",
-  "/assets/gallery/gallery4.png",
-  "/assets/gallery/gallery5.png",
-  "/assets/gallery/gallery6.png",
-  "/assets/gallery/gallery7.png",
-  "/assets/gallery/gallery8.png",
-  "/assets/gallery/gallery9.png",
-  "/assets/gallery/gallery10.png",
-  "/assets/gallery/gallery11.png",
+  "/assets/lavish/gallery/gallery1.png",
+  "/assets/lavish/gallery/gallery2.png",
+  "/assets/lavish/gallery/gallery3.png",
+  "/assets/lavish/gallery/gallery4.png",
+  "/assets/lavish/gallery/gallery5.png",
+  "/assets/lavish/gallery/gallery6.png",
+  "/assets/lavish/gallery/gallery7.png",
+  "/assets/lavish/gallery/gallery8.png",
+  "/assets/lavish/gallery/gallery9.png",
+  "/assets/lavish/gallery/gallery10.png",
+  "/assets/lavish/gallery/gallery11.png",
 ];
 
 
