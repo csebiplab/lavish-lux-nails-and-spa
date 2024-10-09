@@ -27,14 +27,14 @@ const breakpoints = {
 };
 
 const images = [
-  "/assets/services/services1.png",
-  "/assets/services/services2.png",
-  "/assets/services/services3.png",
-  "/assets/services/services4.png",
-  "/assets/services/services5.png",
-  "/assets/services/services6.png",
-  "/assets/services/services7.png",
-  "/assets/services/services8.png",
+  "/assets/lavish/services/service1.png",
+  "/assets/lavish/services/service2.png",
+  "/assets/lavish/services/service3.png",
+  "/assets/lavish/services/service4.png",
+  "/assets/lavish/services/service1.png",
+  "/assets/lavish/services/service2.png",
+  "/assets/lavish/services/service3.png",
+  "/assets/lavish/services/service4.png",
 ];
 
 const FeelOurLuxurious = () => {
@@ -45,11 +45,11 @@ const FeelOurLuxurious = () => {
       </div>
       <div>
         <Image
-          src="/assets/images/feel_our_lavish.jpg"
+          src="/assets/lavish/services/service.png"
           alt="FeelOurLuxurious image"
-          width={432}
-          height={287}
-          className="w-full h-[352px] md:h-[506px] 5xl:h-[682px]"
+          width={1920}
+          height={569}
+          className="w-full"
         />
       </div>
       {/* ==================== swiper slider ================ */}
@@ -78,9 +78,9 @@ const FeelOurLuxurious = () => {
                   <Image
                     src={slideInfo}
                     alt="feel our luxurious image"
-                    width={370}
-                    height={310}
-                    className="w-[370px] h-[310px] md:w-[172px] md:h-[228px] 5xl:w-[335px] 5xl:h-[443px]"
+                    width={294}
+                    height={350}
+                    className="w-full"
                   />
                 </div>
               </div>

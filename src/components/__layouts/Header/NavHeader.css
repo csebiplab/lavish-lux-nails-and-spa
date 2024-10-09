@@ -8,4 +8,6 @@
     background-color: #A0153E;
     border-radius: 12px;
 }
-
+.clip-path-custom {
+    clip-path: polygon(5% 0%, 95% 0%, 108% 50%, 95% 100%, 5% 100%, -8% 50%);
+}

@@ -4,19 +4,20 @@ import { headingIconText } from "@/utils/heading-text";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import "./Gallery.css";
 
 const galleryImages = [
-  "/assets/gallery/gallery1.png",
-  "/assets/gallery/gallery2.png",
-  "/assets/gallery/gallery3.png",
-  "/assets/gallery/gallery4.png",
-  "/assets/gallery/gallery5.png",
-  "/assets/gallery/gallery6.png",
-  "/assets/gallery/gallery7.png",
-  "/assets/gallery/gallery8.png",
-  "/assets/gallery/gallery9.png",
-  "/assets/gallery/gallery10.png",
-  "/assets/gallery/gallery11.png",
+  "/assets/lavish/gallery/gallery1.png",
+  "/assets/lavish/gallery/gallery2.png",
+  "/assets/lavish/gallery/gallery3.png",
+  "/assets/lavish/gallery/gallery4.png",
+  "/assets/lavish/gallery/gallery5.png",
+  "/assets/lavish/gallery/gallery6.png",
+  "/assets/lavish/gallery/gallery7.png",
+  "/assets/lavish/gallery/gallery8.png",
+  "/assets/lavish/gallery/gallery9.png",
+  "/assets/lavish/gallery/gallery10.png",
+  "/assets/lavish/gallery/gallery11.png",
 ];
 
 
@@ -37,62 +38,62 @@ const Gallery = () => {
       <div className="hidden xl:block pt-[25px]">
         <div>
           {/* first div  */}
-          <div className="grid grid-cols-4 gap-[20px]">
+          <div className="grid grid-cols-4 gap-[14px]">
             <div className="col-span-1">
               <Image
-                src="/assets/gallery/gallery11.png"
+                src="/assets/lavish/gallery/gallery1.png"
                 alt="gallery image"
-                width={545}
-                height={660}
-                className="w-full h-[656px] "
+                width={470}
+                height={491}
+                className="w-full"
               />
             </div>
-            <div className="col-span-1 pt-3">
+            <div className="col-span-1 ">
               <Image
-                src="/assets/gallery/gallery10.png"
+                src="/assets/lavish/gallery/gallery2.png"
                 alt="gallery image"
-                width={438}
-                height={326}
-                className="w-full h-[326px] pb-[20px]"
+                width={469}
+                height={238}
+                className="w-full pb-[14px]"
               />
               <Image
-                src="/assets/gallery/gallery7.png"
+                src="/assets/lavish/gallery/gallery5.png"
                 alt="gallery image"
-                width={438}
-                height={326}
-                className="w-full h-[326px] pb-[20px]"
-              />
-            </div>
-            <div className="col-span-1 pt-3">
-              <Image
-                src="/assets/gallery/gallery8.png"
-                alt="gallery image"
-                width={438}
-                height={326}
-                className="w-full h-[326px] pb-[20px]"
-              />
-              <Image
-                src="/assets/gallery/gallery5.png"
-                alt="gallery image"
-                width={438}
-                height={326}
-                className="w-full h-[326px] pb-[20px]"
+                width={469}
+                height={238}
+                className="w-full pb-[14px]"
               />
             </div>
-            <div className="col-span-1 pt-3">
+            <div className="col-span-1">
               <Image
-                src="/assets/gallery/gallery9.png"
+                src="/assets/lavish/gallery/gallery3.png"
                 alt="gallery image"
-                width={438}
-                height={326}
-                className="w-full h-[326px] pb-[20px]"
+                width={469}
+                height={238}
+                className="w-full pb-[14px]"
               />
               <Image
-                src="/assets/gallery/gallery6.png"
+                src="/assets/lavish/gallery/gallery6.png"
                 alt="gallery image"
-                width={438}
-                height={326}
-                className="w-full h-[326px] pb-[20px]"
+                width={469}
+                height={238}
+                className="w-full pb-[14px]"
+              />
+            </div>
+            <div className="col-span-1">
+              <Image
+                src="/assets/lavish/gallery/gallery4.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full pb-[14px]"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery7.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full pb-[14px]"
               />
             </div>
           </div>
@@ -100,37 +101,58 @@ const Gallery = () => {
         {/* second div  */}
         <div className=" flex -mt-3">
           <Image
-            src="/assets/gallery/gallery1.png"
+            src="/assets/lavish/gallery/gallery8.png"
             alt="gallery image"
-            width={464}
-            height={326}
-            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
+            width={469}
+            height={238}
+            className="w-full"
           />
           <Image
-            src="/assets/gallery/gallery2.png"
+            src="/assets/lavish/gallery/gallery9.png"
             alt="gallery image"
-            width={464}
-            height={326}
-            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
+            width={469}
+            height={238}
+            className="w-full"
           />
           <Image
-            src="/assets/gallery/gallery3.png"
+            src="/assets/lavish/gallery/gallery10.png"
             alt="gallery image"
-            width={464}
-            height={326}
-            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
+            width={469}
+            height={238}
+            className="w-full"
           />
           <Image
-            src="/assets/gallery/gallery4.png"
+            src="/assets/lavish/gallery/gallery11.png"
             alt="gallery image"
-            width={464}
-            height={326}
-            className="w-[270px] lg:w-[300px] xl:w-[320px] 2xl:w-[420px] 3xl:w-[440px] 4xl:w-[460px] 5xl:w-[480px] h-[326px]"
+            width={469}
+            height={238}
+            className="w-full"
           />
         </div>
+
         {/* button  */}
-        <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-          <button
+        <div className="flex justify-center items-center pt-[25px] 5xl:pt-[35px]">
+        <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+        <span>Book Now</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="22"
+          viewBox="0 0 34 22"
+          fill="none"
+        >
+          <path
+            d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+            stroke="white"
+          />
+          <path d="M0 10.625H34" stroke="white" />
+          <path
+            d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+            stroke="white"
+          />
+        </svg>
+      </button>
+          {/* <button
             onMouseEnter={() => setLoadMore(false)}
             onMouseLeave={() => setLoadMore(true)}
           >
@@ -149,9 +171,12 @@ const Gallery = () => {
                 height={50}
               />
             )}
-          </button>
+          </button> */}
+          
         </div>
       </div>
+
+
       {/* Small device */}
       <div className="block md:hidden container">
         <div className="pt-[25px]">

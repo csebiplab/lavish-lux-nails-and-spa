@@ -14,3 +14,8 @@
     background: #FFF;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
 }
+
+
+.clip-path-custom {
+    clip-path: polygon(5% 0%, 95% 0%, 108% 50%, 95% 100%, 5% 100%, -8% 50%);
+}

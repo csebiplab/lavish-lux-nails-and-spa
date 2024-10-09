@@ -12,5 +12,14 @@
       height: 450px;
       width: 100%;
     }
-  }
+}
+
+.sm__banner__bg{
+  background-image: url("/assets/lavish/images/banner__sm.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 570px;
+}
   
