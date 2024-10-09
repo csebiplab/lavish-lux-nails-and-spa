@@ -13,6 +13,7 @@ import "react-datepicker/dist/react-datepicker.css";
 // hour picker
 import { AiOutlineClockCircle } from "react-icons/ai";
 import TimePicker from "react-time-picker";
+import BookNow from "@/components/common/Button/BookNow";
 
 const BookAnAppointment = () => {
   const [open, setOpen] = useState(false);
@@ -87,13 +88,11 @@ const BookAnAppointment = () => {
                     Design
                   </option>
                 </select>
-                
+
                 <AiOutlineDown className="absolute top-[60%] right-[20px] transform -translate-y-[50%] pointer-events-none" />
               </div>
               {errors.services && <span>This field is required</span>}
             </div>
-
-            
 
             {/* day */}
 
@@ -230,12 +229,7 @@ const BookAnAppointment = () => {
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <Image
-                  src="/assets/buttons/book_now_book_appointment.png"
-                  alt="book now"
-                  width={129}
-                  height={32}
-                />
+                <BookNow/>
               </Link>
             </div>
           </form>
@@ -624,12 +618,26 @@ const BookAnAppointment = () => {
                     target="_blank"
                     href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                   >
-                    <Image
-                      src="/assets/buttons/large_d_book_appointment.png"
-                      alt="book now"
-                      width={200}
-                      height={50}
-                    />
+                    <button className="bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+                      <span>Book Now</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="34"
+                        height="22"
+                        viewBox="0 0 34 22"
+                        fill="none"
+                      >
+                        <path
+                          d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                          stroke="white"
+                        />
+                        <path d="M0 10.625H34" stroke="white" />
+                        <path
+                          d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                          stroke="white"
+                        />
+                      </svg>
+                    </button>
                   </Link>
                 </div>
               </form>

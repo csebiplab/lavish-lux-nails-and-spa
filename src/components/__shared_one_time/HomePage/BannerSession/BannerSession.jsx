@@ -25,14 +25,24 @@ const BannerSession = () => {
               </span>
             </h1>
             <Link href="tel : (905) 973-6669">
-              <BookNow/>
+              <BookNow />
             </Link>
           </div>
         </div>
       </div>
       {/* medium device  */}
       <div className="block md:hidden">
-
+        <div className="sm__banner__bg container">
+          <div className="h-full flex flex-col justify-center items-start">
+            <h1 className="font-family-secondary text-[42px] font-normal text-white leading-[42px] pb-[20px]">
+              Lavish Lux Nails & Spa <br />{" "}
+              <span className="text-[28px">Best Nail Salon in Mississauga</span>
+            </h1>
+            <Link href="tel : (905) 973-6669">
+              <BookNow />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
