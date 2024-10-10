@@ -44,32 +44,32 @@ const servicesData1 = [
 const ourServices = [
     {
         id: 1,
-        img: "/assets/images/ourServices1.png",
+        img: "/assets/lavish/images/our_service1.png",
         title: "Pedicure",
       },
       {
         id: 2,
-        img: "/assets/images/ourServices2.png",
+        img: "/assets/lavish/images/our_service2.png",
         title: "Artificial Nails",
       },
       {
         id: 3,
-        img: "/assets/images/ourServices3.png",
+        img: "/assets/lavish/images/our_service3.png",
         title: "Additional Services",
       },
       {
         id: 4,
-        img: "/assets/images/ourServices4.png",
+        img: "/assets/lavish/images/our_service4.png",
         title: "Manicure",
       },
       {
         id: 5,
-        img: "/assets/images/ourServices5.png",
+        img: "/assets/lavish/images/our_service5.png",
         title: "Waxing",
       },
       {
         id: 6,
-        img: "/assets/images/ourServices6.png",
+        img: "/assets/lavish/images/our_service6.png",
         title: "Design",
       },
 ]
@@ -86,11 +86,11 @@ const OurServices = () => {
         <div className="grid grid-cols-1 xl:grid-cols-6 gap-10">
           <div className="xl:col-span-3 flex justify-center justify-start pt-[37px] xl:pt-[28px]">
             <Image
-              src="/assets/images/our_services.png"
+              src="/assets/lavish/images/our_services.png"
               alt="our service image"
-              width={747}
-              height={570}
-              className="w-full xl:h-[580px] 5xl:h-[660px] flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
+              width={780}
+              height={686}
+              className="w-full flex justify-start transition delay-300 duration-300 ease-in-out hover:scale-105"
             />
           </div>
           {/* large device  */}
@@ -102,16 +102,16 @@ const OurServices = () => {
                   return (
                     <div
                       key={data?.id}
-                      className="cart__bg flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                      className="cart__bg  flex flex-col items-center justify-center mt-[20px]"
                     >
                       <Image
                         src={data?.img}
                         alt={data?.title}
-                        width={126}
-                        height={126}
-                        className=""
+                        width={113}
+                        height={113}
+                        className="w-full px-[55px] pt-[18px]"
                       />
-                      <p className="font-family-secondary text-2xl font-normal text-black">
+                      <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
                         {data?.title}
                       </p>
                     </div>
@@ -123,16 +123,16 @@ const OurServices = () => {
                   return (
                     <div
                       key={data?.id}
-                      className="cart__bg flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                      className="cart__bg flex flex-col items-center justify-center mt-[20px]"
                     >
                       <Image
                         src={data?.img}
                         alt={data?.title}
-                        width={126}
-                        height={126}
-                        className=""
+                        width={113}
+                        height={113}
+                        className="w-full  px-[55px] pt-[18px]"
                       />
-                      <p className="font-family-secondary text-2xl font-normal text-black">
+                      <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
                         {data?.title}
                       </p>
                     </div>
@@ -195,28 +195,6 @@ const OurServices = () => {
             </div>
             
           </div>
-
-          {/* <div className="block 5xl:hidden flex flex-col items-center">
-            {
-                ourServices?.map((data)=>{
-                    return <div
-                    key={data?.id}
-                    className="cart__bg flex flex-col items-center justify-center gap-[25px] mt-[20px]"
-                  >
-                    <Image
-                      src={data?.img}
-                      alt={data?.title}
-                      width={126}
-                      height={126}
-                      className=""
-                    />
-                    <p className="text-2xl font-normal text-black">
-                      {data?.title}
-                    </p>
-                  </div>
-                })
-            }
-          </div> */}
         </div>
       </div>
     </div>

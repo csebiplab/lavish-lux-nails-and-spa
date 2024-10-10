@@ -41,9 +41,9 @@ const Gallery = () => {
           <div className="grid grid-cols-4 gap-[14px]">
             <div className="col-span-1">
               <Image
-                src="/assets/lavish/gallery/gallery1.png"
+                src="/assets/lavish/gallery/gallery.png"
                 alt="gallery image"
-                width={470}
+                width={469}
                 height={491}
                 className="w-full"
               />
@@ -54,14 +54,14 @@ const Gallery = () => {
                 alt="gallery image"
                 width={469}
                 height={238}
-                className="w-full pb-[14px]"
+                className="w-full pb-[15px]"
               />
               <Image
                 src="/assets/lavish/gallery/gallery5.png"
                 alt="gallery image"
                 width={469}
                 height={238}
-                className="w-full pb-[14px]"
+                className="w-full pb-[15px]"
               />
             </div>
             <div className="col-span-1">
@@ -70,14 +70,14 @@ const Gallery = () => {
                 alt="gallery image"
                 width={469}
                 height={238}
-                className="w-full pb-[14px]"
+                className="w-full pb-[15px]"
               />
               <Image
                 src="/assets/lavish/gallery/gallery6.png"
                 alt="gallery image"
                 width={469}
                 height={238}
-                className="w-full pb-[14px]"
+                className="w-full pb-[15px]"
               />
             </div>
             <div className="col-span-1">
@@ -86,20 +86,20 @@ const Gallery = () => {
                 alt="gallery image"
                 width={469}
                 height={238}
-                className="w-full pb-[14px]"
+                className="w-full pb-[15px]"
               />
               <Image
                 src="/assets/lavish/gallery/gallery7.png"
                 alt="gallery image"
                 width={469}
                 height={238}
-                className="w-full pb-[14px]"
+                className="w-full pb-[15px]"
               />
             </div>
           </div>
         </div>
         {/* second div  */}
-        <div className=" flex -mt-3">
+        <div className="flex -mt-3">
           <Image
             src="/assets/lavish/gallery/gallery8.png"
             alt="gallery image"
