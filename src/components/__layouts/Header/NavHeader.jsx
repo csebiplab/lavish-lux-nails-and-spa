@@ -89,8 +89,6 @@ export function NavHeader() {
   const pathname = usePathname();
   const [openNav, setOpenNav] = React.useState(false);
   const [hideOnScroll, setHideOnScroll] = useState(false);
-  const [bookNow, setBookNow] = useState(true);
-  const [phoneNumber, setPhoneNumber] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -289,47 +287,26 @@ export function NavHeader() {
                 rel="nofollow"
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
-                onMouseEnter={() => setBookNow(false)}
-                onMouseLeave={() => setBookNow(true)}
               >
-                {bookNow ? (
-                  <Image
-                    src="/assets/button/book_default.jpg"
-                    alt="book now"
-                    width={145}
-                    height={32}
-                  />
-                ) : (
-                  <Image
-                    src="/assets/button/book_hover.jpg"
-                    alt="book now"
-                    width={145}
-                    height={32}
-                  />
-                )}
+                <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal pt-[9px] pb-[8px] px-[34px] flex items-center gap-[6px] clip-path-custom">
+                        <span>Book Now</span>
+                      </button>
               </Link>
               <Link
                 href="tel:(905) 973-6669"
                 rel="nofollow"
                 target="_blank"
-                onMouseEnter={() => setPhoneNumber(false)}
-                onMouseLeave={() => setPhoneNumber(true)}
               >
-                {phoneNumber ? (
-                  <Image
-                    src="/assets/button/phone_default.jpg"
-                    alt="book now"
-                    width={145}
-                    height={32}
-                  />
-                ) : (
-                  <Image
-                    src="/assets/button/phone_hover.jpg"
-                    alt="book now"
-                    width={145}
-                    height={32}
-                  />
-                )}
+                <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white pt-[9px] pb-[8px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+                        <Image
+                          src="/assets/lavish/icons/nav_phone.png"
+                          alt="book now"
+                          width={15}
+                          height={15}
+                          className="w-[15px] h-[15px]"
+                        />
+                        <span>(905) 973-6669</span>
+                      </button>
               </Link>
             </div>
             <div className="block md:hidden">

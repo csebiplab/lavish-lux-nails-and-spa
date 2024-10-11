@@ -44,7 +44,7 @@ const BookAnAppointment = () => {
           ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px]">
-          <h5 className="font-family-secondary text-3xl font-normal text-primary pt-[80px] pb-[25px] pl-[30px]">
+          <h5 className="font-family-secondary text-3xl font-normal leading-normal text-white pt-[80px] pb-[25px] pl-[30px]">
             Book An Appointment
           </h5>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -52,7 +52,7 @@ const BookAnAppointment = () => {
 
             <div className="relative px-[20px]">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="services"
               >
                 Services
@@ -98,22 +98,21 @@ const BookAnAppointment = () => {
 
             <div className="px-[20px] pt-[20px] relative">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="day"
               >
                 Day
               </label>
               <br />
               <div className="w-full relative mt-[10px] input__bg">
-                {/* Date Input Field */}
                 <DatePicker
                   selected={selectedDate}
                   onChange={(date) => setSelectedDate(date)}
                   placeholderText="Select Day"
                   className="py-[10px] px-[20px] outline-none"
                   dateFormat="MM/dd/yyyy"
+                  inputClassName="placeholder-dark-50"
                 />
-                {/* Calendar Icon Inside Input Field */}
                 <AiOutlineCalendar
                   className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
                   onClick={() =>
@@ -123,6 +122,7 @@ const BookAnAppointment = () => {
                   }
                 />
               </div>
+
               {errors?.day && <span>This field is required</span>}
             </div>
 
@@ -130,7 +130,7 @@ const BookAnAppointment = () => {
 
             <div className="px-[20px] pt-[20px] relative">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="hour"
               >
                 Hour
@@ -161,14 +161,14 @@ const BookAnAppointment = () => {
             {/* name */}
             <div className="px-[20px] pt-[20px]">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="name"
               >
                 Name
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-50"
                 placeholder="Enter Your Name"
                 {...register("name", { required: true })}
               />
@@ -177,14 +177,14 @@ const BookAnAppointment = () => {
             {/* phone */}
             <div className="px-[20px] pt-[20px]">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="phone"
               >
                 Phone
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-50"
                 placeholder="Enter Your Number"
                 {...register("phone", { required: true })}
               />
@@ -193,14 +193,14 @@ const BookAnAppointment = () => {
             {/* email */}
             <div className="px-[20px] pt-[20px]">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="email"
               >
                 Email
               </label>{" "}
               <br />
               <input
-                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-50"
                 placeholder="Enter Your Email"
                 {...register("email", { required: true })}
               />
@@ -209,14 +209,14 @@ const BookAnAppointment = () => {
             {/* message */}
             <div className="px-[20px] pt-[20px]">
               <label
-                className="text-lg font-semibold text-dark-50"
+                className="text-lg font-semibold text-white leading-normal"
                 htmlFor="mesage"
               >
                 Message
               </label>{" "}
               <br />
               <textarea
-                className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-50"
                 placeholder="Enter Your Message"
                 {...register("message", { required: true })}
               />
@@ -229,7 +229,26 @@ const BookAnAppointment = () => {
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <BookNow/>
+                <button className="bg-primary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+        <span>Book Now</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="22"
+          viewBox="0 0 34 22"
+          fill="none"
+        >
+          <path
+            d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+            stroke="white"
+          />
+          <path d="M0 10.625H34" stroke="white" />
+          <path
+            d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+            stroke="white"
+          />
+        </svg>
+      </button>
               </Link>
             </div>
           </form>

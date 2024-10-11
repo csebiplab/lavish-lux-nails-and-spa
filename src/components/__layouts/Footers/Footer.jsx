@@ -7,59 +7,59 @@ import "./footer.css";
 
 const servicesData = [
   {
-    id : 1,
-    service : "Manicure",
-    img : "/assets/lavish/footer_icon/manicure.png"
+    id: 1,
+    service: "Manicure",
+    img: "/assets/lavish/footer_icon/manicure.png",
   },
   {
-    id : 2,
-    service : "Pedicure",
-    img : "/assets/lavish/footer_icon/pedicure.png"
+    id: 2,
+    service: "Pedicure",
+    img: "/assets/lavish/footer_icon/pedicure.png",
   },
   {
-    id : 3,
-    service : "Waxing",
-    img : "/assets/lavish/footer_icon/waxing.png"
+    id: 3,
+    service: "Waxing",
+    img: "/assets/lavish/footer_icon/waxing.png",
   },
   {
-    id : 4,
-    service : "Design",
-    img : "/assets/lavish/footer_icon/design.png"
+    id: 4,
+    service: "Design",
+    img: "/assets/lavish/footer_icon/design.png",
   },
   {
-    id : 5,
-    service : "Artificial Nails",
-    img : "/assets/lavish/footer_icon/artificialNails.png"
+    id: 5,
+    service: "Artificial Nails",
+    img: "/assets/lavish/footer_icon/artificialNails.png",
   },
   {
-    id : 6,
-    service : "Additional Services",
-    img : "/assets/lavish/footer_icon/additionalServices.png"
+    id: 6,
+    service: "Additional Services",
+    img: "/assets/lavish/footer_icon/additionalServices.png",
   },
-]
+];
 
 const navigationData = [
   {
-    id : 1,
-    navigation : "Blogs"
+    id: 1,
+    navigation: "Blogs",
   },
   {
-    id : 2,
-    navigation : "Contact Us"
+    id: 2,
+    navigation: "Contact Us",
   },
   {
-    id : 3,
-    navigation : "Testimonial"
+    id: 3,
+    navigation: "Testimonial",
   },
   {
-    id : 4,
-    navigation : "Gallery"
+    id: 4,
+    navigation: "Gallery",
   },
   {
-    id : 5,
-    navigation : "Sitemap"
+    id: 5,
+    navigation: "Sitemap",
   },
-]
+];
 
 const Footer = () => {
   return (
@@ -117,30 +117,40 @@ const Footer = () => {
                 Ours Services
               </p>
               <div className="text-white">
-                {
-                  servicesData?.map((data)=>{
-                    return <ul key={data?.id}>
-                      <li className="flex items-center gap-[6px] leading-normal py-[10px] 5xl:py-[13px] text-base 5xl:text-lg text-white font-medium"><Image src={data?.img} alt={data?.service} width={21} height={21}/> {data?.service}</li>
+                {servicesData?.map((data) => {
+                  return (
+                    <ul key={data?.id}>
+                      <li className="flex items-center gap-[6px] leading-normal py-[10px] 5xl:py-[13px] text-base 5xl:text-lg text-white font-medium">
+                        <Image
+                          src={data?.img}
+                          alt={data?.service}
+                          width={21}
+                          height={21}
+                        />{" "}
+                        {data?.service}
+                      </li>
                     </ul>
-                  })
-                }
+                  );
+                })}
               </div>
             </div>
 
             {/* second div  */}
-            
+
             <div className="col-span-2">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Navigation
               </p>
               <div>
-                {
-                  navigationData?.map((data)=>{
-                    return <ul key={data?.id}>
-                        <li className="text-base 5xl:text-lg text-white font-medium leading-normal py-[10px] 5xl:py-[13px]">{data?.navigation}</li>
+                {navigationData?.map((data) => {
+                  return (
+                    <ul key={data?.id}>
+                      <li className="text-base 5xl:text-lg text-white font-medium leading-normal py-[10px] 5xl:py-[13px]">
+                        {data?.navigation}
+                      </li>
                     </ul>
-                  })
-                }
+                  );
+                })}
               </div>
             </div>
             {/* third div  */}
@@ -170,7 +180,7 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            
+
             {/* fourth div  */}
             <div className="col-span-3">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
@@ -178,23 +188,39 @@ const Footer = () => {
               </p>
               <ul>
                 <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal">
-                  <Image src="/assets/icons/map.png" alt="map icon" width={21} height={21}/>
+                  <Image
+                    src="/assets/icons/map.png"
+                    alt="map icon"
+                    width={21}
+                    height={21}
+                  />
                   <Link
                     className="text-white"
                     href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
-                    1100 Burnhamthorpe Rd W Unit 16, <br className="hidden 5xl:block"/> Mississauga, ON L5C 4G4,
+                    1100 Burnhamthorpe Rd W Unit 16,{" "}
+                    <br className="hidden 5xl:block" /> Mississauga, ON L5C 4G4,
                     Canada
                   </Link>
                 </li>
                 <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal py-[20px] 5xl:py-[26px]">
-                  <Image src="/assets/icons/phone.png" alt="phone icon" width={21} height={21}/>
+                  <Image
+                    src="/assets/icons/phone.png"
+                    alt="phone icon"
+                    width={21}
+                    height={21}
+                  />
                   <Link className="text-white" href="tel : (905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
                 <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal">
-                  <Image src="/assets/icons/email.png" alt="email icon" width={21} height={21}/>
+                  <Image
+                    src="/assets/icons/email.png"
+                    alt="email icon"
+                    width={21}
+                    height={21}
+                  />
                   <Link
                     className="text-white"
                     href="mail : manager@lavishluxnailsandspa.com"
@@ -316,7 +342,12 @@ const Footer = () => {
               </p>
               <ul>
                 <li className="flex items-center gap-[24px] text-lg font-medium">
-                  <Image src="/assets/icons/map.png" alt="map icon" width={21} height={21}/>
+                  <Image
+                    src="/assets/icons/map.png"
+                    alt="map icon"
+                    width={21}
+                    height={21}
+                  />
                   <Link
                     className="text-white"
                     href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
@@ -326,13 +357,23 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="flex items-center gap-[24px] text-lg font-medium py-[26px]">
-                  <Image src="/assets/icons/phone.png" alt="phone icon" width={21} height={21}/>
+                  <Image
+                    src="/assets/icons/phone.png"
+                    alt="phone icon"
+                    width={21}
+                    height={21}
+                  />
                   <Link className="text-white" href="tel : (905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
                 <li className="flex items-center gap-[24px] text-lg font-medium">
-                  <Image src="/assets/icons/email.png" alt="email icon" width={21} height={21}/>
+                  <Image
+                    src="/assets/icons/email.png"
+                    alt="email icon"
+                    width={21}
+                    height={21}
+                  />
                   <Link
                     className="text-white"
                     href="mail : manager@lavishluxnailsandspa.com"
@@ -345,31 +386,31 @@ const Footer = () => {
           </div>
           {/* fourth div  */}
           <div className="w-1/2 mx-auto pt-[35px]">
-              <div className="border-[4px] rounded-[8px] border-primary ">
-                <p className="text-[25px] font-semibold text-white text-center pb-[28px] pt-[8px]">
-                  Open Hours
-                </p>
-                <span>
-                  <svg
-                    className="px-[20px] 5xl:px-[50px]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="auto"
-                    height="24"
-                    viewBox="0 0 424 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z"
-                      fill="#C7A43C"
-                    />
-                  </svg>
-                </span>
-                <p className="text-lg font-medium text-white text-center pb-[23px]">
-                  Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am
-                  ~ 6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
-                </p>
-              </div>
+            <div className="border-[4px] rounded-[8px] border-primary ">
+              <p className="text-[25px] font-semibold text-white text-center pb-[28px] pt-[8px]">
+                Open Hours
+              </p>
+              <span>
+                <svg
+                  className="px-[20px] 5xl:px-[50px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="auto"
+                  height="24"
+                  viewBox="0 0 424 24"
+                  fill="none"
+                >
+                  <path
+                    d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z"
+                    fill="#C7A43C"
+                  />
+                </svg>
+              </span>
+              <p className="text-lg font-medium text-white text-center pb-[23px]">
+                Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am ~
+                6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
+              </p>
             </div>
+          </div>
         </div>
         {/* footer bottom  */}
         <div className="bg-primary py-[9px] container flex justify-between items-center">
@@ -410,41 +451,91 @@ const Footer = () => {
               height={65}
               className="w-[228px] h-[65px] mx-auto"
             />
-            <p className="text-center pt-[15px] text-lg font-semibold px-[30px]">
+            <p className="text-center pt-[15px] text-base sm:text-lg font-semibold leading-[25px] px-[30px]">
               Find the best nail salon in Mississauga for impeccable manicures &
               pedicures. Expert service & stunning results await! Book now.
             </p>
           </div>
+          {/* first div  */}
+          <div className="pt-[20px]">
+            <p className="text-[22px] sm:text-[25px] font-semibold text-white pb-[16px] sm:pb-[21px] text-center">
+              Ours Services
+            </p>
+            <div className="text-white">
+              {servicesData?.map((data) => {
+                return (
+                  <ul key={data?.id}>
+                    <li className="flex items-center justify-center gap-[6px] leading-normal py-[10px] sm:py-[13px] text-base sm:text-lg text-white font-medium">
+                      <Image
+                        src={data?.img}
+                        alt={data?.service}
+                        width={21}
+                        height={21}
+                      />{" "}
+                      {data?.service}
+                    </li>
+                  </ul>
+                );
+              })}
+            </div>
+          </div>
           {/* second div  */}
-          <div className="pt-[30px]">
-            <p className="text-center text-[25px] font-semibold">Navigation</p>
-            <ul className="text-center">
-              <li className="pt-[20px] pb-[10px] text-lg font-medium">Blogs</li>
-              <li className="py-[10px] text-lg font-medium">Contact Us</li>
-              <li className="py-[10px] text-lg font-medium">Testimonial</li>
-              <li className="py-[10px] text-lg font-medium">Gallery</li>
-              <li className="pt-[10px] text-lg font-medium">Sitemap</li>
-            </ul>
+          <div className="pt-[13px]">
+            <p className="text-[22px] sm:text-[25px] font-semibold text-white pb-[16px] sm:pb-[20px] text-center">
+              Navigation
+            </p>
+            <div>
+              {navigationData?.map((data) => {
+                return (
+                  <ul key={data?.id}>
+                    <li className="text-base sm:text-lg text-white font-medium leading-normal py-[8px] sm:py-[10px] text-center">
+                      {data?.navigation}
+                    </li>
+                  </ul>
+                );
+              })}
+            </div>
           </div>
           {/* third div  */}
-          <div className="pt-[30px]">
-            <p className="text-center text-[25px] font-semibold">Contact Us</p>
-            <ul className="text-center ">
-              <li className="py-[22px] text-lg font-medium">
+          <div className="pt-[20px] ">
+            <p className="text-[22px] sm:text-[25px] font-semibold text-white pb-[18px] sm:pb-[22px] text-center">
+              Contact Us
+            </p>
+            <ul className="flex flex-col items-center justify-center">
+              <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal">
+                <Image
+                  src="/assets/icons/map.png"
+                  alt="map icon"
+                  width={21}
+                  height={21}
+                />
                 <Link
                   className="text-white"
                   href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                 >
-                  1100 Burnhamthorpe Rd W Unit 16, <br /> Mississauga, ON L5C
-                  4G4, Canada
+                  1100 Burnhamthorpe Rd W Unit 16,{" "}
+                  <br/> Mississauga, ON L5C 4G4,
+                  Canada
                 </Link>
               </li>
-              <li className="text-lg font-medium">
+              <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal py-[17px] sm:py-[22px]">
+                <Image
+                  src="/assets/icons/phone.png"
+                  alt="phone icon"
+                  width={21}
+                  height={21}
+                />
                 <Link className="text-white" href="tel : (905) 973-6669">
                   (905) 973-6669
                 </Link>
               </li>
-              <li className="pt-[20px] text-lg font-medium">
+              <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal">
+                <Image
+                  src="/assets/icons/email.png"
+                  alt="email icon"
+                  width={21}
+                  height={21}
+                />
                 <Link
                   className="text-white"
                   href="mail : manager@lavishluxnailsandspa.com"
@@ -454,30 +545,31 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
           {/* fourth div  */}
-          <div className="pt-[30px] ">
-            <div className="border-4 border-primary rounded-lg pt-[17px] pb-[23px] mx-[30px]">
-              <p className="text-center text-[25px] font-semibold">
+          <div className="pt-[32px] px-[30px]">
+            <div className="border-[4px] rounded-[8px] border-primary ">
+              <p className="text-[22px] sm:text-[25px] font-semibold text-white text-center pb-[10px] sm:pb-[12px] pt-[13px] sm:pt-[17px]">
                 Open Hours
               </p>
-              <span className="flex justify-center pt-[12px] pb-[24px]">
+              <span>
                 <svg
+                  className="px-[20px] 5xl:px-[50px]"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="318"
+                  width="auto"
                   height="24"
-                  viewBox="0 0 318 24"
+                  viewBox="0 0 424 24"
                   fill="none"
                 >
                   <path
-                    d="M0.452994 12.4258L12 23.9728L23.547 12.4258L12 0.878776L0.452994 12.4258ZM317.547 12.4258L306 0.878776L294.453 12.4258L306 23.9728L317.547 12.4258ZM12 14.4258H306V10.4258H12V14.4258Z"
+                    d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z"
                     fill="#C7A43C"
                   />
                 </svg>
               </span>
-              <p className="text-center text-lg font-medium">
+              <p className="text-base sm:text-lg font-medium leading-normal text-white text-center pb-[18px] sm:pb-[23px]">
                 Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am ~
-                6:00pm <br /> Sun.
-                <br /> 11:00am ~ 5:00pm
+                6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
               </p>
             </div>
           </div>

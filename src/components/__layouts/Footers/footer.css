@@ -37,7 +37,7 @@ img {
 /* small device  */
 .small_footer_image{
    /* background-image: url("/assets/images/footer__sm.png"); */
-   background-image: url("/assets/images/footer__bg.png");
+   background-image: url("/assets/lavish/images/footer_sm.png");
    background-position: center center;
    background-repeat: no-repeat;
    background-size: cover;
