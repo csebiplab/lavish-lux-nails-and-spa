@@ -42,37 +42,37 @@ const servicesData1 = [
 ];
 
 const ourServices = [
-    {
-        id: 1,
-        img: "/assets/lavish/images/our_service1.png",
-        title: "Pedicure",
-      },
-      {
-        id: 2,
-        img: "/assets/lavish/images/our_service2.png",
-        title: "Artificial Nails",
-      },
-      {
-        id: 3,
-        img: "/assets/lavish/images/our_service3.png",
-        title: "Additional Services",
-      },
-      {
-        id: 4,
-        img: "/assets/lavish/images/our_service4.png",
-        title: "Manicure",
-      },
-      {
-        id: 5,
-        img: "/assets/lavish/images/our_service5.png",
-        title: "Waxing",
-      },
-      {
-        id: 6,
-        img: "/assets/lavish/images/our_service6.png",
-        title: "Design",
-      },
-]
+  {
+    id: 1,
+    img: "/assets/lavish/images/our_service1.png",
+    title: "Pedicure",
+  },
+  {
+    id: 2,
+    img: "/assets/lavish/images/our_service2.png",
+    title: "Artificial Nails",
+  },
+  {
+    id: 3,
+    img: "/assets/lavish/images/our_service3.png",
+    title: "Additional Services",
+  },
+  {
+    id: 4,
+    img: "/assets/lavish/images/our_service4.png",
+    title: "Manicure",
+  },
+  {
+    id: 5,
+    img: "/assets/lavish/images/our_service5.png",
+    title: "Waxing",
+  },
+  {
+    id: 6,
+    img: "/assets/lavish/images/our_service6.png",
+    title: "Design",
+  },
+];
 
 const OurServices = () => {
   return (
@@ -96,104 +96,102 @@ const OurServices = () => {
           {/* large device  */}
           <div className="hidden xl:block xl:col-span-3">
             <div className="w-full">
-            <div className=" flex justify-end gap-[25px] lg:gap-[28px]">
-              <div className="mt-[60px]">
-                {servicesData?.map((data) => {
-                  return (
-                    <div
-                      key={data?.id}
-                      className="cart__bg  flex flex-col items-center justify-center mt-[20px]"
-                    >
-                      <Image
-                        src={data?.img}
-                        alt={data?.title}
-                        width={113}
-                        height={113}
-                        className="w-full px-[55px] pt-[18px]"
-                      />
-                      <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
-                        {data?.title}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-              <div>
-                {servicesData1?.map((data) => {
-                  return (
-                    <div
-                      key={data?.id}
-                      className="cart__bg flex flex-col items-center justify-center mt-[20px]"
-                    >
-                      <Image
-                        src={data?.img}
-                        alt={data?.title}
-                        width={113}
-                        height={113}
-                        className="w-full  px-[55px] pt-[18px]"
-                      />
-                      <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
-                        {data?.title}
-                      </p>
-                    </div>
-                  );
-                })}
+              <div className=" flex justify-end gap-[25px] lg:gap-[28px]">
+                <div className="mt-[60px]">
+                  {servicesData?.map((data) => {
+                    return (
+                      <div
+                        key={data?.id}
+                        className="cart__bg  flex flex-col items-center justify-center mt-[20px]"
+                      >
+                        <Image
+                          src={data?.img}
+                          alt={data?.title}
+                          width={113}
+                          height={113}
+                          className="w-full px-[55px] pt-[18px]"
+                        />
+                        <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
+                          {data?.title}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div>
+                  {servicesData1?.map((data) => {
+                    return (
+                      <div
+                        key={data?.id}
+                        className="cart__bg flex flex-col items-center justify-center mt-[20px]"
+                      >
+                        <Image
+                          src={data?.img}
+                          alt={data?.title}
+                          width={113}
+                          height={113}
+                          className="w-full  px-[55px] pt-[18px]"
+                        />
+                        <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
+                          {data?.title}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-            </div>
-            
           </div>
 
           {/* small device  */}
 
           <div className="block xl:hidden xl:col-span-3">
-            <div className="w-full">
-            <div className="flex justify-end gap-[20px] md:gap-[28px]">
-              <div className="mt-[60px]">
-                {servicesData?.map((data) => {
-                  return (
-                    <div
-                      key={data?.id}
-                      className="cart__bg_sm flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
-                    >
-                      <Image
-                        src={data?.img}
-                        alt={data?.title}
-                        width={93}
-                        height={93}
-                        className="w-[93px] h-[93px]"
-                      />
-                      <p className="font-family-secondary text-2xl font-normal text-black">
-                        {data?.title}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-              <div>
-                {servicesData1?.map((data) => {
-                  return (
-                    <div
-                      key={data?.id}
-                      className="cart__bg_sm flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
-                    >
-                      <Image
-                        src={data?.img}
-                        alt={data?.title}
-                        width={93}
-                        height={93}
-                        className="w-[93px] h-[93px]"
-                      />
-                      <p className="font-family-secondary text-2xl font-normal text-black">
-                        {data?.title}
-                      </p>
-                    </div>
-                  );
-                })}
+            <div className="w-full flex justify-center">
+              <div className="flex justify-end gap-[20px] md:gap-[28px]">
+                <div className="mt-[60px]">
+                  {servicesData?.map((data) => {
+                    return (
+                      <div
+                        key={data?.id}
+                        className="cart__bg_sm flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                      >
+                        <Image
+                          src={data?.img}
+                          alt={data?.title}
+                          width={94}
+                          height={94}
+                          className="w-full px-[40px] pt-[15px] pb-[5px]"
+                        />
+                        <p className="font-family-secondary text-2xl font-normal text-black pb-[14px] leading-normal">
+                          {data?.title}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div>
+                  {servicesData1?.map((data) => {
+                    return (
+                      <div
+                        key={data?.id}
+                        className="cart__bg_sm flex flex-col items-center justify-center mt-[20px]"
+                      >
+                        <Image
+                          src={data?.img}
+                          alt={data?.title}
+                          width={94}
+                          height={94}
+                          className="w-full px-[40px] pt-[15px] pb-[5px]"
+                        />
+                        <p className="font-family-secondary text-2xl font-normal text-black pb-[14px] leading-normal">
+                          {data?.title}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-            </div>
-            
           </div>
         </div>
       </div>

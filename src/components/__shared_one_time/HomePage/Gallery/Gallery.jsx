@@ -152,26 +152,6 @@ const Gallery = () => {
           />
         </svg>
       </button>
-          {/* <button
-            onMouseEnter={() => setLoadMore(false)}
-            onMouseLeave={() => setLoadMore(true)}
-          >
-            {loadMore ? (
-              <Image
-                src="/assets/button/load_deault.jpg"
-                alt="book now"
-                width={200}
-                height={50}
-              />
-            ) : (
-              <Image
-                src="/assets/button/load_hover.jpg"
-                alt="book now"
-                width={200}
-                height={50}
-              />
-            )}
-          </button> */}
           
         </div>
       </div>
@@ -181,7 +161,7 @@ const Gallery = () => {
       <div className="block md:hidden container">
         <div className="pt-[25px]">
           {galleryImages.slice(0, visibleImages).map((img, index) => (
-            <div key={index} className="pt-[15px]">
+            <div key={index} className="pb-[15px]">
               <Image
                 src={img}
                 alt="gallery image"
