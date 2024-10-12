@@ -60,10 +60,10 @@ const BookAnAppointment = () => {
               <br />
               <div className="relative">
                 <select
-                  className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
+                  className="mt-[10px] text-dark-200 w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
                   {...register("services", { required: true })}
                 >
-                  <option className="text-xs" value="">
+                  <option className="text-xs text-dark-200" value="">
                     Please Select Your Services
                   </option>
                   <option
@@ -230,25 +230,25 @@ const BookAnAppointment = () => {
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
                 <button className="bg-primary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
-        <span>Book Now</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="22"
-          viewBox="0 0 34 22"
-          fill="none"
-        >
-          <path
-            d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
-            stroke="white"
-          />
-          <path d="M0 10.625H34" stroke="white" />
-          <path
-            d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
-            stroke="white"
-          />
-        </svg>
-      </button>
+                  <span>Book Now</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="22"
+                    viewBox="0 0 34 22"
+                    fill="none"
+                  >
+                    <path
+                      d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                      stroke="white"
+                    />
+                    <path d="M0 10.625H34" stroke="white" />
+                    <path
+                      d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                      stroke="white"
+                    />
+                  </svg>
+                </button>
               </Link>
             </div>
           </form>
@@ -395,46 +395,31 @@ const BookAnAppointment = () => {
             </div>
 
             <div className="flex justify-center items-center pt-[35px] pb-[38px]">
-              {/* <Link
-                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
-                rel="nofollow"
-                target="_blank"
-              >
-                <button
-                  type="submit"
-                  className="flex items-center gap-[5px] text-sm font-medium text-white bg-secondary py-[6px] px-[17px] rounded-lg"
-                >
-                  Book Now{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="15"
-                    viewBox="0 0 22 15"
-                    fill="none"
-                  >
-                    <path
-                      d="M21.1984 7.52539C18.2713 7.52539 15.8984 10.4915 15.8984 14.1504"
-                      stroke="white"
-                    />
-                    <path d="M0 7.52539H21.2" stroke="white" />
-                    <path
-                      d="M15.8984 0.900391C15.8984 4.55926 18.2713 7.52533 21.1984 7.52539"
-                      stroke="white"
-                    />
-                  </svg>
-                </button>
-              </Link> */}
               <Link
                 rel="nofollow"
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <Image
-                  src="/assets/buttons/book_now_book_appointment.png"
-                  alt="book now"
-                  width={129}
-                  height={32}
-                />
+                <button className="bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+                  <span>Book Now</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="22"
+                    viewBox="0 0 34 22"
+                    fill="none"
+                  >
+                    <path
+                      d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                      stroke="white"
+                    />
+                    <path d="M0 10.625H34" stroke="white" />
+                    <path
+                      d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                      stroke="white"
+                    />
+                  </svg>
+                </button>
               </Link>
             </div>
           </form>
@@ -467,10 +452,10 @@ const BookAnAppointment = () => {
                       onFocus="this.size=7;"
                       onBlur="this.size=0;"
                       onChange="this.size=1; this.blur()"
-                      className="mt-[10px] w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
+                      className="mt-[10px] text-dark-200 w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
                       {...register("services", { required: true })}
                     >
-                      <option className="text-xs" value="">
+                      <option className="text-xs text-dark-200" value="">
                         Please Select Your Services
                       </option>
                       <option className="text-xs" value="service1">
@@ -514,7 +499,7 @@ const BookAnAppointment = () => {
                         selected={selectedDate}
                         onChange={(date) => setSelectedDate(date)}
                         placeholderText="Select Day"
-                        className="py-[10px] pl-[20px] rounded-lg outline-none"
+                        className="py-[10px] pl-[20px] rounded-lg outline-none "
                         dateFormat="MM/dd/yyyy"
                       />
                       {/* Calendar Icon Inside Input Field */}
@@ -575,7 +560,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                      className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-200"
                       placeholder="Enter Your Name"
                       {...register("name", { required: true })}
                     />
@@ -591,7 +576,7 @@ const BookAnAppointment = () => {
                     </label>{" "}
                     <br />
                     <input
-                      className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                      className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-200"
                       placeholder="Enter Your Number"
                       {...register("phone", { required: true })}
                     />
@@ -608,7 +593,7 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <input
-                    className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                    className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-200"
                     placeholder="Enter Your Email"
                     {...register("email", { required: true })}
                   />
@@ -624,7 +609,7 @@ const BookAnAppointment = () => {
                   </label>{" "}
                   <br />
                   <textarea
-                    className="mt-[10px] w-full py-[10px] px-[20px] input__bg"
+                    className="mt-[10px] w-full py-[10px] px-[20px] input__bg placeholder-dark-200"
                     placeholder="Enter Your Message"
                     {...register("message", { required: true })}
                   />

@@ -8,17 +8,17 @@ import "./OurServices.css";
 const servicesData = [
   {
     id: 1,
-    img: "/assets/images/ourServices1.png",
+    img: "/assets/lavish/icons/ourServices1.png",
     title: "Pedicure",
   },
   {
     id: 2,
-    img: "/assets/images/ourServices2.png",
+    img: "/assets/lavish/icons/ourServices2.png",
     title: "Artificial Nails",
   },
   {
     id: 3,
-    img: "/assets/images/ourServices3.png",
+    img: "/assets/lavish/icons/ourServices3.png",
     // title: "Additional Services",
     title: "Additional",
   },
@@ -26,50 +26,17 @@ const servicesData = [
 const servicesData1 = [
   {
     id: 1,
-    img: "/assets/images/ourServices4.png",
+    img: "/assets/lavish/icons/ourServices4.png",
     title: "Manicure",
   },
   {
     id: 2,
-    img: "/assets/images/ourServices5.png",
+    img: "/assets/lavish/icons/ourServices5.png",
     title: "Waxing",
   },
   {
     id: 3,
-    img: "/assets/images/ourServices6.png",
-    title: "Design",
-  },
-];
-
-const ourServices = [
-  {
-    id: 1,
-    img: "/assets/lavish/images/our_service1.png",
-    title: "Pedicure",
-  },
-  {
-    id: 2,
-    img: "/assets/lavish/images/our_service2.png",
-    title: "Artificial Nails",
-  },
-  {
-    id: 3,
-    img: "/assets/lavish/images/our_service3.png",
-    title: "Additional Services",
-  },
-  {
-    id: 4,
-    img: "/assets/lavish/images/our_service4.png",
-    title: "Manicure",
-  },
-  {
-    id: 5,
-    img: "/assets/lavish/images/our_service5.png",
-    title: "Waxing",
-  },
-  {
-    id: 6,
-    img: "/assets/lavish/images/our_service6.png",
+    img: "/assets/lavish/icons/ourServices6.png",
     title: "Design",
   },
 ];

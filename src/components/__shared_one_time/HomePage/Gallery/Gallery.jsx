@@ -20,10 +20,8 @@ const galleryImages = [
   "/assets/lavish/gallery/gallery11.png",
 ];
 
-
 const Gallery = () => {
   const [visibleImages, setVisibleImages] = useState(4);
-  const [loadMore, setLoadMore] = useState(true);
 
   const loadMoreImages = () => {
     setVisibleImages(galleryImages.length);
@@ -132,30 +130,28 @@ const Gallery = () => {
 
         {/* button  */}
         <div className="flex justify-center items-center pt-[25px] 5xl:pt-[35px]">
-        <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
-        <span>Book Now</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="22"
-          viewBox="0 0 34 22"
-          fill="none"
-        >
-          <path
-            d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
-            stroke="white"
-          />
-          <path d="M0 10.625H34" stroke="white" />
-          <path
-            d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
-            stroke="white"
-          />
-        </svg>
-      </button>
-          
+          <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+            <span>Book Now</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="22"
+              viewBox="0 0 34 22"
+              fill="none"
+            >
+              <path
+                d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                stroke="white"
+              />
+              <path d="M0 10.625H34" stroke="white" />
+              <path
+                d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                stroke="white"
+              />
+            </svg>
+          </button>
         </div>
       </div>
-
 
       {/* Small device */}
       <div className="block md:hidden container">
@@ -176,35 +172,26 @@ const Gallery = () => {
         {/* Load More Button */}
         {visibleImages < galleryImages.length && (
           <div className="pt-[15px] flex justify-center">
-            {/* <button onClick={loadMoreImages}>
-              <Image
-                src="/assets/buttons/load_more_sm.png"
-                alt="book now"
-                width={129}
-                height={32}
-              />
-            </button> */}
-            <button
-              onClick={loadMoreImages}
-              onMouseEnter={() => setLoadMore(false)}
-              onMouseLeave={() => setLoadMore(true)}
+            <button onClick={loadMoreImages} className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+            <span>Book Now</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="22"
+              viewBox="0 0 34 22"
+              fill="none"
             >
-              {loadMore ? (
-                <Image
-                  src="/assets/button/load_deault.jpg"
-                  alt="book now"
-                  width={200}
-                  height={50}
-                />
-              ) : (
-                <Image
-                  src="/assets/button/load_hover.jpg"
-                  alt="book now"
-                  width={200}
-                  height={50}
-                />
-              )}
-            </button>
+              <path
+                d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                stroke="white"
+              />
+              <path d="M0 10.625H34" stroke="white" />
+              <path
+                d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                stroke="white"
+              />
+            </svg>
+          </button>
           </div>
         )}
       </div>
