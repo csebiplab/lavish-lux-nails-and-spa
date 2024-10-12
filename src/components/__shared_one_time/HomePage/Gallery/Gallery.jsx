@@ -2,7 +2,6 @@
 import HeadingIcon from "@/components/__ui/HeadingIcon";
 import { headingIconText } from "@/utils/heading-text";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 import "./Gallery.css";
 
@@ -33,7 +32,7 @@ const Gallery = () => {
         <HeadingIcon text={headingIconText.gallery__headingIconText} />
       </div>
       {/* large device  */}
-      <div className="hidden xl:block pt-[25px]">
+      <div className="hidden md:block pt-[25px]">
         <div>
           {/* first div  */}
           <div className="grid grid-cols-4 gap-[14px]">

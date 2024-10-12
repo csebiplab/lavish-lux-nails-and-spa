@@ -112,7 +112,7 @@ const OurServices = () => {
 
           {/* small device  */}
 
-          <div className="block xl:hidden xl:col-span-3">
+          <div className="block md:hidden xl:col-span-3">
             <div className="w-full flex justify-center">
               <div className="flex justify-end gap-[20px] md:gap-[28px]">
                 <div className="mt-[60px]">
