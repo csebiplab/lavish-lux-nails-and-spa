@@ -130,21 +130,21 @@ const Gallery = () => {
         {/* button  */}
         <div className="flex justify-center items-center pt-[25px] 5xl:pt-[35px]">
           <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
-            <span>Book Now</span>
+            <span>Load More</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="34"
+              width="35"
               height="22"
-              viewBox="0 0 34 22"
+              viewBox="0 0 35 22"
               fill="none"
             >
               <path
-                d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                d="M34.7485 11.0078C30.0614 11.0078 26.2617 15.7648 26.2617 21.6328"
                 stroke="white"
               />
-              <path d="M0 10.625H34" stroke="white" />
+              <path d="M0.800781 11.0078H34.7477" stroke="white" />
               <path
-                d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                d="M26.2617 0.382812C26.2617 6.25081 30.0614 11.0077 34.7485 11.0078"
                 stroke="white"
               />
             </svg>
@@ -171,26 +171,29 @@ const Gallery = () => {
         {/* Load More Button */}
         {visibleImages < galleryImages.length && (
           <div className="pt-[15px] flex justify-center">
-            <button onClick={loadMoreImages} className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
-            <span>Book Now</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="22"
-              viewBox="0 0 34 22"
-              fill="none"
+            <button
+              onClick={loadMoreImages}
+              className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom"
             >
-              <path
-                d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
-                stroke="white"
-              />
-              <path d="M0 10.625H34" stroke="white" />
-              <path
-                d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
-                stroke="white"
-              />
-            </svg>
-          </button>
+              <span>Load More</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="22"
+                viewBox="0 0 35 22"
+                fill="none"
+              >
+                <path
+                  d="M34.7485 11.0078C30.0614 11.0078 26.2617 15.7648 26.2617 21.6328"
+                  stroke="white"
+                />
+                <path d="M0.800781 11.0078H34.7477" stroke="white" />
+                <path
+                  d="M26.2617 0.382812C26.2617 6.25081 30.0614 11.0077 34.7485 11.0078"
+                  stroke="white"
+                />
+              </svg>
+            </button>
           </div>
         )}
       </div>
