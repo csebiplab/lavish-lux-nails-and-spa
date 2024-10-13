@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 const galleryImages = [
-  "/assets/lavish/gallery/gallery1.png",
+  
   "/assets/lavish/gallery/gallery2.png",
   "/assets/lavish/gallery/gallery3.png",
   "/assets/lavish/gallery/gallery4.png",
@@ -17,6 +17,7 @@ const galleryImages = [
   "/assets/lavish/gallery/gallery9.png",
   "/assets/lavish/gallery/gallery10.png",
   "/assets/lavish/gallery/gallery11.png",
+  "/assets/lavish/gallery/gallery__image.png",
 ];
 
 const Gallery = () => {
@@ -38,11 +39,11 @@ const Gallery = () => {
           <div className="grid grid-cols-4 gap-[14px]">
             <div className="col-span-1">
               <Image
-                src="/assets/lavish/gallery/gallery.png"
+                src="/assets/lavish/gallery/gallery__image.png"
                 alt="gallery image"
                 width={469}
                 height={491}
-                className="w-full"
+                className="w-full "
               />
             </div>
             <div className="col-span-1 ">
@@ -100,7 +101,7 @@ const Gallery = () => {
           <Image
             src="/assets/lavish/gallery/gallery8.png"
             alt="gallery image"
-            width={469}
+            width={464}
             height={238}
             className="w-full"
           />
