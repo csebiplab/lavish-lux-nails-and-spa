@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 const galleryImages = [
-  
   "/assets/lavish/gallery/gallery2.png",
   "/assets/lavish/gallery/gallery3.png",
   "/assets/lavish/gallery/gallery4.png",
@@ -22,6 +21,7 @@ const galleryImages = [
 
 const Gallery = () => {
   const [visibleImages, setVisibleImages] = useState(4);
+  const [loadImage, setLoadImage] = useState(false);
 
   const loadMoreImages = () => {
     setVisibleImages(galleryImages.length);
@@ -127,10 +127,79 @@ const Gallery = () => {
             className="w-full"
           />
         </div>
+        {/* third div  */}
+        {loadImage && (
+          <div className="w-full">
+            <div className="flex">
+              <Image
+                src="/assets/lavish/gallery/gallery12.png"
+                alt="gallery image"
+                width={464}
+                height={238}
+                className="w-full"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery13.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery14.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery15.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full"
+              />
+            </div>
+            {/* second div */}
+            <div className="flex">
+              <Image
+                src="/assets/lavish/gallery/gallery16.png"
+                alt="gallery image"
+                width={464}
+                height={238}
+                className="w-full"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery17.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery18.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full"
+              />
+              <Image
+                src="/assets/lavish/gallery/gallery19.png"
+                alt="gallery image"
+                width={469}
+                height={238}
+                className="w-full"
+              />
+            </div>
+          </div>
+        )}
 
         {/* button  */}
         <div className="flex justify-center items-center pt-[25px] 5xl:pt-[35px]">
-          <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+          <button
+            onClick={() => setLoadImage(!loadImage)}
+            className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom"
+          >
             <span>Load More</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
