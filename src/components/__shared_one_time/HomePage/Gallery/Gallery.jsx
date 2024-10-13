@@ -156,7 +156,7 @@ const Gallery = () => {
       <div className="block md:hidden container">
         <div className="pt-[25px]">
           {galleryImages.slice(0, visibleImages).map((img, index) => (
-            <div key={index} className="pb-[15px]">
+            <div key={index} className="pb-[12px] sm:pb-[15px]">
               <Image
                 src={img}
                 alt="gallery image"
@@ -169,7 +169,7 @@ const Gallery = () => {
         </div>
 
         {/* Load More Button */}
-        {visibleImages < galleryImages.length && (
+        {visibleImages < galleryImages?.length && (
           <div className="pt-[15px] flex justify-center">
             <button
               onClick={loadMoreImages}

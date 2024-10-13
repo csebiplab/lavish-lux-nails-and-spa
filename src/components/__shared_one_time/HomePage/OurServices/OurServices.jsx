@@ -120,7 +120,7 @@ const OurServices = () => {
                     return (
                       <div
                         key={data?.id}
-                        className="cart__bg_sm flex flex-col items-center justify-center gap-[25px] md:gap-[28px] mt-[20px]"
+                        className="cart__bg_sm flex flex-col items-center justify-center mt-[20px]"
                       >
                         <Image
                           src={data?.img}
