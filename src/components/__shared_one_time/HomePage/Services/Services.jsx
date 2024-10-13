@@ -9,7 +9,6 @@ import "swiper/css/virtual";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./Services.css";
-// import { SwiperNavButtons } from "./SwiperSliderButton";
 
 const breakpoints = {
   0: {
@@ -22,7 +21,7 @@ const breakpoints = {
   },
   1040: {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 60,
   },
 };
 
@@ -68,9 +67,9 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="services__bg mx-8 md:mx-0 5xl:mx-3">
-      <div className="container py-[37px] md:py-[51px] xl:py-[57px]">
-        <div className="">
+    <div className="">
+      <div className="container padding__top">
+        <div className="services__bg py-[23px] px-1">
           {/* =================== Card Section =============== */}
           <Swiper
             className=""
@@ -92,7 +91,7 @@ const Services = () => {
               <SwiperSlide
                 key={i}
               >
-                <div className="">
+                <div className="px-2 5xl:px-4">
                   <Image src={img} alt={title} width={62} height={62} className="border border-primary p-[5px] rounded-full bg-primary-50 w-[62px] h-[62px] mx-auto"/>
                   <div className="text-center">
                     <p className="font-family-secondary text-4xl font-normal text-black py-[16px]">{title}</p>
@@ -101,8 +100,6 @@ const Services = () => {
                 </div>
               </SwiperSlide>
             ))}
-
-            {/* <SwiperNavButtons /> */}
           </Swiper>
         </div>
       </div>

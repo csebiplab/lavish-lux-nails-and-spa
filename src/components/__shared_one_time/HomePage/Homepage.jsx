@@ -23,7 +23,7 @@ const Homepage = () => {
                 <FeelOurLuxurious/>
             </section>
 
-            <section className="padding__top">
+            <section>
                 <Services/>
             </section>
 
