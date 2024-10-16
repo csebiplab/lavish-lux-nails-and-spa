@@ -71,20 +71,18 @@ const Services = () => {
         <div className="services__bg py-[23px] px-1">
           {/* =================== Card Section =============== */}
           <Swiper
-            className="!slide-left"
+            className=""
             modules={[Autoplay, Navigation]}
             loop={true}
             autoplay={{
-              delay: 6000,
+              delay: 0,
               pauseOnMouseEnter: false,
               disableOnInteraction: false,
               stopOnLastSlide: false,
               reverseDirection: true,
             }}
-            // slidesPerView={5}
             speed={3000}
             allowTouchMove={false}
-            // modules={[Autoplay,Navigation, Scrollbar]}
             breakpoints={breakpoints}
           >
             {services.map(({ title, desc, img }, i) => (

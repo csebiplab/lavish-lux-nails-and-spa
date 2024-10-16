@@ -127,6 +127,7 @@ const FeelOurLuxurious = () => {
               pauseOnMouseEnter: false,
               disableOnInteraction: false,
               stopOnLastSlide: false,
+              reverseDirection: false,
             }}
             speed={6000}
             allowTouchMove={false}
