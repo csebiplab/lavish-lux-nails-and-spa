@@ -24,7 +24,11 @@ const BannerSession = () => {
                 Best Nail Salon in Mississauga
               </span>
             </h1>
-            <Link href="tel : (905) 973-6669">
+            <Link
+              href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+              rel="nofollow"
+              target="_blank"
+            >
               <BookNow />
             </Link>
           </div>
@@ -36,12 +40,18 @@ const BannerSession = () => {
           <div className="h-full flex flex-col justify-center items-center">
             <h1 className="font-family-secondary text-[36px] sm:text-[42px] font-normal text-white leading-[42px] pb-[30px] sm:pb-[35px] text-center">
               Lavish Lux Nails & Spa <br />{" "}
-              <span className="text-[24px] sm:text-[30px">Best Nail Salon in Mississauga</span>
+              <span className="text-[24px] sm:text-[30px">
+                Best Nail Salon in Mississauga
+              </span>
             </h1>
             <div className="w-full flex justify-center items-center">
-            <Link href="tel : (905) 973-6669">
-              <BookNow />
-            </Link>
+              <Link
+                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+                rel="nofollow"
+                target="_blank"
+              >
+                <BookNow />
+              </Link>
             </div>
           </div>
         </div>

@@ -166,6 +166,7 @@ export function NavHeader() {
               </div>
               {/* second div  */}
               <div>
+                <Link href="/">
                 <Image
                   src="/assets/images/nav_logo.png"
                   width={347}
@@ -173,6 +174,7 @@ export function NavHeader() {
                   alt="nav logo"
                   className="w-[340px] 5xl:w-[347px] h-[90px] 5xl:h-[98px]"
                 />
+                </Link>
               </div>
               {/* third div  */}
               <div>
