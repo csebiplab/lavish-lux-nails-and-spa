@@ -3,7 +3,7 @@ import "./BookNow.css";
 const BookNow = () => {
   return (
     <div>
-      <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+      <button className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex justify-center items-center space-x-3 clip-path-custom">
         <span>Book Now</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

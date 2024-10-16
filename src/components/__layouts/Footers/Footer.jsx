@@ -66,7 +66,7 @@ const Footer = () => {
     <footer className="">
       {/* large device  */}
       <div className="hidden xl:block">
-        <div className="footer__bg container py-[20px] 5xl:py-[24px]">
+        <div className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]">
           <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
             <span>
               <svg
@@ -84,10 +84,10 @@ const Footer = () => {
               </svg>
             </span>
             <Image
-              src="/assets/images/footer_logo.png"
+              src="/assets/lavish/images/footer__logo.png"
               alt="footer logo"
-              width={401}
-              height={113}
+              width={319}
+              height={89}
               className="w-full mx-auto pb-[12px] 5xl:pb-[15px]"
             />
             <span>
@@ -187,7 +187,7 @@ const Footer = () => {
                 Contact Us
               </p>
               <ul>
-                <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal">
+                <li className="flex items-start gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal">
                   <Image
                     src="/assets/icons/map.png"
                     alt="map icon"
@@ -198,8 +198,8 @@ const Footer = () => {
                     className="text-white"
                     href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
-                    1100 Burnhamthorpe Rd W Unit 16,{" "}
-                    <br className="hidden 5xl:block" /> Mississauga, ON L5C 4G4,
+                    1100 Burnhamthorpe Rd <br className="hidden lg:block" /> W Unit 16,
+                     Mississauga, <br className="hidden lg:block" /> ON L5C 4G4,
                     Canada
                   </Link>
                 </li>
@@ -225,7 +225,7 @@ const Footer = () => {
                     className="text-white"
                     href="mail : manager@lavishluxnailsandspa.com"
                   >
-                    manager@lavishluxnailsandspa.com
+                    manager@lavishlux <br className="hidden lg:block" /> nailsandspa.com
                   </Link>
                 </li>
               </ul>
@@ -233,7 +233,7 @@ const Footer = () => {
           </div>
         </div>
         {/* footer bottom  */}
-        <div className="bg-primary py-[17px] container flex justify-between items-center">
+        <div className="bg-primary py-[10px] container flex justify-between items-center">
           <div className="flex items-center gap-[15px]">
             <p className="text-base font-semibold text-white">
               WEBSITE DESIGN AND SEO BY :-
