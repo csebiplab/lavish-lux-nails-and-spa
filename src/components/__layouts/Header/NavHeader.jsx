@@ -124,7 +124,7 @@ export function NavHeader() {
             <div className="flex justify-between items-center gap-[60px]">
               {/* first div  */}
               <div className="">
-                <p className=" full__section_l_p pb-[6px] 5xl:pb-[8px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
+                <p className=" full__section_l_p pb-[3px] 5xl:pb-[5px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
                   {" "}
                   <FaCanadianMapleLeaf className="w-[27px] h-[27px]" />
                   Best Nail Salon in Mississauga
@@ -142,7 +142,7 @@ export function NavHeader() {
                     fill="#C7A43C"
                   />
                 </svg>
-                <ul className="full__section_l_p pt-[8px] 5xl:pt-[10px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
+                <ul className="full__section_l_p pt-[5px] 5xl:pt-[7px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                   <Link href="#about">
                     <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
                       About
@@ -172,7 +172,7 @@ export function NavHeader() {
                   width={347}
                   height={98}
                   alt="nav logo"
-                  className="w-[340px] 5xl:w-[347px] h-[90px] 5xl:h-[98px]"
+                  className="w-full"
                 />
                 </Link>
               </div>
@@ -220,7 +220,7 @@ export function NavHeader() {
                     fill="#C7A43C"
                   />
                 </svg>
-                <div className="full__section_r_p pt-[8px] 5xl:pt-[10px] flex items-center justify-between gap-[30px] 5xl:gap-[40px]">
+                <div className="full__section_r_p pt-[5px] 5xl:pt-[7px] flex items-center justify-between gap-[30px] 5xl:gap-[40px]">
                   <ul className="flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                     <Link href="#gallery">
                       <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
@@ -233,13 +233,13 @@ export function NavHeader() {
                       </li>
                     </Link>
                   </ul>
-                  <div className="">
+                  <div className="-mt-[4px]">
                     <Link
                       href="tel:(905) 973-6669"
                       rel="nofollow"
                       target="_blank"
                     >
-                      <button className="bg-secondary hover:bg-primary text-base 5xl:text-lg font-semibold text-white py-[12px] px-[13px] flex items-center gap-[6px] clip-path-custom">
+                      <button className="bg-secondary hover:bg-primary text-base 5xl:text-lg font-semibold text-white py-[6px] px-[12px] flex items-center gap-[6px] clip-path-custom">
                         <Image
                           src="/assets/lavish/icons/nav_phone.png"
                           alt="book now"
@@ -290,7 +290,7 @@ export function NavHeader() {
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal pt-[9px] pb-[8px] px-[34px] flex items-center gap-[6px] clip-path-custom">
+                <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
                         <span>Book Now</span>
                       </button>
               </Link>
@@ -299,7 +299,7 @@ export function NavHeader() {
                 rel="nofollow"
                 target="_blank"
               >
-                <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white pt-[9px] pb-[8px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+                <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
                         <Image
                           src="/assets/lavish/icons/nav_phone.png"
                           alt="book now"

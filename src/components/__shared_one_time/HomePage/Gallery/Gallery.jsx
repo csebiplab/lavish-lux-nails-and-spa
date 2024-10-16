@@ -39,10 +39,10 @@ const Gallery = () => {
           <div className="grid grid-cols-4 gap-[14px]">
             <div className="col-span-1">
               <Image
-                src="/assets/lavish/gallery/gallery__image.png"
+                src="/assets/lavish/gallery/firstGallery.png"
                 alt="gallery image"
                 width={469}
-                height={491}
+                height={496}
                 className="w-full "
               />
             </div>
@@ -97,7 +97,7 @@ const Gallery = () => {
           </div>
         </div>
         {/* second div  */}
-        <div className="flex -mt-3">
+        <div className="flex gap-[14px]">
           <Image
             src="/assets/lavish/gallery/gallery8.png"
             alt="gallery image"
@@ -130,7 +130,7 @@ const Gallery = () => {
         {/* third div  */}
         {loadImage && (
           <div className="w-full">
-            <div className="flex">
+            <div className="flex gap-[14px] pt-[15px]">
               <Image
                 src="/assets/lavish/gallery/gallery12.png"
                 alt="gallery image"
@@ -161,7 +161,7 @@ const Gallery = () => {
               />
             </div>
             {/* second div */}
-            <div className="flex">
+            <div className="flex gap-[14px] pt-[15px]">
               <Image
                 src="/assets/lavish/gallery/gallery16.png"
                 alt="gallery image"
@@ -198,7 +198,7 @@ const Gallery = () => {
         <div className="flex justify-center items-center pt-[25px] 5xl:pt-[35px]">
           <button
             onClick={() => setLoadImage(!loadImage)}
-            className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom"
+            className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom"
           >
             <span>Load More</span>
             <svg
@@ -243,7 +243,7 @@ const Gallery = () => {
           <div className="pt-[15px] flex justify-center">
             <button
               onClick={loadMoreImages}
-              className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom"
+              className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom"
             >
               <span>Load More</span>
               <svg

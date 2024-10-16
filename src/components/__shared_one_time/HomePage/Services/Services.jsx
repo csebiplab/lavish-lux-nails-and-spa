@@ -27,42 +27,41 @@ const breakpoints = {
 
 const services = [
   {
-    id : 1,
-    img : "/assets/images/services1.png",
-    title : "Tranquil Atmosphere",
-    desc : "Experience pure tranquility at our nail spa sanctuary, where every moment is a serene escape from the chaos of daily life."
+    id: 1,
+    img: "/assets/images/services1.png",
+    title: "Tranquil Atmosphere",
+    desc: "Experience pure tranquility at our nail spa sanctuary, where every moment is a serene escape from the chaos of daily life.",
   },
   {
-    id : 2,
-    img : "/assets/images/services2.png",
-    title : "Hygiene",
-    desc : "Indulge with confidence, knowing that our top-tier hygiene standards are designed to protect and delight you."
+    id: 2,
+    img: "/assets/images/services2.png",
+    title: "Hygiene",
+    desc: "Indulge with confidence, knowing that our top-tier hygiene standards are designed to protect and delight you.",
   },
   {
-    id : 3,
-    img : "/assets/images/services3.png",
-    title : "Nail Artistry",
-    desc : "Elevate your nail aesthetics with our exceptional artistry, where every design is a bespoke reflection of your unique style."
+    id: 3,
+    img: "/assets/images/services3.png",
+    title: "Nail Artistry",
+    desc: "Elevate your nail aesthetics with our exceptional artistry, where every design is a bespoke reflection of your unique style.",
   },
   {
-    id : 4,
-    img : "/assets/images/services1.png",
-    title : "Tranquil Atmosphere",
-    desc : "Experience pure tranquility at our nail spa sanctuary, where every moment is a serene escape from the chaos of daily life."
+    id: 4,
+    img: "/assets/images/services1.png",
+    title: "Tranquil Atmosphere",
+    desc: "Experience pure tranquility at our nail spa sanctuary, where every moment is a serene escape from the chaos of daily life.",
   },
   {
-    id : 5,
-    img : "/assets/images/services2.png",
-    title : "Hygiene",
-    desc : "Indulge with confidence, knowing that our top-tier hygiene standards are designed to protect and delight you."
+    id: 5,
+    img: "/assets/images/services2.png",
+    title: "Hygiene",
+    desc: "Indulge with confidence, knowing that our top-tier hygiene standards are designed to protect and delight you.",
   },
   {
-    id : 6,
-    img : "/assets/images/services3.png",
-    title : "Nail Artistry",
-    desc : "Elevate your nail aesthetics with our exceptional artistry, where every design is a bespoke reflection of your unique style."
+    id: 6,
+    img: "/assets/images/services3.png",
+    title: "Nail Artistry",
+    desc: "Elevate your nail aesthetics with our exceptional artistry, where every design is a bespoke reflection of your unique style.",
   },
-  
 ];
 
 const Services = () => {
@@ -72,14 +71,15 @@ const Services = () => {
         <div className="services__bg py-[23px] px-1">
           {/* =================== Card Section =============== */}
           <Swiper
-            className=""
+            className="!slide-left"
             modules={[Autoplay, Navigation]}
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 6000,
               pauseOnMouseEnter: false,
               disableOnInteraction: false,
               stopOnLastSlide: false,
+              reverseDirection: true,
             }}
             // slidesPerView={5}
             speed={3000}
@@ -100,6 +100,7 @@ const Services = () => {
                 </div>
               </SwiperSlide>
             ))}
+           
           </Swiper>
         </div>
       </div>

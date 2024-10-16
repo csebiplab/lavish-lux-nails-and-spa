@@ -226,7 +226,7 @@ const BookAnAppointment = () => {
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <button className="bg-primary hover:bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+                <button className="bg-primary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom">
                   <span>Book Now</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -448,7 +448,7 @@ const BookAnAppointment = () => {
                     target="_blank"
                     href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
                   >
-                    <button className="bg-primary text-base font-semibold text-white py-[16px] px-[32px] flex items-center space-x-3 clip-path-custom">
+                    <button className="bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom">
                       <span>Book Now</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

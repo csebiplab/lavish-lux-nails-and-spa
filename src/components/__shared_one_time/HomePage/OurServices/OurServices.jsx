@@ -76,7 +76,7 @@ const OurServices = () => {
                           alt={data?.title}
                           width={113}
                           height={113}
-                          className="w-full px-[55px] pt-[18px]"
+                          className="w-full px-[37px] pt-[18px]"
                         />
                         <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
                           {data?.title}
@@ -97,7 +97,7 @@ const OurServices = () => {
                           alt={data?.title}
                           width={113}
                           height={113}
-                          className="w-full  px-[55px] pt-[18px]"
+                          className="w-full  px-[37px] pt-[18px]"
                         />
                         <p className="font-family-secondary text-2xl font-normal text-black pb-[15px]">
                           {data?.title}
