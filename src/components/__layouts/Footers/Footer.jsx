@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]">
           <div className="flex items-center gap-[50px] 5xl:gap-[60px]">
             <div className="w-full h-[2px] bg-primary" />
-            <div className="w-full">
+            <div className="w-2/3">
               <Image
                 src="/assets/lavish/images/footer__logo.png"
                 alt="footer logo"
@@ -84,9 +84,9 @@ const Footer = () => {
             Find the best nail salon in Mississauga for impeccable manicures &
             pedicures. Expert service & stunning results await! Book now.
           </p>
-          <div className="grid grid-cols-10 gap-10 5xl:gap-[54px]">
+          <div className="grid grid-cols-12 gap-6 5xl:gap-[54px]">
             {/* first div  */}
-            <div className="col-span-2">
+            <div className="col-span-3">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Ours Services
               </p>
@@ -110,7 +110,6 @@ const Footer = () => {
             </div>
 
             {/* second div  */}
-
             <div className="col-span-2">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Navigation
@@ -127,6 +126,8 @@ const Footer = () => {
                 })}
               </div>
             </div>
+            
+
             {/* third div  */}
             <div className="col-span-3">
               <div className="border-[4px] rounded-[8px] border-primary ">
@@ -156,7 +157,7 @@ const Footer = () => {
             </div>
 
             {/* fourth div  */}
-            <div className="col-span-3">
+            <div className="col-span-4">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Contact Us
               </p>
@@ -170,7 +171,7 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location:1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
                     1100 Burnhamthorpe Rd <br className="hidden lg:block" /> W
                     Unit 16, Mississauga, <br className="hidden lg:block" /> ON
@@ -184,7 +185,7 @@ const Footer = () => {
                     width={21}
                     height={21}
                   />
-                  <Link className="text-white" href="tel : (905) 973-6669">
+                  <Link className="text-white" href="tel:(905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
@@ -197,14 +198,14 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="mail : manager@lavishluxnailsandspa.com"
+                    href="mail:manager@lavishluxnailsandspa.com"
                   >
-                    manager@lavishlux <br className="hidden lg:block" />{" "}
-                    nailsandspa.com
+                    manager@lavishluxnailsandspa.com
                   </Link>
                 </li>
               </ul>
             </div>
+            
           </div>
         </div>
         {/* footer bottom  */}

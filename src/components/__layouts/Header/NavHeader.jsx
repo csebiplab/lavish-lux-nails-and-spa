@@ -129,19 +129,6 @@ export function NavHeader() {
                   <FaCanadianMapleLeaf className="w-[27px] h-[22px]" />
                   Best Nail Salon in Mississauga
                 </p>
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="auto"
-                  height="18"
-                  viewBox="0 0 709 18"
-                  fill="none"
-                  className="w-[400px] 3xl:w-[500px] 5xl:w-[700px]"
-                >
-                  <path
-                    d="M708.572 9L699.912 0.339746L691.252 9L699.912 17.6603L708.572 9ZM-0.0878906 10.5H699.912V7.5H-0.0878906V10.5Z"
-                    fill="#C7A43C"
-                  />
-                </svg> */}
                 <div className="w-full h-[2px] bg-primary"/>
                 <ul className="full__section_l_p pt-[5px] 5xl:pt-[7px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                   <Link href="#about">
@@ -167,7 +154,7 @@ export function NavHeader() {
                 </ul>
               </div>
               {/* second div  */}
-              <div className="w-1/2">
+              <div className="w-1/2 5xl:w-1/3">
                 <Link href="/">
                 <Image
                   src="/assets/images/nav_logo.png"
@@ -210,18 +197,6 @@ export function NavHeader() {
                     </Link>
                   </div>
                 </div>
-                {/* <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="auto"
-                  height="18"
-                  viewBox="0 0 709 18"
-                  fill="none"
-                >
-                  <path
-                    d="M0.339746 9L9 17.6603L17.6603 9L9 0.339746L0.339746 9ZM9 10.5H709V7.5H9V10.5Z"
-                    fill="#C7A43C"
-                  />
-                </svg> */}
                 <div className="w-full h-[2px] bg-primary"/>
                 <div className="full__section_r_p pt-[5px] 5xl:pt-[7px] flex items-center justify-end gap-[20px] 5xl:gap-[30px]">
                   <ul className="flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">

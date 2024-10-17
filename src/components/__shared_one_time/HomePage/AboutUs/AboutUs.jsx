@@ -8,7 +8,7 @@ const AboutUs = () => {
     <div id="about">
       <div className="full__section_l_p padding__top padding__bottom  pr-3 md:pr-0">
         <div className="grid grid-cols-1 xl:grid-cols-6 5xl:grid-cols-7 gap-[15px]">
-          <div className="order-2 xl:order-1 xl:col-span-3 ">
+          <div data-aos="fade-right" className="order-2 xl:order-1 xl:col-span-3 ">
             <div className="h-full flex flex-col justify-start 5xl:justify-center items-center md:items-start">
               <div className="">
                 <HeadingIcon text={headingIconText.aboutUs__headingIconText} />
@@ -27,7 +27,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="order-1 xl:order-2 xl:col-span-3 5xl:col-span-4">
+          <div data-aos="fade-left" className="order-1 xl:order-2 xl:col-span-3 5xl:col-span-4">
             <div>
               <Image
                 src="/assets/lavish/images/about__us.png"
