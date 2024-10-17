@@ -9,7 +9,7 @@ const BannerSession = () => {
     <div>
       {/* large device  */}
       <div className="hidden md:block bannerSession__bg container">
-        <div className="relative h-full flex flex-col items-center justify-center">
+        <div data-aos="fade-up" className=" relative h-full flex flex-col items-center justify-center">
           <Image
             src="/assets/lavish/images/hero__content.png"
             alt="hero content"

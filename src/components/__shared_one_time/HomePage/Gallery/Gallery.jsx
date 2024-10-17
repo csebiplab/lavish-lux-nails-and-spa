@@ -33,7 +33,7 @@ const Gallery = () => {
         <HeadingIcon text={headingIconText.gallery__headingIconText} />
       </div>
       {/* large device  */}
-      <div className="hidden md:block pt-[25px]">
+      <div data-aos="fade-up" className="hidden md:block pt-[25px]">
         <div>
           {/* first div  */}
           <div className="grid grid-cols-4 gap-[14px]">
@@ -198,7 +198,8 @@ const Gallery = () => {
         <div className="flex justify-center items-center pt-[25px] 5xl:pt-[35px]">
           <button
             onClick={() => setLoadImage(!loadImage)}
-            className="bg-secondary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom"
+
+            className={`bg-secondary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom ${loadImage && "hidden"}`}
           >
             <span>Load More</span>
             <svg

@@ -55,7 +55,7 @@ const FeelOurLuxurious = () => {
             text={headingIconText.feelOurLuxurious__headingIconText}
           />
         </div>
-        <div>
+        <div data-aos="fade-right">
           <Image
             src="/assets/lavish/services/service.png"
             alt="FeelOurLuxurious image"
@@ -65,7 +65,7 @@ const FeelOurLuxurious = () => {
           />
         </div>
         {/* ==================== swiper slider ================ */}
-        <div className="container -mt-[50px] md:-mt-[60px] 5xl:-mt-[100px]">
+        <div data-aos="fade-up" className="container -mt-[50px] md:-mt-[60px] 5xl:-mt-[100px]">
           <Swiper
             modules={[Autoplay]}
             loop={true}

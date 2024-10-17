@@ -67,7 +67,7 @@ const services = [
 const Services = () => {
   return (
     <div className="">
-      <div className="container padding__top">
+      <div data-aos="fade-down" className=" container padding__top">
         <div className="services__bg py-[23px] px-1">
           {/* =================== Card Section =============== */}
           <Swiper
