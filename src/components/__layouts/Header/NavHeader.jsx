@@ -121,15 +121,15 @@ export function NavHeader() {
 
         <div className="custom-container">
           <div className="hidden xl:block main__header py-[6px] 5xl:py-[10px]">
-            <div className="flex justify-between items-center gap-[60px]">
+            <div className="w-full flex justify-between items-center gap-[40px]">
               {/* first div  */}
-              <div className="">
-                <p className=" full__section_l_p pb-[3px] 5xl:pb-[5px] flex items-center gap-[10px] text-secondary text-sm 5xl:text-base font-medium">
+              <div className="w-full">
+                <p className="full__section_l_p pb-[4px] 5xl:pb-[5px] flex items-center gap-[4px] text-secondary text-sm 5xl:text-base font-medium">
                   {" "}
-                  <FaCanadianMapleLeaf className="w-[27px] h-[27px]" />
+                  <FaCanadianMapleLeaf className="w-[27px] h-[22px]" />
                   Best Nail Salon in Mississauga
                 </p>
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="auto"
                   height="18"
@@ -141,7 +141,8 @@ export function NavHeader() {
                     d="M708.572 9L699.912 0.339746L691.252 9L699.912 17.6603L708.572 9ZM-0.0878906 10.5H699.912V7.5H-0.0878906V10.5Z"
                     fill="#C7A43C"
                   />
-                </svg>
+                </svg> */}
+                <div className="w-full h-[2px] bg-primary"/>
                 <ul className="full__section_l_p pt-[5px] 5xl:pt-[7px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                   <Link href="#about">
                     <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
@@ -162,10 +163,11 @@ export function NavHeader() {
                       Book Now
                     </li>
                   </Link>
+                  
                 </ul>
               </div>
               {/* second div  */}
-              <div>
+              <div className="w-1/2">
                 <Link href="/">
                 <Image
                   src="/assets/images/nav_logo.png"
@@ -177,7 +179,7 @@ export function NavHeader() {
                 </Link>
               </div>
               {/* third div  */}
-              <div>
+              <div className="w-full">
                 <div className="full__section_r_p pb-[6px] 5xl:pb-[8px] flex justify-end gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
                   <p className="text-sm font-semibold text-secondary ">
                     Follow Us:
@@ -208,7 +210,7 @@ export function NavHeader() {
                     </Link>
                   </div>
                 </div>
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="auto"
                   height="18"
@@ -219,8 +221,9 @@ export function NavHeader() {
                     d="M0.339746 9L9 17.6603L17.6603 9L9 0.339746L0.339746 9ZM9 10.5H709V7.5H9V10.5Z"
                     fill="#C7A43C"
                   />
-                </svg>
-                <div className="full__section_r_p pt-[5px] 5xl:pt-[7px] flex items-center justify-between gap-[30px] 5xl:gap-[40px]">
+                </svg> */}
+                <div className="w-full h-[2px] bg-primary"/>
+                <div className="full__section_r_p pt-[5px] 5xl:pt-[7px] flex items-center justify-end gap-[20px] 5xl:gap-[30px]">
                   <ul className="flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
                     <Link href="#gallery">
                       <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
@@ -233,19 +236,19 @@ export function NavHeader() {
                       </li>
                     </Link>
                   </ul>
-                  <div className="-mt-[4px]">
+                  <div className="-mt-[2px]">
                     <Link
                       href="tel:(905) 973-6669"
                       rel="nofollow"
                       target="_blank"
                     >
-                      <button className="bg-secondary hover:bg-primary text-base 5xl:text-lg font-semibold text-white py-[6px] px-[12px] flex items-center gap-[6px] clip-path-custom">
+                      <button className="bg-secondary hover:bg-primary text-base 5xl:text-lg font-semibold text-white py-[4px] px-[8px] flex items-center gap-[2px] clip-path-custom">
                         <Image
                           src="/assets/lavish/icons/nav_phone.png"
                           alt="book now"
                           width={24}
                           height={24}
-                          className="w-[24px] h-[24px]"
+                          className="w-[24px] h-[20px]"
                         />
                         <span>(905) 973-6669</span>
                       </button>
