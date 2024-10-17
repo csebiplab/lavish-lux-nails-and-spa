@@ -66,7 +66,7 @@ const Footer = () => {
     <footer className="">
       {/* large device  */}
       <div className="hidden xl:block">
-        <div className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]">
+        <div data-aos="fade-up" className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]">
           <div className="flex items-center gap-[50px] 5xl:gap-[60px]">
             <div className="w-full h-[2px] bg-primary" />
             <div className="w-2/3">

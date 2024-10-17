@@ -90,56 +90,58 @@ const Review = () => {
           </div>
 
           {/* ==================== swiper slider ================ */}
-          <Swiper
-            modules={[Autoplay]}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              pauseOnMouseEnter: false,
-              disableOnInteraction: false,
-              stopOnLastSlide: false,
-            }}
-            speed={3000}
-            allowTouchMove={false}
-            breakpoints={breakpoints}
-            spaceBetween={12}
-          >
-            {reviews.map((slideInfo, index) => (
-              <SwiperSlide
-                key={index}
-                className={`px-[12px] md:px-0 !h-auto !md:h-full`}
-              >
-                <div className="w-full !h-full card-sd bg-primary-700">
-                  <div className="text-center pt-[8px] pb-[10px] px-[12px]">
-                    <Image
-                      className="pb-[10px]"
-                      src={slideInfo?.google}
-                      alt="google image"
-                      width={148}
-                      height={85}
-                    />
-                    <Image
-                      src={slideInfo?.star}
-                      alt="star icon"
-                      width={210}
-                      height={31}
-                    />
+          <div data-aos="fade-up">
+            <Swiper
+              modules={[Autoplay]}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                pauseOnMouseEnter: false,
+                disableOnInteraction: false,
+                stopOnLastSlide: false,
+              }}
+              speed={3000}
+              allowTouchMove={false}
+              breakpoints={breakpoints}
+              spaceBetween={12}
+            >
+              {reviews.map((slideInfo, index) => (
+                <SwiperSlide
+                  key={index}
+                  className={`px-[12px] md:px-0 !h-auto !md:h-full`}
+                >
+                  <div className="w-full !h-full card-sd bg-primary-700">
+                    <div className="text-center pt-[8px] pb-[10px] px-[12px]">
+                      <Image
+                        className="pb-[10px]"
+                        src={slideInfo?.google}
+                        alt="google image"
+                        width={148}
+                        height={85}
+                      />
+                      <Image
+                        src={slideInfo?.star}
+                        alt="star icon"
+                        width={210}
+                        height={31}
+                      />
 
-                    <p className="text-lg font-medium py-[10px] text-left text-balck">
-                      {slideInfo?.reviewText}
-                    </p>
-                    <p className="text-[15px] font-semibold pb-[5px] text-left text-black">
-                      {slideInfo?.author}
-                    </p>
-                    <p className="text-xs font-medium text-dark-100 text-left">
-                      {slideInfo?.address}
-                    </p>
+                      <p className="text-lg font-medium py-[10px] text-left text-balck">
+                        {slideInfo?.reviewText}
+                      </p>
+                      <p className="text-[15px] font-semibold pb-[5px] text-left text-black">
+                        {slideInfo?.author}
+                      </p>
+                      <p className="text-xs font-medium text-dark-100 text-left">
+                        {slideInfo?.address}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-            <SwiperNavButtons />
-          </Swiper>
+                </SwiperSlide>
+              ))}
+              <SwiperNavButtons />
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

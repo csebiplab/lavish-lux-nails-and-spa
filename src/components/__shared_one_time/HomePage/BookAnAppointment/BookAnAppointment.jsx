@@ -256,7 +256,7 @@ const BookAnAppointment = () => {
       <div className="hidden md:block">
         <div className="">
           <div className="grid grid-cols-3">
-            <div className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]">
+            <div data-aos="fade-right" className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]">
               <h5 className="font-family-secondary text-[42px] xl:text-[55px] 5xl:text-[75px] font-normal text-white leading-normal">
                 Book An Appointment
               </h5>
@@ -473,7 +473,7 @@ const BookAnAppointment = () => {
               </form>
             </div>
 
-            <div className="col-span-1 flex items-center justify-end -ml-[220px]">
+            <div data-aos="fade-left" className="col-span-1 flex items-center justify-end -ml-[220px]">
               <iframe
                 className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
