@@ -6,12 +6,14 @@ import Footer from "@/components/__layouts/Footers/Footer";
 import ScrollToTopComponent from "@/components/common/ScrollToTop";
 import { NavHeader } from "@/components/__layouts/Header/NavHeader";
 import { Lucida_Grande, Naomi } from "../font";
+import AosSetup from "@/config/aos";
 
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <AosSetup/>
       <body className={`${Lucida_Grande.variable} ${Naomi.variable}`}>
         <Suspense>
           <RoutingProgressBar />

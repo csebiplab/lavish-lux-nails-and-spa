@@ -67,52 +67,26 @@ const Footer = () => {
       {/* large device  */}
       <div className="hidden xl:block">
         <div className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]">
-          <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
-            <span>
-              <svg
-                className="mt-6"
-                xmlns="http://www.w3.org/2000/svg"
-                width="auto"
-                height="30"
-                viewBox="0 0 682 30"
-                fill="none"
-              >
-                <path
-                  d="M681.65 15L667.217 0.566243L652.783 15L667.217 29.4338L681.65 15ZM0 17.5L667.217 17.5V12.5L0 12.5L0 17.5Z"
-                  fill="#C7A43C"
-                />
-              </svg>
-            </span>
-            <Image
-              src="/assets/lavish/images/footer__logo.png"
-              alt="footer logo"
-              width={319}
-              height={89}
-              className="w-full mx-auto pb-[12px] 5xl:pb-[15px]"
-            />
-            <span>
-              <svg
-                className="mt-6"
-                xmlns="http://www.w3.org/2000/svg"
-                width="auto"
-                height="30"
-                viewBox="0 0 682 30"
-                fill="none"
-              >
-                <path
-                  d="M0.349609 15L14.7834 29.4338L29.2172 15L14.7834 0.566243L0.349609 15ZM682 12.5L14.7834 12.5V17.5L682 17.5V12.5Z"
-                  fill="#C7A43C"
-                />
-              </svg>
-            </span>
+          <div className="flex items-center gap-[50px] 5xl:gap-[60px]">
+            <div className="w-full h-[2px] bg-primary" />
+            <div className="w-2/3">
+              <Image
+                src="/assets/lavish/images/footer__logo.png"
+                alt="footer logo"
+                width={319}
+                height={89}
+                className="w-full mx-auto pb-[12px] 5xl:pb-[15px]"
+              />
+            </div>
+            <div className="w-full h-[2px] bg-primary" />
           </div>
           <p className="text-base 5xl:text-lg font-normal text-white text-center pb-[25px] 5xl:pb-[35px]">
             Find the best nail salon in Mississauga for impeccable manicures &
             pedicures. Expert service & stunning results await! Book now.
           </p>
-          <div className="grid grid-cols-10 gap-10 5xl:gap-[54px]">
+          <div className="grid grid-cols-12 gap-6 5xl:gap-[54px]">
             {/* first div  */}
-            <div className="col-span-2">
+            <div className="col-span-3">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Ours Services
               </p>
@@ -136,7 +110,6 @@ const Footer = () => {
             </div>
 
             {/* second div  */}
-
             <div className="col-span-2">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Navigation
@@ -153,6 +126,8 @@ const Footer = () => {
                 })}
               </div>
             </div>
+            
+
             {/* third div  */}
             <div className="col-span-3">
               <div className="border-[4px] rounded-[8px] border-primary ">
@@ -182,7 +157,7 @@ const Footer = () => {
             </div>
 
             {/* fourth div  */}
-            <div className="col-span-3">
+            <div className="col-span-4">
               <p className="text-[22px] 5xl:text-[25px] font-semibold text-white pb-[18px] 5xl:pb-[28px]">
                 Contact Us
               </p>
@@ -196,11 +171,11 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location:1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
-                    1100 Burnhamthorpe Rd <br className="hidden lg:block" /> W Unit 16,
-                     Mississauga, <br className="hidden lg:block" /> ON L5C 4G4,
-                    Canada
+                    1100 Burnhamthorpe Rd <br className="hidden lg:block" /> W
+                    Unit 16, Mississauga, <br className="hidden lg:block" /> ON
+                    L5C 4G4, Canada
                   </Link>
                 </li>
                 <li className="flex items-center gap-[12px] 5xl:gap-[24px] text-base 5xl:text-lg font-medium leading-normal py-[20px] 5xl:py-[26px]">
@@ -210,7 +185,7 @@ const Footer = () => {
                     width={21}
                     height={21}
                   />
-                  <Link className="text-white" href="tel : (905) 973-6669">
+                  <Link className="text-white" href="tel:(905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
@@ -223,13 +198,14 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="mail : manager@lavishluxnailsandspa.com"
+                    href="mail:manager@lavishluxnailsandspa.com"
                   >
-                    manager@lavishlux <br className="hidden lg:block" /> nailsandspa.com
+                    manager@lavishluxnailsandspa.com
                   </Link>
                 </li>
               </ul>
             </div>
+            
           </div>
         </div>
         {/* footer bottom  */}
@@ -513,9 +489,8 @@ const Footer = () => {
                   className="text-white"
                   href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                 >
-                  1100 Burnhamthorpe Rd W Unit 16,{" "}
-                  <br/> Mississauga, ON L5C 4G4,
-                  Canada
+                  1100 Burnhamthorpe Rd W Unit 16, <br /> Mississauga, ON L5C
+                  4G4, Canada
                 </Link>
               </li>
               <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal py-[17px] sm:py-[22px]">
