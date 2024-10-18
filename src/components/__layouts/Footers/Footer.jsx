@@ -66,7 +66,10 @@ const Footer = () => {
     <footer className="">
       {/* large device  */}
       <div className="hidden xl:block">
-        <div data-aos="fade-up" className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]">
+        <div
+          data-aos="fade-up"
+          className="footer__bg container pt-[20px] pb-[5px] 5xl:py-[24px]"
+        >
           <div className="flex items-center gap-[50px] 5xl:gap-[60px]">
             <div className="w-full h-[2px] bg-primary" />
             <div className="w-2/3">
@@ -126,7 +129,6 @@ const Footer = () => {
                 })}
               </div>
             </div>
-            
 
             {/* third div  */}
             <div className="col-span-3">
@@ -205,7 +207,6 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            
           </div>
         </div>
         {/* footer bottom  */}
@@ -237,7 +238,7 @@ const Footer = () => {
 
       {/* medium device  */}
       <div className="hidden lg:block xl:hidden">
-        <div className="footer__bg container py-[100px]">
+        <div className="footer__bg container py-[35px]">
           <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
             <span>
               <svg
@@ -277,11 +278,11 @@ const Footer = () => {
               </svg>
             </span>
           </div>
-          <p className="text-lg font-normal text-white text-center pb-[55px]">
+          <p className="text-lg font-normal text-white text-center pb-[18px]">
             Find the best nail salon in Mississauga for impeccable manicures &
             pedicures. Expert service & stunning results await! Book now.
           </p>
-          <div className="grid grid-cols-7 gap-10 5xl:gap-[54px]">
+          <div className="grid grid-cols-8 gap-4">
             {/* first div  */}
             <div className="col-span-2">
               <p className="text-[25px] font-semibold text-white pb-[28px]">
@@ -312,12 +313,12 @@ const Footer = () => {
               </ul>
             </div>
             {/* third div  */}
-            <div className="col-span-3">
+            <div className="col-span-4">
               <p className="text-[25px] font-semibold text-white pb-[28px]">
                 Contact Us
               </p>
               <ul>
-                <li className="flex items-center gap-[24px] text-lg font-medium">
+                <li className="flex items-start gap-[8px] text-lg font-medium">
                   <Image
                     src="/assets/icons/map.png"
                     alt="map icon"
@@ -326,24 +327,24 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location:1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
                   >
-                    1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4,
-                    Canada
+                    1100 Burnhamthorpe Rd <br /> W Unit 16, Mississauga, <br />{" "}
+                    ON L5C 4G4, Canada
                   </Link>
                 </li>
-                <li className="flex items-center gap-[24px] text-lg font-medium py-[26px]">
+                <li className="flex items-center gap-[8px] text-lg font-medium py-[26px]">
                   <Image
                     src="/assets/icons/phone.png"
                     alt="phone icon"
                     width={21}
                     height={21}
                   />
-                  <Link className="text-white" href="tel : (905) 973-6669">
+                  <Link className="text-white" href="tel:(905) 973-6669">
                     (905) 973-6669
                   </Link>
                 </li>
-                <li className="flex items-center gap-[24px] text-lg font-medium">
+                <li className="flex items-center gap-[8px] text-lg font-medium">
                   <Image
                     src="/assets/icons/email.png"
                     alt="email icon"
@@ -352,7 +353,7 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="mail : manager@lavishluxnailsandspa.com"
+                    href="mail:manager@lavishluxnailsandspa.com"
                   >
                     manager@lavishluxnailsandspa.com
                   </Link>
@@ -387,9 +388,23 @@ const Footer = () => {
               </p>
             </div>
           </div>
+          {/* fifth div  */}
+          <div className="flex justify-between items-center pt-[35px]">
+            <div>
+              <p className="text-base font-medium text-white">
+                © All Copyright 2024 by Lavish Lux Nail Spa
+              </p>
+            </div>
+            <div className="flex items-center justify-between gap-10">
+              <p className="text-base font-medium text-white">
+                Terms & Condition
+              </p>
+              <p className="text-base font-medium text-white">Privacy Policy</p>
+            </div>
+          </div>
         </div>
         {/* footer bottom  */}
-        <div className="bg-primary py-[9px] container flex justify-between items-center">
+        <div className="bg-primary py-[9px] container flex justify-center items-center">
           <div className="flex items-center gap-[15px]">
             <p className="text-base font-semibold text-white">
               WEBSITE DESIGN AND SEO BY :-
@@ -400,17 +415,6 @@ const Footer = () => {
               width={141}
               height={36}
             />
-          </div>
-          <div>
-            <p className="text-base font-medium text-white">
-              © All Copyright 2024 by Lavish Lux Nail Spa
-            </p>
-          </div>
-          <div className="flex items-center justify-between">
-            <p className="text-base font-medium text-white">
-              Terms & Condition
-            </p>
-            <p className="text-base font-medium text-white">Privacy Policy</p>
           </div>
         </div>
       </div>

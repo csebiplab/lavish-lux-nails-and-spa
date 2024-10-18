@@ -28,10 +28,10 @@ const BookAnAppointment = () => {
   return (
     <div id="contact">
       {/* small device  */}
-      <div className="block md:hidden">
+      <div className="container block xl:hidden">
         <div className="px-[20px]">
           <iframe
-            className="w-full h-[240px]"
+            className="w-full h-[240px] lg:h-[295px]"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
             width="370"
             height="240"
@@ -41,10 +41,10 @@ const BookAnAppointment = () => {
           ></iframe>
         </div>
         <div className="bookAnAppointment__bg -mt-[50px]">
-          <h5 className="font-family-secondary text-3xl font-normal leading-normal text-white pt-[80px] pb-[25px] pl-[30px]">
+          <h5 className="font-family-secondary text-3xl lg:text-[75px] font-normal leading-normal text-white pt-[80px] lg:pt-[50px] pb-[25px] lg:pb-0 pl-[30px] lg:pl-[52px]">
             Book An Appointment
           </h5>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} className="px-0 lg:px-[32px]">
             {/* services */}
 
             <div className="relative px-[20px]">
@@ -253,7 +253,7 @@ const BookAnAppointment = () => {
       </div>
 
       {/* large device  */}
-      <div className="hidden md:block">
+      <div className="hidden xl:block">
         <div className="">
           <div className="grid grid-cols-3">
             <div data-aos="fade-right" className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]">
@@ -487,6 +487,7 @@ const BookAnAppointment = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };

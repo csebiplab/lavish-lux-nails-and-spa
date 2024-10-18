@@ -6,7 +6,8 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div id="about">
-      <div className="full__section_l_p padding__top padding__bottom  pr-3 md:pr-0">
+      {/* small and extra large div  */}
+      <div className="block lg:hidden xl:block full__section_l_p padding__top padding__bottom  pr-3 md:pr-0">
         <div className="grid grid-cols-1 xl:grid-cols-6 5xl:grid-cols-7 gap-[15px]">
           <div data-aos="fade-right" className="order-2 xl:order-1 xl:col-span-3 ">
             <div className="h-full flex flex-col justify-start 5xl:justify-center items-center md:items-start">
@@ -39,6 +40,21 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* large device  */}
+      <div className="container padding__all hidden lg:block xl:hidden">
+          {/* img part  */}
+          <div>
+            <Image className="w-full" src="/assets/md-device/about_us.png" alt="about us image" width={736} height={509}/>
+          </div>
+          {/* content part  */}
+          <div>
+          <div className="w-full flex justify-center items-center pt-[18px]">
+                <HeadingIcon text={headingIconText.aboutUs__headingIconText} />
+              </div>
+            <p className="text-lg font-medium text-black leading-[35px] text-center ">Lavish Lux Nails & Spa is not just a destination; it's a transformative experience in the heart of Mississauga. Renowned for its blend of luxury and expert craftsmanship, our salon is where indulgence meets excellence. Each visit promises a journey into unparalleled beauty and tranquility, with services ranging from flawless manicures to breathtaking nail art, all tailored to your unique style. Our dedicated team of skilled technicians ensures that every detail is perfected, providing personalized attention that leaves you feeling cherished and looking spectacular. Step into Lavish Lux and discover why we are the pinnacle of elegance and sophistication in Mississauga's beauty scene. Experience the difference that true luxury and expert care can make, and elevate your nail care to a new level of perfection.</p>
+          </div>
       </div>
     </div>
   );

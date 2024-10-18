@@ -17,7 +17,7 @@ const BannerSession = () => {
             height={463}
             className="w-full"
           />
-          <div className="absolute top-[120px] 5xl:top-[160px] left-[100px]">
+          <div className="absolute top-[80px] xl:top-[120px] 5xl:top-[160px] left-[100px]">
             <h1 className="font-family-secondary text-[42px] xl:text-[55px] 5xl:text-[75px] font-normal text-white leading-[42px] xl:leading-[55px] 5xl:leading-[75px] pb-[20px] 5xl:pb-[25px]">
               Lavish Lux Nails & Spa <br />{" "}
               <span className="text-[28px] xl:text-[34px] 5xl:text-[45px]">
