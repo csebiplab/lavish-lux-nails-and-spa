@@ -94,7 +94,7 @@ const Review = () => {
           </div>
 
           {/* ==================== swiper slider ================ */}
-          <div data-aos="fade-up">
+          <div>
             <Swiper
               modules={[Autoplay]}
               loop={true}

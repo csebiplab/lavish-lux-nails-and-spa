@@ -50,8 +50,8 @@ const OurServices = () => {
             text={headingIconText.ourServicesAtLavish__headingIconText}
           />
         </div>
-        <div className="grid grid-cols-1 xl:grid-cols-6 gap-10">
-          <div data-aos="fade-right" className="xl:col-span-3 flex justify-center justify-start pt-[37px] xl:pt-[28px]">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-10">
+          <div data-aos="fade-right" className="lg:col-span-3 flex justify-center justify-start pt-[37px] lg:pt-[28px]">
             <Image
               src="/assets/lavish/images/our_services.png"
               alt="our service image"
@@ -61,9 +61,9 @@ const OurServices = () => {
             />
           </div>
           {/* large device  */}
-          <div data-aos="fade-left" className="xl:col-span-3">
+          <div data-aos="fade-left" className="hidden lg:block lg:col-span-3">
             <div className="w-full">
-              <div className=" flex justify-center xl:justify-end gap-[25px] lg:gap-[28px]">
+              <div className=" flex justify-center lg:justify-end gap-[25px] lg:gap-[28px]">
                 <div className="mt-[60px]">
                   {servicesData?.map((data) => {
                     return (
@@ -112,7 +112,7 @@ const OurServices = () => {
 
           {/* small device  */}
 
-          <div className="block md:hidden xl:col-span-3">
+          <div className="block lg:hidden lg:col-span-3">
             <div className="w-full flex justify-center">
               <div className="flex justify-end gap-[20px] md:gap-[28px]">
                 <div className="mt-[60px]">
