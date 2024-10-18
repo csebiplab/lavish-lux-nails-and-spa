@@ -22,4 +22,11 @@
   width: 100%;
   height: 380px;
 }
+
+@media (max-width: 1024px) {
+  .bannerSession__bg {
+    height: 313px;
+    width: 100%;
+  }
+}
   

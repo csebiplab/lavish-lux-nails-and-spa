@@ -282,7 +282,7 @@ const Footer = () => {
             Find the best nail salon in Mississauga for impeccable manicures &
             pedicures. Expert service & stunning results await! Book now.
           </p>
-          <div className="grid grid-cols-8 gap-12 5xl:gap-[54px]">
+          <div className="grid grid-cols-8 gap-4">
             {/* first div  */}
             <div className="col-span-2">
               <p className="text-[25px] font-semibold text-white pb-[28px]">
@@ -318,7 +318,7 @@ const Footer = () => {
                 Contact Us
               </p>
               <ul>
-                <li className="flex items-start gap-[10px] text-lg font-medium">
+                <li className="flex items-start gap-[8px] text-lg font-medium">
                   <Image
                     src="/assets/icons/map.png"
                     alt="map icon"
@@ -333,7 +333,7 @@ const Footer = () => {
                     ON L5C 4G4, Canada
                   </Link>
                 </li>
-                <li className="flex items-center gap-[10px] text-lg font-medium py-[26px]">
+                <li className="flex items-center gap-[8px] text-lg font-medium py-[26px]">
                   <Image
                     src="/assets/icons/phone.png"
                     alt="phone icon"
@@ -344,7 +344,7 @@ const Footer = () => {
                     (905) 973-6669
                   </Link>
                 </li>
-                <li className="flex items-center gap-[10px] text-lg font-medium">
+                <li className="flex items-center gap-[8px] text-lg font-medium">
                   <Image
                     src="/assets/icons/email.png"
                     alt="email icon"
