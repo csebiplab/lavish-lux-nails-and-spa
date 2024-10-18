@@ -61,9 +61,9 @@ const OurServices = () => {
             />
           </div>
           {/* large device  */}
-          <div data-aos="fade-left" className="hidden xl:block xl:col-span-3">
+          <div data-aos="fade-left" className="xl:col-span-3">
             <div className="w-full">
-              <div className=" flex justify-end gap-[25px] lg:gap-[28px]">
+              <div className=" flex justify-center xl:justify-end gap-[25px] lg:gap-[28px]">
                 <div className="mt-[60px]">
                   {servicesData?.map((data) => {
                     return (
