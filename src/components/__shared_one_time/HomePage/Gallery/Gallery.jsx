@@ -16,7 +16,7 @@ const galleryImages = [
   "/assets/lavish/gallery/gallery9.png",
   "/assets/lavish/gallery/gallery10.png",
   "/assets/lavish/gallery/gallery11.png",
-  "/assets/lavish/gallery/gallery__image.png",
+  "/assets/lavish/gallery/firstGallery.png",
 ];
 
 const Gallery = () => {
