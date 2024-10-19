@@ -1,4 +1,5 @@
 "use client";
+import { useRef } from "react";
 
 import "./Review.css";
 
@@ -13,6 +14,7 @@ import { SwiperNavButtons } from "./SwiperSliderButton";
 import Image from "next/image";
 import HeadingIcon from "@/components/__ui/HeadingIcon";
 import { headingIconText } from "@/utils/heading-text";
+
 
 const breakpoints = {
   0: {
@@ -85,6 +87,7 @@ const reviews = [
 ];
 
 const Review = () => {
+  const swipperRef = useRef(null)
   return (
     <div className="">
       <div className="container padding__top">
@@ -96,16 +99,17 @@ const Review = () => {
           {/* ==================== swiper slider ================ */}
           <div>
             <Swiper
+              ref={swipperRef}
               modules={[Autoplay]}
               loop={true}
               autoplay={{
                 delay: 3000,
-                pauseOnMouseEnter: false,
+                pauseOnMouseEnter: true,
                 disableOnInteraction: false,
                 stopOnLastSlide: false,
               }}
               speed={3000}
-              allowTouchMove={false}
+              allowTouchMove={true}
               breakpoints={breakpoints}
               spaceBetween={12}
             >
