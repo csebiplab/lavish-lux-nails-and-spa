@@ -246,7 +246,7 @@ export function NavHeader() {
             }`}
           >
             {/* first div  */}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center pt-1">
               <div className="flex justify-center items-center gap-[5px]">
                 <Image
                   src="/assets/images/canada.png"
@@ -259,7 +259,37 @@ export function NavHeader() {
                   Best Nail Salon in Mississauga
                 </p>
               </div>
-              <div className="block xl:hidden">
+              <div className="flex items-center gap-2">
+                <p className="text-sm font-semibold text-secondary ">
+                  Follow Us:
+                </p>
+                <div className="flex  gap-[30px]">
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61559301724341"
+                  >
+                    <FaFacebook className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.tiktok.com/@lavishluxnailsspa"
+                  >
+                    <AiFillTikTok className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.instagram.com/lavishluxnailspa_sauga/"
+                  >
+                    <FaInstagram className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+                </div>
+              </div>
+              {/* <div className="block xl:hidden">
                 <IconButton
                   variant="text"
                   color="blue-gray"
@@ -278,22 +308,23 @@ export function NavHeader() {
                     />
                   )}
                 </IconButton>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* center div  */}
-          <div id="hideOnScroll"
-            className={`block xl:hidden bg-white flex justify-center items-center gap-20 pb-2 ${
+          <div
+            id="hideOnScroll"
+            className={`block xl:hidden bg-white flex justify-center items-center gap-20 pt-2 pb-1 ${
               hideOnScroll ? "hidden" : ""
-            }`}>
-          <div className="w-full h-[2px] bg-primary"/>
-          <div className="w-full h-[2px] bg-primary"/>
+            }`}
+          >
+            <div className="w-full h-[2px] bg-primary" />
+            {/* <div className="w-full h-[2px] bg-primary"/> */}
           </div>
-          
 
           {/* second div  */}
-          <div className=" container w-full bg-white flex justify-between items-center py-[4px]">
+          <div className=" container w-full bg-white flex justify-between items-center">
             {/* button  */}
             <div className="w-full flex justify-between items-center gap-[15px]">
               <Link
@@ -302,14 +333,29 @@ export function NavHeader() {
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
                 <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
-                  <span className="flex items-center gap-[7px]">Book Now <svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
-                  <path d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25" stroke="white"/>
-                  <path d="M0 10.625H34" stroke="white"/>
-                  <path d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625" stroke="white"/>
-                  </svg></span>
+                  <span className="flex items-center gap-[7px]">
+                    Book Now{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="22"
+                      viewBox="0 0 34 22"
+                      fill="none"
+                    >
+                      <path
+                        d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                        stroke="white"
+                      />
+                      <path d="M0 10.625H34" stroke="white" />
+                      <path
+                        d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                        stroke="white"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </Link>
-              <div className="">
+              <div className="py-1">
                 <Image
                   src="/assets/images/nav_sm_logo.png"
                   width={214}
