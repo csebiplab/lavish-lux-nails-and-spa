@@ -20,7 +20,7 @@ import "./NavHeader.css";
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 xl:mt-0 xl:mb-0 xl:flex-row items-center border-0 outline-none">
+    <List className="mt-4 mb-6 p-0 xl:mt-0 xl:mb-0 xl:flex-row justify-between xl:items-center border-0 outline-none ">
       <Typography
         as={Link}
         href="/about"
@@ -28,9 +28,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          <Link href="#about">About</Link>
-        </ListItem>
+        <div className="border-t-[1.5px] border-secondary">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#about">About</Link>
+          </ListItem>
+        </div>
       </Typography>
 
       <Typography
@@ -40,9 +42,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          <Link href="#service">Services</Link>
-        </ListItem>
+        <div className="border-y border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#service">Services</Link>
+          </ListItem>
+        </div>
       </Typography>
       <Typography
         as={Link}
@@ -51,11 +55,13 @@ function NavList() {
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true">
-            Book Now
-          </Link>
-        </ListItem>
+        <div className="border-b border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true">
+              Book Now
+            </Link>
+          </ListItem>
+        </div>
       </Typography>
 
       <Typography
@@ -65,9 +71,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          <Link href="#gallery">Gallery</Link>
-        </ListItem>
+        <div className="border-b border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#gallery">Gallery</Link>
+          </ListItem>
+        </div>
       </Typography>
 
       <Typography
@@ -77,9 +85,11 @@ function NavList() {
         color="blue-gray"
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          <Link href="#contact">Contact Us</Link>
-        </ListItem>
+        <div className="border-b border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#contact">Contact Us</Link>
+          </ListItem>
+        </div>
       </Typography>
     </List>
   );
@@ -246,7 +256,7 @@ export function NavHeader() {
             }`}
           >
             {/* first div  */}
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center pt-1">
               <div className="flex justify-center items-center gap-[5px]">
                 <Image
                   src="/assets/images/canada.png"
@@ -259,7 +269,37 @@ export function NavHeader() {
                   Best Nail Salon in Mississauga
                 </p>
               </div>
-              <div className="block xl:hidden">
+              <div className="flex items-center gap-2">
+                <p className="text-sm font-semibold text-secondary ">
+                  Follow Us:
+                </p>
+                <div className="flex  gap-[30px]">
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61559301724341"
+                  >
+                    <FaFacebook className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.tiktok.com/@lavishluxnailsspa"
+                  >
+                    <AiFillTikTok className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.instagram.com/lavishluxnailspa_sauga/"
+                  >
+                    <FaInstagram className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+                </div>
+              </div>
+              {/* <div className="block xl:hidden">
                 <IconButton
                   variant="text"
                   color="blue-gray"
@@ -278,22 +318,23 @@ export function NavHeader() {
                     />
                   )}
                 </IconButton>
-              </div>
+              </div> */}
             </div>
           </div>
 
           {/* center div  */}
-          <div id="hideOnScroll"
-            className={`block xl:hidden bg-white flex justify-center items-center gap-20 pb-2 ${
+          <div
+            id="hideOnScroll"
+            className={`block xl:hidden bg-white flex justify-center items-center gap-20 pt-2 pb-1 ${
               hideOnScroll ? "hidden" : ""
-            }`}>
-          <div className="w-full h-[2px] bg-primary"/>
-          <div className="w-full h-[2px] bg-primary"/>
+            }`}
+          >
+            <div className="w-full h-[2px] bg-primary" />
+            {/* <div className="w-full h-[2px] bg-primary"/> */}
           </div>
-          
 
           {/* second div  */}
-          <div className=" container w-full bg-white flex justify-between items-center py-[4px]">
+          <div className=" container w-full bg-white flex justify-between items-center">
             {/* button  */}
             <div className="w-full flex justify-between items-center gap-[15px]">
               <Link
@@ -302,14 +343,29 @@ export function NavHeader() {
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
                 <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
-                  <span className="flex items-center gap-[7px]">Book Now <svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
-                  <path d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25" stroke="white"/>
-                  <path d="M0 10.625H34" stroke="white"/>
-                  <path d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625" stroke="white"/>
-                  </svg></span>
+                  <span className="flex items-center gap-[7px]">
+                    Book Now{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="22"
+                      viewBox="0 0 34 22"
+                      fill="none"
+                    >
+                      <path
+                        d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                        stroke="white"
+                      />
+                      <path d="M0 10.625H34" stroke="white" />
+                      <path
+                        d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                        stroke="white"
+                      />
+                    </svg>
+                  </span>
                 </button>
               </Link>
-              <div className="">
+              <div className="py-1">
                 <Image
                   src="/assets/images/nav_sm_logo.png"
                   width={214}
@@ -460,7 +516,13 @@ export function NavHeader() {
       >
         <div className="mb-6 flex items-center justify-between">
           <Typography variant="paragraph" color="blue-gray">
-            Lavish Lux
+            <Image
+              src="/assets/icons/nav_sm.png"
+              alt="nav logo"
+              width={239}
+              height={66}
+              className="w-2/3"
+            />
           </Typography>
           <IconButton
             variant="text"
@@ -473,7 +535,7 @@ export function NavHeader() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="h-5 w-5"
+              className="h-7 w-7"
             >
               <path
                 strokeLinecap="round"
@@ -484,7 +546,37 @@ export function NavHeader() {
           </IconButton>
         </div>
         <NavList />
+        {/* button  */}
+        <div className="grid grid-cols-1 justify-items-center gap-2">
+        <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+            <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+              <Image
+                src="/assets/lavish/icons/nav_phone.png"
+                alt="book now"
+                width={15}
+                height={15}
+                className="w-[15px] h-[15px]"
+              />
+              <span>(905) 973-6669</span>
+            </button>
+          </Link>
+          <Link
+            rel="nofollow"
+            target="_blank"
+            href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+          >
+            <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[20px] flex items-center gap-[6px] clip-path-custom">
+              <span>Book Now</span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
+              <path d="M34 11.125C29.3056 11.125 25.5 15.882 25.5 21.75" stroke="white"/>
+              <path d="M0 11.125H34" stroke="white"/>
+              <path d="M25.5 0.5C25.5 6.368 29.3056 11.1249 34 11.125" stroke="white"/>
+            </svg></span>
+            </button>
+          </Link>
+        </div>
       </Drawer>
+      
     </>
   );
 }
