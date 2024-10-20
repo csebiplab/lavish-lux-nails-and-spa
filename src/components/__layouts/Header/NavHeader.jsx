@@ -448,12 +448,12 @@ export function NavHeader() {
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
+                <button className="bg-secondary hover:bg-primary text-xs sm:text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
                   <span>Book Now</span>
                 </button>
               </Link>
               <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
-                <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+                <button className="bg-secondary hover:bg-primary text-xs sm:text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
                   <Image
                     src="/assets/lavish/icons/nav_phone.png"
                     alt="book now"
@@ -547,7 +547,7 @@ export function NavHeader() {
         </div>
         <NavList />
         {/* button  */}
-        <div className="grid grid-cols-1 justify-items-center gap-2">
+        <div className="grid grid-cols-1 justify-items-start gap-2">
         <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
             <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
               <Image
