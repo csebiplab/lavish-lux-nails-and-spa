@@ -173,7 +173,7 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="location:1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location:https://www.google.com/maps/place/1100+Burnhamthorpe+Rd+W+Unit+16,+Mississauga,+ON+L5C+4G4,+Canada"
                   >
                     1100 Burnhamthorpe Rd <br className="hidden lg:block" /> W
                     Unit 16, Mississauga, <br className="hidden lg:block" /> ON
@@ -200,7 +200,7 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="mail:manager@lavishluxnailsandspa.com"
+                    href="mailto:manager@lavishluxnailsandspa.com"
                   >
                     manager@lavishluxnailsandspa.com
                   </Link>
@@ -327,7 +327,7 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="location:1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                    href="location:https://www.google.com/maps/place/1100+Burnhamthorpe+Rd+W+Unit+16,+Mississauga,+ON+L5C+4G4,+Canada"
                   >
                     1100 Burnhamthorpe Rd <br /> W Unit 16, Mississauga, <br />{" "}
                     ON L5C 4G4, Canada
@@ -353,7 +353,7 @@ const Footer = () => {
                   />
                   <Link
                     className="text-white"
-                    href="mail:manager@lavishluxnailsandspa.com"
+                    href="mailto:manager@lavishluxnailsandspa.com"
                   >
                     manager@lavishluxnailsandspa.com
                   </Link>
@@ -482,7 +482,7 @@ const Footer = () => {
               Contact Us
             </p>
             <ul className="flex flex-col items-center justify-center">
-              <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal">
+              <li className="flex items-center gap-[4px] sm:gap-[20px] text-base sm:text-lg font-medium leading-normal">
                 <Image
                   src="/assets/icons/map.png"
                   alt="map icon"
@@ -491,13 +491,13 @@ const Footer = () => {
                 />
                 <Link
                   className="text-white"
-                  href="location:1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada"
+                  href="location:https://www.google.com/maps/place/1100+Burnhamthorpe+Rd+W+Unit+16,+Mississauga,+ON+L5C+4G4,+Canada"
                 >
                   1100 Burnhamthorpe Rd W Unit 16, <br /> Mississauga, ON L5C
                   4G4, Canada
                 </Link>
               </li>
-              <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal py-[17px] sm:py-[22px]">
+              <li className="flex items-center gap-[4px] sm:gap-[20px] text-base sm:text-lg font-medium leading-normal py-[17px] sm:py-[22px]">
                 <Image
                   src="/assets/icons/phone.png"
                   alt="phone icon"
@@ -508,7 +508,7 @@ const Footer = () => {
                   (905) 973-6669
                 </Link>
               </li>
-              <li className="flex items-center gap-[12px] sm:gap-[24px] text-base sm:text-lg font-medium leading-normal">
+              <li className="flex items-center gap-[4px] sm:gap-[20px] text-base sm:text-lg font-medium leading-normal">
                 <Image
                   src="/assets/icons/email.png"
                   alt="email icon"
@@ -517,7 +517,7 @@ const Footer = () => {
                 />
                 <Link
                   className="text-white"
-                  href="mail:manager@lavishluxnailsandspa.com"
+                  href="mailto:manager@lavishluxnailsandspa.com"
                 >
                   manager@lavishluxnailsandspa.com
                 </Link>
@@ -527,26 +527,11 @@ const Footer = () => {
 
           {/* fourth div  */}
           <div className="pt-[32px] px-[30px]">
-            <div className="border-[4px] rounded-[8px] border-primary ">
-              <p className="text-[22px] sm:text-[25px] font-semibold text-white text-center pb-[10px] sm:pb-[12px] pt-[13px] sm:pt-[17px]">
+            <div className="border-[2px] rounded-[8px] border-primary ">
+              <p className="text-[22px] sm:text-[25px] font-semibold text-white text-center pb-[10px] sm:pb-[12px] pt-[13px] sm:pt-[17px] border-b-[2px] border-primary mx-[30px]">
                 Open Hours
               </p>
-              <span>
-                <svg
-                  className="px-[20px] 5xl:px-[50px]"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="auto"
-                  height="24"
-                  viewBox="0 0 424 24"
-                  fill="none"
-                >
-                  <path
-                    d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z"
-                    fill="#C7A43C"
-                  />
-                </svg>
-              </span>
-              <p className="text-base sm:text-lg font-medium leading-normal text-white text-center pb-[18px] sm:pb-[23px]">
+              <p className="text-base sm:text-lg font-medium leading-normal text-white text-center pt-3 pb-[18px] sm:pb-[23px]">
                 Mon. ~ Fri. <br /> 10:00am ~ 7:00pm <br /> Sat. <br /> 9:00am ~
                 6:00pm <br /> Sun. <br /> 11:00am ~ 5:00pm
               </p>
@@ -555,7 +540,7 @@ const Footer = () => {
           {/* fifth div  */}
           <div className="pt-[50px]">
             <div className="border border-white  mx-[30px]" />
-            <p className="text-base font-medium pb-[15px] text-white text-center pt-[20px]">
+            <p className="text-sm sm:text-base font-medium pb-[15px] text-white text-center pt-[20px]">
               © All Copyright 2024 by Lavish Lux Nail & Spa
             </p>
             <div className="flex justify-evenly">
