@@ -1,13 +1,17 @@
 "use client";
-import Aos from "aos";
-import React, { useEffect } from "react";
+
+import { useEffect } from "react";
 import "aos/dist/aos.css";
 
-const AosSetup = () => {
+export default function AosSetup() {
   useEffect(() => {
-    Aos.init();
+    import("aos").then((AOS) =>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      })
+    );
   }, []);
-  return;
-};
 
-export default AosSetup;
+  return <></>;
+}

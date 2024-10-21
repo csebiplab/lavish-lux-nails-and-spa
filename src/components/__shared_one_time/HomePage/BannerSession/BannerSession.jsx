@@ -9,7 +9,10 @@ const BannerSession = () => {
     <div>
       {/* large device  */}
       <div className="hidden md:block bannerSession__bg container">
-        <div data-aos="fade-up" className=" relative h-full flex flex-col items-center justify-center">
+        <div
+          data-aos="fade-up"
+          className=" relative h-full flex flex-col items-center justify-center"
+        >
           <Image
             src="/assets/lavish/images/hero__content.png"
             alt="hero content"
@@ -35,6 +38,7 @@ const BannerSession = () => {
         </div>
       </div>
       {/* small device  */}
+      
       <div className="block md:hidden overflow-x-hidden">
         <div className="sm__banner__bg px-[30px] sm:px-[40px]">
           <div className="h-full flex flex-col justify-center items-center">
@@ -75,6 +79,7 @@ const BannerSession = () => {
           </div>
         </div>
       </div>
+     
     </div>
   );
 };

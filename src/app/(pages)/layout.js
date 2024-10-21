@@ -12,21 +12,24 @@ import AosSetup from "@/config/aos";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <AosSetup/>
-      <body className={`${Lucida_Grande.variable} ${Naomi.variable}`}>
-        <Suspense>
-          <RoutingProgressBar />
-        </Suspense>
-        <>
-          <NavHeader/>
-        </>
-        {children}
-        <>
-          <Footer />
-          <ScrollToTopComponent />
-        </>
-      </body>
-    </html>
+    <>
+      <AosSetup />
+      <html lang="en">
+        <body className={`${Lucida_Grande.variable} ${Naomi.variable}`}>
+
+          <Suspense>
+            <RoutingProgressBar />
+          </Suspense>
+          <>
+            <NavHeader />
+          </>
+          {children}
+          <>
+            <Footer />
+            <ScrollToTopComponent />
+          </>
+        </body>
+      </html>
+    </>
   );
 }
