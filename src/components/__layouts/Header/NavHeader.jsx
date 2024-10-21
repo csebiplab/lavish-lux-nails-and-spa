@@ -22,8 +22,8 @@ function NavList() {
   return (
     <List className="mt-4 mb-6 p-0 xl:mt-0 xl:mb-0 xl:flex-row justify-between xl:items-center border-0 outline-none ">
       <Typography
-        as={Link}
-        href="/about"
+        as={"paragraph"}
+        // href="/about"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
@@ -36,8 +36,8 @@ function NavList() {
       </Typography>
 
       <Typography
-        as={Link}
-        href="/services"
+        as={"paragraph"}
+        // href="/services"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
@@ -49,8 +49,8 @@ function NavList() {
         </div>
       </Typography>
       <Typography
-        as={Link}
-        href="/book-now"
+        as={"paragraph"}
+        // href="/book-now"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
@@ -65,8 +65,8 @@ function NavList() {
       </Typography>
 
       <Typography
-        as={Link}
-        href="/gallery"
+        as={"paragraph"}
+        // href="/gallery"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
@@ -79,8 +79,8 @@ function NavList() {
       </Typography>
 
       <Typography
-        as={Link}
-        href="/contact-us"
+        as={"paragraph"}
+        // href="/contact-us"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
@@ -548,7 +548,7 @@ export function NavHeader() {
         <NavList />
         {/* button  */}
         <div className="grid grid-cols-1 justify-items-start gap-2">
-        <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+          <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
             <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
               <Image
                 src="/assets/lavish/icons/nav_phone.png"
@@ -567,16 +567,29 @@ export function NavHeader() {
           >
             <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[20px] flex items-center gap-[6px] clip-path-custom">
               <span>Book Now</span>
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
-              <path d="M34 11.125C29.3056 11.125 25.5 15.882 25.5 21.75" stroke="white"/>
-              <path d="M0 11.125H34" stroke="white"/>
-              <path d="M25.5 0.5C25.5 6.368 29.3056 11.1249 34 11.125" stroke="white"/>
-            </svg></span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="22"
+                  viewBox="0 0 34 22"
+                  fill="none"
+                >
+                  <path
+                    d="M34 11.125C29.3056 11.125 25.5 15.882 25.5 21.75"
+                    stroke="white"
+                  />
+                  <path d="M0 11.125H34" stroke="white" />
+                  <path
+                    d="M25.5 0.5C25.5 6.368 29.3056 11.1249 34 11.125"
+                    stroke="white"
+                  />
+                </svg>
+              </span>
             </button>
           </Link>
         </div>
       </Drawer>
-      
     </>
   );
 }
