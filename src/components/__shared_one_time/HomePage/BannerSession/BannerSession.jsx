@@ -38,7 +38,7 @@ const BannerSession = () => {
         </div>
       </div>
       {/* small device  */}
-      {/*
+      
       <div className="block md:hidden overflow-x-hidden">
         <div className="sm__banner__bg px-[30px] sm:px-[40px]">
           <div className="h-full flex flex-col justify-center items-center">
@@ -79,7 +79,7 @@ const BannerSession = () => {
           </div>
         </div>
       </div>
-      */}
+     
     </div>
   );
 };
