@@ -325,7 +325,7 @@ export function NavHeader() {
           {/* center div  */}
           <div
             id="hideOnScroll"
-            className={`block xl:hidden bg-white flex justify-center items-center gap-20 pt-2 pb-1 ${
+            className={`xl:hidden bg-white flex justify-center items-center gap-20 pt-2 pb-1 ${
               hideOnScroll ? "hidden" : ""
             }`}
           >
