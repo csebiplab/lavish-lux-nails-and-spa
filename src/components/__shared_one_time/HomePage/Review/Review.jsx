@@ -1,19 +1,20 @@
 "use client";
-import Image from "next/image";
+import { useRef } from "react";
 
-import google from "../../../../../public/assets/images/google.png";
-import review from "../../../../../public/assets/images/five_star.png";
+import "./Review.css";
+
 import "swiper/css";
 import "swiper/css/autoplay";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
 import "swiper/css/virtual";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./ReviewSlider.css";
-// import { SwiperNavButtons } from "./SwiperSliderButton";
+
+import { SwiperNavButtons } from "./SwiperSliderButton";
+import Image from "next/image";
 import HeadingIcon from "@/components/__ui/HeadingIcon";
 import { headingIconText } from "@/utils/heading-text";
+
 
 const breakpoints = {
   0: {
@@ -21,93 +22,134 @@ const breakpoints = {
     spaceBetween: 20,
   },
   768: {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 20,
+  },
+  1025: {
+    slidesPerView: 3,
+    spaceBetween: 30,
+  },
+  1440: {
+    slidesPerView: 3,
+    spaceBetween: 30,
   },
 };
 
 const reviews = [
   {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
     reviewText:
       "Great place to relax and get pampered. Great service and professional staff. Highly recommend you come and experience this place.",
     author: "Sandra Serrao",
     address: "Mississauga",
   },
   {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
     reviewText:
-      "Great atmosphere, staff, and service! Great place to be pampered!                       👍 Services Pedicure, Manicure",
+      "Great atmosphere, staff, and service! Great place to be pampered! 👍 Services Pedicure, Manicure",
     author: "Jennifer Xuan",
     address: "Mississauga",
   },
   {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
     reviewText:
       "Got manicure and pedicure done and they did an amazing job! Staff is very friendly and very detailed oriented. Services Pedicure, Manicure",
     author: "jay pat",
     address: "Mississauga",
   },
-  
+  {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
+    reviewText:
+      "Great place to relax and get pampered. Great service and professional staff. Highly recommend you come and experience this place.",
+    author: "Sandra Serrao",
+    address: "Mississauga",
+  },
+  {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
+    reviewText:
+      "Great atmosphere, staff, and service! Great place to be pampered! 👍 Services Pedicure, Manicure",
+    author: "Jennifer Xuan",
+    address: "Mississauga",
+  },
+  {
+    google: "/assets/images/google.png",
+    star: "/assets/images/five_star.png",
+    reviewText:
+      "Got manicure and pedicure done and they did an amazing job! Staff is very friendly and very detailed oriented. Services Pedicure, Manicure",
+    author: "jay pat",
+    address: "Mississauga",
+  },
 ];
 
 const Review = () => {
+  const swipperRef = useRef(null)
   return (
-    <div >
-      <div className="container">
-        <div className="padding__all">
-        <div className="flex justify-center items-center">
-              <HeadingIcon text={headingIconText.review__headingIconText}/>
-            </div>
-          {/* =================== Card Section =============== */}
-          <Swiper
-            modules={[Autoplay, Navigation]}
-            loop={true}
-            autoplay={{
-              delay: 3000,
-              pauseOnMouseEnter: false,
-              disableOnInteraction: false,
-              stopOnLastSlide: false,
-            }}
-            // slidesPerView={5}
-            speed={3000}
-            allowTouchMove={false}
-            // modules={[Autoplay,Navigation, Scrollbar]}
-            breakpoints={breakpoints}
-          >
-            {reviews.map(({ address, author, reviewText }, i) => (
-              <SwiperSlide
-                key={i}
-                className={`text-center py-4 lg:py-10 md:pr-[21px] !w-full !md:h-full`}
-              >
-                <div className="cart__bg !w-full md:w-[500px] !h-[250px] md:h-full p-[14px] md:mx-0 mx-auto">
-                  <Image
-                    src={google}
-                    width={89.92}
-                    height={51}
-                    alt="google"
-                    className="mb-2"
-                  />
-                  <Image
-                    src={review}
-                    width={83}
-                    height={12}
-                    alt="google"
-                    className=""
-                  />
+    <div className="">
+      <div className="container padding__top">
+        <div className="">
+          <div className="flex justify-center pb-[25px]">
+            <HeadingIcon text={headingIconText.review__headingIconText} />
+          </div>
 
-                  <div className="text-start">
-                    <p className="text-sm md:text-[12px] mt-4  text-black leading-[22px] md:leading-6">
-                      {reviewText}
-                    </p>
-                    <p className="font-semibold lg:text-sm text-sm mt-3">
-                      {author}
-                    </p>
-                    <p className="text-[#4A4A4A] text-[8px] mt-2">{address}</p>
+          {/* ==================== swiper slider ================ */}
+          <div>
+            <Swiper
+              ref={swipperRef}
+              modules={[Autoplay]}
+              loop={true}
+              autoplay={{
+                delay: 3000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+                stopOnLastSlide: false,
+              }}
+              speed={3000}
+              allowTouchMove={true}
+              breakpoints={breakpoints}
+              spaceBetween={12}
+            >
+              {reviews.map((slideInfo, index) => (
+                <SwiperSlide
+                  key={index}
+                  className={`px-[12px] md:px-0 !h-auto !md:h-full`}
+                >
+                  <div className="w-full !h-full card-sd bg-primary-700">
+                    <div className="text-center pt-[8px] pb-[10px] px-[12px]">
+                      <Image
+                        className="pb-[10px]"
+                        src={slideInfo?.google}
+                        alt="google image"
+                        width={148}
+                        height={85}
+                      />
+                      <Image
+                        src={slideInfo?.star}
+                        alt="star icon"
+                        width={210}
+                        height={31}
+                      />
+
+                      <p className="text-lg font-medium py-[10px] text-left text-balck">
+                        {slideInfo?.reviewText}
+                      </p>
+                      <p className="text-[15px] font-semibold pb-[5px] text-left text-black">
+                        {slideInfo?.author}
+                      </p>
+                      <p className="text-xs font-medium text-dark-100 text-left">
+                        {slideInfo?.address}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-
-            {/* <SwiperNavButtons /> */}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+              <SwiperNavButtons />
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>

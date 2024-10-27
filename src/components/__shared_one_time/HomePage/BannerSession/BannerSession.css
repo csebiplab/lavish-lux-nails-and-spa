@@ -1,0 +1,36 @@
+.bannerSession__bg{
+    background-image: url("/assets/lavish/images/hero__bg.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 570px;
+}
+
+@media (max-width: 1440px) {
+    .bannerSession__bg {
+      height: 450px;
+      width: 100%;
+    }
+}
+
+.sm__banner__bg{
+  background-image: url("/assets/lavish/images/banner__sm.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 380px;
+}
+
+@media (max-width: 1024px) {
+  .bannerSession__bg {
+    height: 313px;
+    width: 100%;
+  }
+}
+
+.clip-path-custom {
+  clip-path: polygon(5% 0%, 95% 0%, 108% 50%, 95% 100%, 5% 100%, -8% 50%);
+}
+  

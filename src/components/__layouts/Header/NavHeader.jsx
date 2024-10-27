@@ -1,173 +1,95 @@
 "use client";
 
-import { ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { FaInstagram } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { FaCanadianMapleLeaf } from "react-icons/fa6";
 import {
-  Button,
-  Collapse,
   Drawer,
   IconButton,
   List,
   ListItem,
-  Menu,
-  MenuHandler,
-  MenuItem,
-  MenuList,
-  Navbar,
   Typography,
 } from "@material-tailwind/react";
+import { FaFacebook } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import UpperNavbar from "./UpperNav";
 import "./NavHeader.css";
-
-// our services nav menu
-const our_service_menu_items = {
-  // interior: [
-  //   {
-  //     title: "Cleaning Services in Richmond",
-  //     route: "/cleaning-services-in-richmond",
-  //   },
-  //   {
-  //     title: "House Cleaning Services in Katy TX",
-  //     route: "/house-cleaning-services-in-katy-tx",
-  //   },
-  // ],
-};
-
-function OurServiceManu() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  const renderItems = (data = []) => {
-    return data?.map(({ route, title }, key) => (
-      <Link href={route} key={key}>
-        <MenuItem className="rounded-md">
-          <Typography color="blue-gray">{title}</Typography>
-        </MenuItem>
-      </Link>
-    ));
-  };
-
-  return (
-    <>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-        className="bg-gray-100"
-      >
-        <MenuHandler>
-          <div className="font-medium text-lg">
-            <ListItem
-              className="flex justify-center items-center gap-2 rounded-full py-1  pr-4 font-bold  text-lg    text-black"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              Services
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
-          </div>
-        </MenuHandler>
-        <MenuList className="hidden max-w-[100vw] w-screen lg:block border-0 outline-0 bg-gray-100">
-          <div className="container grid grid-cols-3 gap-y-2">
-            <div>
-              <p className="mb-1 text-primary font-semibold">Interior</p>
-              <ul>{renderItems(our_service_menu_items.interior)}</ul>
-            </div>
-          </div>
-        </MenuList>
-      </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>
-          <p className="text-primary mb-1 font-semibold">Interior</p>
-          <ul>{renderItems(our_service_menu_items.interior)}</ul>
-          <hr className="my-1" />
-        </Collapse>
-      </div>
-    </>
-  );
-}
-
-// our services nav list end
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row items-center border-0 outline-none">
+    <List className="mt-4 mb-6 p-0 xl:mt-0 xl:mb-0 xl:flex-row justify-between xl:items-center border-0 outline-none ">
       <Typography
-        as={Link}
-        href="/about"
+        as={"paragraph"}
+        // href="/about"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          About
-        </ListItem>
+        <div className="border-t-[1.5px] border-secondary">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#about">About</Link>
+          </ListItem>
+        </div>
       </Typography>
 
       <Typography
-        as={Link}
-        href="/services"
+        as={"paragraph"}
+        // href="/services"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Services
-        </ListItem>
+        <div className="border-y border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#service">Services</Link>
+          </ListItem>
+        </div>
       </Typography>
       <Typography
-        as={Link}
-        href="/book-now"
+        as={"paragraph"}
+        // href="/book-now"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm lg:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Book Now
-        </ListItem>
+        <div className="border-b border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true">
+              Book Now
+            </Link>
+          </ListItem>
+        </div>
       </Typography>
 
-      {/* <div className="mt-[6px]">
-        <OurServiceManu />
-      </div> */}
-
       <Typography
-        as={Link}
-        href="/gallery"
+        as={"paragraph"}
+        // href="/gallery"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Gallery
-        </ListItem>
+        <div className="border-b border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#gallery">Gallery</Link>
+          </ListItem>
+        </div>
       </Typography>
 
       <Typography
-        as={Link}
-        href="/contact-us"
+        as={"paragraph"}
+        // href="/contact-us"
         variant="small"
         color="blue-gray"
         className="font-medium rounded-full text-sm md:text-[14px] xl:text-base 2xl:text-lg text-black"
       >
-        <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
-          Contact Us
-        </ListItem>
+        <div className="border-b border-black">
+          <ListItem className="flex items-center text-lg text-dark-100 font-bold px-1 lg:px-4 xl:px-5 2xl:px-6">
+            <Link href="#contact">Contact Us</Link>
+          </ListItem>
+        </div>
       </Typography>
     </List>
   );
@@ -204,71 +126,307 @@ export function NavHeader() {
   if (pathname.startsWith("/admin")) return null;
   return (
     <>
-      <UpperNavbar />
       <header className="sticky top-0 z-[500000]">
-        <div className="custom-container main__header">
-          <Navbar className="container rounded-none py-2 shadow-none max-w-full">
-            <div className="flex items-center justify-between text-blue-gray-900">
-              <Link href="/">
-                <Image
-                  src="/assets/images/nav_logo.png"
-                  width={217}
-                  height={103}
-                  alt="brand logo"
-                  className="w-full h-full lg:w-[217px] hidden md:block"
-                />
-              </Link>
-              <div className="hidden lg:block">
-                <NavList />
+        {/* large device  start*/}
+
+        <div className="custom-container">
+          <div className="hidden xl:block main__header py-[6px] 5xl:py-[10px]">
+            <div className="w-full flex justify-between items-center gap-[40px]">
+              {/* first div  */}
+              <div className="w-full">
+                <p className="full__section_l_p pb-[4px] 5xl:pb-[5px] flex items-center gap-[4px] text-secondary text-sm 5xl:text-base font-medium">
+                  {" "}
+                  <FaCanadianMapleLeaf className="w-[27px] h-[22px]" />
+                  Best Nail Salon in Mississauga
+                </p>
+                <div className="w-full h-[2px] bg-primary" />
+                <ul className="full__section_l_p pt-[5px] 5xl:pt-[7px] flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
+                  <Link href="#about">
+                    <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
+                      About
+                    </li>
+                  </Link>
+                  <Link href="#service">
+                    <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
+                      Services
+                    </li>
+                  </Link>
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+                  >
+                    <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
+                      Book Now
+                    </li>
+                  </Link>
+                </ul>
               </div>
+              {/* second div  */}
+              <div className="w-1/2 5xl:w-1/3">
+                <Link href="/">
+                  <Image
+                    src="/assets/images/nav_logo.png"
+                    width={347}
+                    height={98}
+                    alt="nav logo"
+                    className="w-full"
+                  />
+                </Link>
+              </div>
+              {/* third div  */}
+              <div className="w-full">
+                <div className="full__section_r_p pb-[6px] 5xl:pb-[8px] flex justify-end gap-[12px] 2xl:gap-[14px] 5xl:gap-[16px]">
+                  <p className="text-sm font-semibold text-secondary ">
+                    Follow Us:
+                  </p>
+                  <div className="flex  gap-[30px]">
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href="https://www.facebook.com/profile.php?id=61559301724341"
+                    >
+                      <FaFacebook className="h-[22px] w-[22px] text-secondary" />
+                    </Link>
 
-              <div className="flex ">
-                <div className="hidden md:flex items-center gap-x-6 md:gap-x-7 lg:gap-x-8">
-                  <div className="">
-                    <div className="flex items-center gap-2">
-                      <Image
-                        src="/assets/images/phone-call.png"
-                        width={24}
-                        height={24}
-                        alt="Phone"
-                        className="w-[24px] h-[24px]"
-                      />
-                      <div className="">
-                        <span className="text-base block">Quick Contact</span>
-                        <a
-                          href="tel:(832) 820-4035"
-                          className="text-primary font-bold xs:text-base sm:text-xl md:text-2xl 2xl:text-3xl"
-                        >
-                          (832) 820-4035
-                        </a>
-                      </div>
-                    </div>
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href="https://www.tiktok.com/@lavishluxnailsspa"
+                    >
+                      <AiFillTikTok className="h-[22px] w-[22px] text-secondary" />
+                    </Link>
+
+                    <Link
+                      rel="nofollow"
+                      target="_blank"
+                      href="https://www.instagram.com/lavishluxnailspa_sauga/"
+                    >
+                      <FaInstagram className="h-[22px] w-[22px] text-secondary" />
+                    </Link>
                   </div>
-
-                  {/* <div>
-              <Image
-                src="/assets/images/header-logo.jpg"
-                width={65}
-                height={80}
-                alt="brand"
-                className="h-[80px] w-[65px]"
-              />
-            </div> */}
+                </div>
+                <div className="w-full h-[2px] bg-primary" />
+                <div className="full__section_r_p pt-[5px] 5xl:pt-[7px] flex items-center justify-end gap-[20px] 5xl:gap-[30px]">
+                  <ul className="flex items-center gap-[30px] 2xl:gap-[40px] 5xl:gap-[50px]">
+                    <Link href="#gallery">
+                      <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
+                        Gallery
+                      </li>
+                    </Link>
+                    <Link href="#contact">
+                      <li className="text-sm 2xl:text-base 5xl:text-lg font-semibold text-black">
+                        Contact Us
+                      </li>
+                    </Link>
+                  </ul>
+                  <div className="-mt-[2px]">
+                    <Link
+                      href="tel:(905) 973-6669"
+                      rel="nofollow"
+                      target="_blank"
+                    >
+                      <button className="bg-secondary hover:bg-primary text-base 5xl:text-lg font-semibold text-white py-[4px] px-[8px] flex items-center gap-[2px] clip-path-custom">
+                        <Image
+                          src="/assets/lavish/icons/nav_phone.png"
+                          alt="book now"
+                          width={24}
+                          height={24}
+                          className="w-[24px] h-[20px]"
+                        />
+                        <span>(905) 973-6669</span>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </Navbar>
+          </div>
         </div>
-            
+
+        {/* large device  end*/}
+
+        {/* 1024px medium device start  */}
+
+        <div className=" hidden lg:block xl:hidden">
+          <div
+            id="hideOnScroll"
+            className={`container block xl:hidden bg-white ${
+              hideOnScroll ? "hidden" : ""
+            }`}
+          >
+            {/* first div  */}
+            <div className="flex justify-between items-center pt-1">
+              <div className="flex justify-center items-center gap-[5px]">
+                <Image
+                  src="/assets/images/canada.png"
+                  width={19}
+                  height={19}
+                  alt="canada logo"
+                  className="h-[19px] w-[19px]"
+                />
+                <p className="text-secondary text-sm font-medium text-center">
+                  Best Nail Salon in Mississauga
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <p className="text-sm font-semibold text-secondary ">
+                  Follow Us:
+                </p>
+                <div className="flex  gap-[30px]">
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.facebook.com/profile.php?id=61559301724341"
+                  >
+                    <FaFacebook className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.tiktok.com/@lavishluxnailsspa"
+                  >
+                    <AiFillTikTok className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+
+                  <Link
+                    rel="nofollow"
+                    target="_blank"
+                    href="https://www.instagram.com/lavishluxnailspa_sauga/"
+                  >
+                    <FaInstagram className="h-[20px] w-[20px] text-secondary" />
+                  </Link>
+                </div>
+              </div>
+              {/* <div className="block xl:hidden">
+                <IconButton
+                  variant="text"
+                  color="blue-gray"
+                  className="xl:hidden"
+                  onClick={() => setOpenNav(!openNav)}
+                >
+                  {openNav ? (
+                    <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+                  ) : (
+                    <Image
+                      src="/assets/images/menu.png"
+                      width={33}
+                      height={33}
+                      alt="Menu"
+                      className="w-[33px] h-[23px] "
+                    />
+                  )}
+                </IconButton>
+              </div> */}
+            </div>
+          </div>
+
+          {/* center div  */}
+          <div
+            id="hideOnScroll"
+            className={`xl:hidden bg-white flex justify-center items-center gap-20 pt-2 pb-1 ${
+              hideOnScroll ? "hidden" : ""
+            }`}
+          >
+            <div className="w-full h-[2px] bg-primary" />
+            {/* <div className="w-full h-[2px] bg-primary"/> */}
+          </div>
+
+          {/* second div  */}
+          <div className=" container w-full bg-white flex justify-between items-center">
+            {/* button  */}
+            <div className="w-full flex justify-between items-center gap-[15px]">
+              <Link
+                rel="nofollow"
+                target="_blank"
+                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+              >
+                <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
+                  <span className="flex items-center gap-[7px]">
+                    Book Now{" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="22"
+                      viewBox="0 0 34 22"
+                      fill="none"
+                    >
+                      <path
+                        d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                        stroke="white"
+                      />
+                      <path d="M0 10.625H34" stroke="white" />
+                      <path
+                        d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                        stroke="white"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </Link>
+              <div className="py-1">
+                <Image
+                  src="/assets/images/nav_sm_logo.png"
+                  width={214}
+                  height={61}
+                  alt="brand logo"
+                  className="h-[61px] w-[214px]"
+                />
+              </div>
+              <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+                <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+                  <Image
+                    src="/assets/lavish/icons/nav_phone.png"
+                    alt="book now"
+                    width={15}
+                    height={15}
+                    className="w-[15px] h-[15px]"
+                  />
+                  <span>(905) 973-6669</span>
+                </button>
+              </Link>
+              <div
+                id="hideOnScroll"
+                className={`block xl:hidden bg-white ${
+                  hideOnScroll ? "" : "hidden"
+                }`}
+              >
+                <IconButton
+                  variant="text"
+                  color="blue-gray"
+                  className="xl:hidden"
+                  onClick={() => setOpenNav(!openNav)}
+                >
+                  {openNav ? (
+                    <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+                  ) : (
+                    <Image
+                      src="/assets/images/menu.png"
+                      width={33}
+                      height={33}
+                      alt="Menu"
+                      className="w-[33px] h-[23px] "
+                    />
+                  )}
+                </IconButton>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 1024px medium device end  */}
+
         {/* small device start  */}
 
-        <div
-          id="hideOnScroll"
-          className={`block md:hidden pt-1 bg-white ${
-            hideOnScroll ? "hidden" : ""
-          }`}
-        >
-          <div className="flex justify-center items-center gap-[5px]">
+        <div className="block lg:hidden">
+          <div
+            id="hideOnScroll"
+            className={`block md:hidden pt-1 bg-white ${
+              hideOnScroll ? "hidden" : ""
+            }`}
+          >
+            <div className="flex justify-center items-center gap-[5px]">
               <Image
                 src="/assets/images/canada.png"
                 width={19}
@@ -276,74 +434,74 @@ export function NavHeader() {
                 alt="canada logo"
                 className="h-[19px] w-[19px]"
               />
-          <p className="text-secondary text-sm font-medium text-center">Best Nail Salon in Mississauga</p>
-          </div>
-          
-        </div>
-
-        <div className="w-full bg-white flex justify-between items-center px-3 sm:px-6 py-[15px]">
-          <div className="block md:hidden">
-            <Link href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true" rel="nofollow" target="_blank" className="!no-underline">
-              <Button className="text-black px-[11px] py-[9px] nav__btn">
-                <span className="text-white text-sm font-semibold">
-                  Get an Estimated
-                </span>
-              </Button>
-            </Link>
+              <p className="text-secondary text-sm font-medium text-center">
+                Best Nail Salon in Mississauga
+              </p>
+            </div>
           </div>
 
-          <div className="block md:hidden">
-            <a href="tel:(905) 973-6669" className="!no-underline">
-              <Button className="text-white px-[11px] py-[9px] nav__btn flex items-center gap-[5px]">
-                <Image
-                  src="/assets/images/phone_icon.png"
-                  alt="phone icon"
-                  width={15}
-                  height={15}
-                />
-                <span className="text-white text-sm font-semibold">
-                  (905) 973-6669
-                </span>
-              </Button>
-            </a>
+          <div className="w-full bg-white flex justify-between items-center px-[15px] py-[15px]">
+            {/* button  */}
+            <div className="flex items-center gap-[15px]">
+              <Link
+                rel="nofollow"
+                target="_blank"
+                href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+              >
+                <button className="bg-secondary hover:bg-primary text-xs sm:text-sm font-semibold text-white leading-normal py-[7px] px-[34px] flex items-center gap-[6px] clip-path-custom">
+                  <span>Book Now</span>
+                </button>
+              </Link>
+              <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+                <button className="bg-secondary hover:bg-primary text-xs sm:text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+                  <Image
+                    src="/assets/lavish/icons/nav_phone.png"
+                    alt="book now"
+                    width={15}
+                    height={15}
+                    className="w-[15px] h-[15px]"
+                  />
+                  <span>(905) 973-6669</span>
+                </button>
+              </Link>
+            </div>
+            <div className="block md:hidden">
+              <IconButton
+                variant="text"
+                color="blue-gray"
+                className="lg:hidden"
+                onClick={() => setOpenNav(!openNav)}
+              >
+                {openNav ? (
+                  <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+                ) : (
+                  <Image
+                    src="/assets/images/menu.png"
+                    width={24}
+                    height={24}
+                    alt="Menu"
+                    className="w-[24px] h-[24px]"
+                  />
+                )}
+              </IconButton>
+            </div>
           </div>
 
-          <div className="block md:hidden">
-            <IconButton
-              variant="text"
-              color="blue-gray"
-              className="lg:hidden"
-              onClick={() => setOpenNav(!openNav)}
-            >
-              {openNav ? (
-                <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-              ) : (
-                <Image
-                  src="/assets/images/menu.png"
-                  width={24}
-                  height={24}
-                  alt="Menu"
-                  className="w-[24px] h-[24px]"
-                />
-              )}
-            </IconButton>
-          </div>
-        </div>
-
-        <div
-          id="hideOnScroll"
-          className={`block md:hidden pt-1 bg-white ${
-            hideOnScroll ? "hidden" : ""
-          }`}
-        >
-          <div className="w-full flex justify-center items-center pb-3 px-3">
-            <Image
-              src="/assets/images/nav_sm_logo.png"
-              width={214}
-              height={61}
-              alt="brand logo"
-              className="h-[61px] w-[214px]"
-            />
+          <div
+            id="hideOnScroll"
+            className={`block md:hidden pt-1 bg-white ${
+              hideOnScroll ? "hidden" : ""
+            }`}
+          >
+            <div className="w-full flex justify-center items-center pb-3 px-3">
+              <Image
+                src="/assets/images/nav_sm_logo.png"
+                width={214}
+                height={61}
+                alt="brand logo"
+                className="h-[61px] w-[214px]"
+              />
+            </div>
           </div>
         </div>
 
@@ -357,8 +515,14 @@ export function NavHeader() {
         className="p-4 overflow-y-auto pb-24 !z-[1000000000000000000]"
       >
         <div className="mb-6 flex items-center justify-between">
-          <Typography variant="p" color="blue-gray">
-            Maricela's
+          <Typography variant="paragraph" color="blue-gray">
+            <Image
+              src="/assets/icons/nav_sm.png"
+              alt="nav logo"
+              width={239}
+              height={66}
+              className="w-2/3"
+            />
           </Typography>
           <IconButton
             variant="text"
@@ -371,7 +535,7 @@ export function NavHeader() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="h-5 w-5"
+              className="h-7 w-7"
             >
               <path
                 strokeLinecap="round"
@@ -382,6 +546,49 @@ export function NavHeader() {
           </IconButton>
         </div>
         <NavList />
+        {/* button  */}
+        <div className="grid grid-cols-1 justify-items-start gap-2">
+          <Link href="tel:(905) 973-6669" rel="nofollow" target="_blank">
+            <button className="bg-secondary hover:bg-primary text-sm font-semibold leading-normal text-white py-[7px] px-[10px] flex items-center gap-[5px] clip-path-custom">
+              <Image
+                src="/assets/lavish/icons/nav_phone.png"
+                alt="book now"
+                width={15}
+                height={15}
+                className="w-[15px] h-[15px]"
+              />
+              <span>(905) 973-6669</span>
+            </button>
+          </Link>
+          <Link
+            rel="nofollow"
+            target="_blank"
+            href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
+          >
+            <button className="bg-secondary hover:bg-primary text-sm font-semibold text-white leading-normal py-[7px] px-[20px] flex items-center gap-[6px] clip-path-custom">
+              <span>Book Now</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="22"
+                  viewBox="0 0 34 22"
+                  fill="none"
+                >
+                  <path
+                    d="M34 11.125C29.3056 11.125 25.5 15.882 25.5 21.75"
+                    stroke="white"
+                  />
+                  <path d="M0 11.125H34" stroke="white" />
+                  <path
+                    d="M25.5 0.5C25.5 6.368 29.3056 11.1249 34 11.125"
+                    stroke="white"
+                  />
+                </svg>
+              </span>
+            </button>
+          </Link>
+        </div>
       </Drawer>
     </>
   );
