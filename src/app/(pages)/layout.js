@@ -8,26 +8,33 @@ import { NavHeader } from "@/components/__layouts/Header/NavHeader";
 import { Lucida_Grande, Naomi } from "../font";
 import AosSetup from "@/config/aos";
 import { headers } from "next/headers";
+import { projectfor } from "@/constants/projectfor";
 
 
 export async function generateMetadata() {
 
   const headerList = headers();
   const pathname = headerList.get("x-current-path");
-  const fullUrl = headerList.get("next-url");
+  const clientUrlWithPath = "https://lavishluxnailsandspa.com" + pathname
 
 
   try {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-    console.log(`${apiUrl}/api/metadata?projectFor=LavishLux&pageLink=${fullUrl}`)
-
-    const response = await fetch(`${apiUrl}/api/metadata?projectFor=LavishLux&pageLink=${fullUrl}`, {
+    const response = await fetch(`${apiUrl}/api/metadata?projectFor=${projectfor}&pageLink=${clientUrlWithPath}`, {
       cache: "no-store",
     });
     const data = await response.json();
 
     const { title, description, keywords } = data?.data[0] ?? {};
+
+    const gglverificationResponse = await fetch(`${apiUrl}/api/site-verification`, {
+      cache: "no-store",
+    });
+
+    const gVerificationData = await gglverificationResponse.json();
+
+    const verificationContent= gVerificationData?.data?.[0]?.url
 
     return {
       title: title,
@@ -37,11 +44,21 @@ export async function generateMetadata() {
         title: title,
         description: description,
       },
+       verification: {
+        google: verificationContent,
+      },
+      alternates: {
+        canonical: clientUrlWithPath,
+      },
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     };
   
   } catch (error) {
-   console.log(error, "err from layout to generate metadata")
+    return {
+      title: "Home",
+      description: "Home",
+      keywords: "Nails and Spa",
+    }
   }
 }
 
