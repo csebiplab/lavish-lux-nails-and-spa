@@ -1,7 +1,7 @@
 import { projectfor } from "@/constants/projectfor";
 
 export default async function robots() {
-    const sitemapUrl = `${process.env.NEXT_PUBLIC_API_URL}/sitemap.xml`;
+    const sitemapUrl = `https://lavishluxnailsandspa.com/sitemap.xml`;
     const robotStatic = {
         rules: [
             {
