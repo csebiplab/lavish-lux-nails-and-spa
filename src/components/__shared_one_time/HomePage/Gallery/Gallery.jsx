@@ -97,7 +97,7 @@ const Gallery = () => {
           </div>
         </div>
         {/* second div  */}
-        <div className="flex gap-[14px]">
+        <div className="grid grid-cols-4 gap-[14px]">
           <Image
             src="/assets/lavish/gallery/gallery8.png"
             alt="gallery image"
@@ -130,7 +130,7 @@ const Gallery = () => {
         {/* third div  */}
         {loadImage && (
           <div className="w-full">
-            <div className="flex gap-[14px] pt-[15px]">
+            <div className="grid grid-cols-4 gap-[14px] mt-[15px]">
               <Image
                 src="/assets/lavish/gallery/gallery12.png"
                 alt="gallery image"
@@ -161,7 +161,7 @@ const Gallery = () => {
               />
             </div>
             {/* second div */}
-            <div className="flex gap-[14px] pt-[15px]">
+            <div className="grid grid-cols-4 gap-[14px] mt-[15px]">
               <Image
                 src="/assets/lavish/gallery/gallery16.png"
                 alt="gallery image"
