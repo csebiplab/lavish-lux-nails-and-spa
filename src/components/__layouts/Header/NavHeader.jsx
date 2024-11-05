@@ -248,7 +248,7 @@ export function NavHeader() {
 
         {/* 1024px medium device start  */}
 
-        <div className=" hidden lg:block xl:hidden">
+        <div className=" hidden md:block xl:hidden">
           <div
             id="hideOnScroll"
             className={`container block xl:hidden bg-white ${
@@ -419,7 +419,7 @@ export function NavHeader() {
 
         {/* small device start  */}
 
-        <div className="block lg:hidden">
+        <div className="block md:hidden">
           <div
             id="hideOnScroll"
             className={`block md:hidden pt-1 bg-white ${

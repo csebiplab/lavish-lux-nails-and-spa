@@ -236,7 +236,7 @@ const Footer = () => {
       </div>
 
       {/* medium device  */}
-      <div className="hidden lg:block xl:hidden">
+      <div className="hidden md:block xl:hidden">
         <div className="footer__bg container py-[35px]">
           <div className="flex itmes-center gap-[50px] 5xl:gap-[92px]">
             <span>
