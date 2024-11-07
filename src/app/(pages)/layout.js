@@ -15,7 +15,7 @@ export async function generateMetadata() {
 
   const headerList = headers();
   const pathname = headerList.get("x-current-path");
-  const clientUrlWithPath = "https://lavishluxnailsandspa.com" + pathname
+  const clientUrlWithPath = process.env.NEXT_PUBLIC_CLIENT_URL + pathname
 
 
   try {
