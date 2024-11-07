@@ -17,7 +17,7 @@ export default async function sitemap() {
         } else {
             return [
                 {
-                    url: process.env.NEXT_PUBLIC_API_URL,
+                    url: `${process.env.NEXT_PUBLIC_CLIENT_URL}`,
                     lastModified: new Date().toISOString(),
                     changeFrequency: 'yearly',
                     priority: 1,
@@ -28,7 +28,7 @@ export default async function sitemap() {
         console.error("Error fetching sitemap data:", error);
         return [
             {
-                url: process.env.NEXT_PUBLIC_API_URL,
+                url: `${process.env.NEXT_PUBLIC_CLIENT_URL}`,
                 lastModified: new Date().toISOString(),
                 changeFrequency: 'yearly',
                 priority: 1,
