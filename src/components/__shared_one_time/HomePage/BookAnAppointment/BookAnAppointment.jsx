@@ -24,6 +24,7 @@ const BookAnAppointment = () => {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -38,7 +39,6 @@ const BookAnAppointment = () => {
     <p><strong>Services:</strong> ${data?.services} </p>
     <p><strong>Day:</strong> ${data?.day}</p>
     <p><strong>Hour:</strong> ${data?.hour}</p>
-    
     <p><strong>Message:</strong>${data?.message}</p>
   </div>
 `;
@@ -48,15 +48,34 @@ const BookAnAppointment = () => {
       email: data?.email,
       message: emailTemplate,
     };
-    const url = process.env.NEXT_PUBLIC_API_URL+"/api/send-email"
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ ...payload }),
-    });
-    console.log("res data :", res)
+    const url = process.env.NEXT_PUBLIC_API_URL + "/api/send-email";
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ ...payload }),
+    // });
+    // console.log("res data :", res)
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...payload }),
+      });
+      reset();
+      if (!res.ok) {
+        throw new Error(`Failed to send email: ${res.statusText}`);
+      }
+
+      const result = await res.json();
+      console.log("Response data:", result);
+      
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
   return (
     <div id="contact">
@@ -98,23 +117,23 @@ const BookAnAppointment = () => {
                   </option>
                   <option
                     className="text-xs !hover:bg-red-500"
-                    value="service1"
+                    value="Pedicure"
                   >
                     Pedicure
                   </option>
-                  <option className="text-xs" value="service2">
+                  <option className="text-xs" value="Artificial Nails">
                     Artificial Nails
                   </option>
-                  <option className="text-xs" value="service3">
+                  <option className="text-xs" value="Additional Services">
                     Additional Services
                   </option>
-                  <option className="text-xs" value="service4">
+                  <option className="text-xs" value="Manicure">
                     Manicure
                   </option>
-                  <option className="text-xs" value="service5">
+                  <option className="text-xs" value="Waxing">
                     Waxing
                   </option>
-                  <option className="text-xs" value="service6">
+                  <option className="text-xs" value="Design">
                     Design
                   </option>
                 </select>
@@ -124,68 +143,82 @@ const BookAnAppointment = () => {
               {errors.services && <span>This field is required</span>}
             </div>
 
-            {/* day */}
-
+            {/* Date Picker */}
             <div className="px-[20px] pt-[20px] relative">
               <label
-                className="text-lg font-semibold text-white leading-normal"
+                className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                 htmlFor="day"
               >
                 Day
               </label>
               <br />
-              <div className="w-full relative mt-[10px] input__bg">
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={(date) => setSelectedDate(date)}
-                  placeholderText="Select Day"
-                  className="py-[10px] px-[20px] outline-none"
-                  dateFormat="MM/dd/yyyy"
-                  inputClassName="placeholder-dark-50"
-                />
-                <AiOutlineCalendar
-                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                  onClick={() =>
-                    document
-                      .querySelector(".react-datepicker__input-container input")
-                      .focus()
-                  }
-                />
-              </div>
-
-              {errors?.day && <span>This field is required</span>}
+              <Controller
+                name="day"
+                control={control}
+                rules={{ required: "This field is required" }}
+                render={({ field }) => (
+                  <div className="w-full relative mt-[10px] input__bg">
+                    <DatePicker
+                      {...field}
+                      placeholderText="Select Day"
+                      className="py-[10px] pl-[20px] rounded-lg outline-none w-full"
+                      dateFormat="MM/dd/yyyy"
+                      selected={field.value}
+                    />
+                    <AiOutlineCalendar
+                      className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                      onClick={() =>
+                        document
+                          .querySelector(
+                            ".react-datepicker__input-container input"
+                          )
+                          .focus()
+                      }
+                    />
+                  </div>
+                )}
+              />
+              {errors.day && (
+                <span className="text-red-500">{errors.day.message}</span>
+              )}
             </div>
 
-            {/* hour */}
-
+            {/* Time Picker */}
             <div className="px-[20px] pt-[20px] relative">
               <label
-                className="text-lg font-semibold text-white leading-normal"
+                className="text-base 5xl:text-lg font-semibold leading-normal text-white"
                 htmlFor="hour"
               >
                 Hour
               </label>
               <br />
-              <div className="relative mt-[10px]">
-                <TimePicker
-                  onChange={setSelectedTime}
-                  value={selectedTime}
-                  clockIcon={null}
-                  className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
-                  format="HH:mm:ss"
-                  disableClock={true}
-                  clearIcon={null}
-                />
-                <AiOutlineClockCircle
-                  className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                  onClick={() =>
-                    document
-                      .querySelector(".react-time-picker__wrapper input")
-                      .focus()
-                  }
-                />
-              </div>
-              {errors?.hour && <span>This field is required</span>}
+              <Controller
+                name="hour"
+                control={control}
+                rules={{ required: "This field is required" }}
+                render={({ field }) => (
+                  <div className="relative mt-[10px]">
+                    <TimePicker
+                      {...field}
+                      className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
+                      format="HH:mm"
+                      disableClock={true}
+                      value={field.value}
+                    />
+                    <AiOutlineClockCircle
+                      className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                      onClick={() =>
+                        document
+                          .querySelector(".react-time-picker__wrapper input")
+                          .focus()
+                      }
+                    />
+                  </div>
+                )}
+              />
+              {errors.hour && (
+                <span className="text-red-500">{errors.hour.message}</span>
+              )}
             </div>
 
             {/* name */}
@@ -320,22 +353,22 @@ const BookAnAppointment = () => {
                       <option className="text-xs text-dark-200" value="">
                         Please Select Your Services
                       </option>
-                      <option className="text-xs" value="service1">
+                      <option className="text-xs" value="Pedicure">
                         Pedicure
                       </option>
-                      <option className="text-xs" value="service2">
+                      <option className="text-xs" value="Artificial Nails">
                         Artificial Nails
                       </option>
-                      <option className="text-xs" value="service3">
+                      <option className="text-xs" value="Additional Services">
                         Additional Services
                       </option>
-                      <option className="text-xs" value="service4">
+                      <option className="text-xs" value="Manicure">
                         Manicure
                       </option>
-                      <option className="text-xs" value="service5">
+                      <option className="text-xs" value="Waxing">
                         Waxing
                       </option>
-                      <option className="text-xs" value="service6">
+                      <option className="text-xs" value="Design">
                         Design
                       </option>
                     </select>
@@ -345,74 +378,8 @@ const BookAnAppointment = () => {
                 </div>
 
                 {/* second div  */}
-                <div className="w-full flex justify-between gap-[15px] pt-[10px] 5xl:pt-[15px]">
-                  {/* day */}
-                  <div className="w-1/2 relative">
-                    <label
-                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
-                      htmlFor="day"
-                    >
-                      Day
-                    </label>
-                    <br />
-                    <div className="w-full relative mt-[10px] input__bg">
-                      <DatePicker
-                        selected={selectedDate}
-                        onChange={(date) => setSelectedDate(date)}
-                        placeholderText="Select Day"
-                        className="py-[10px] pl-[20px] rounded-lg outline-none "
-                        dateFormat="MM/dd/yyyy"
-                      />
-                      <AiOutlineCalendar
-                        className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                        onClick={() =>
-                          document
-                            .querySelector(
-                              ".react-datepicker__input-container input"
-                            )
-                            .focus()
-                        }
-                      />
-                    </div>
-                    {errors?.day && <span>This field is required</span>}
-                  </div>
-                  {/* hour */}
-                  <div className="w-1/2 relative">
-                    <label
-                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
-                      htmlFor="hour"
-                    >
-                      Hour
-                    </label>
-                    <br />
-                    <div className="relative mt-[10px]">
-                      <TimePicker
-                        onChange={setSelectedTime}
-                        value={selectedTime}
-                        clockIcon={null}
-                        className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
-                        format="HH:mm:ss"
-                        disableClock={true}
-                        clearIcon={null}
-                      />
-                      <AiOutlineClockCircle
-                        className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
-                        onClick={() =>
-                          document
-                            .querySelector(".react-time-picker__wrapper input")
-                            .focus()
-                        }
-                      />
-                    </div>
-                    {errors?.hour && <span>This field is required</span>}
-                  </div>
-                  {/* test  */}
-                  {/* <div className="w-1/2">
-                  <TimePicker onChange={onChange} value={value} />
-                  </div> */}
-                </div>
 
-                <div>
+                <div className="w-full flex justify-between gap-[15px] pt-[10px] 5xl:pt-[15px]">
                   {/* Date Picker */}
                   <div className="w-1/2 relative">
                     <label
