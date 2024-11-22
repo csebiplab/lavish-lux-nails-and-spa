@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./BookAnAppointment.css";
 import Link from "next/link";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { AiOutlineDown } from "react-icons/ai";
 
 // date picker
@@ -13,17 +13,50 @@ import "react-datepicker/dist/react-datepicker.css";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import TimePicker from "react-time-picker";
 
+import "react-time-picker/dist/TimePicker.css";
+import "react-clock/dist/Clock.css";
+
 const BookAnAppointment = () => {
+  const [value, onChange] = useState("10:00");
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
+    const emailTemplate = `
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <h2>New Message</h2>
+    <p><strong>Name:</strong>${data?.name}</p>
+    <p><strong>Phone:</strong> ${data?.phone}</p>
+    <p><strong>Email:</strong> <a href="johndoe@example.com">${data?.email}</a></p>
+    <p><strong>Services:</strong> ${data?.services} </p>
+    <p><strong>Day:</strong> ${data?.day}</p>
+    <p><strong>Hour:</strong> ${data?.hour}</p>
+    
+    <p><strong>Message:</strong>${data?.message}</p>
+  </div>
+`;
+    const payload = {
+      projectFor: "kongkon4545@gmail.com",
+      name: data?.name,
+      email: data?.email,
+      message: emailTemplate,
+    };
+    const url = process.env.NEXT_PUBLIC_API_URL+"/api/send-email"
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...payload }),
+    });
+    console.log("res data :", res)
   };
   return (
     <div id="contact">
@@ -256,7 +289,10 @@ const BookAnAppointment = () => {
       <div className="hidden xl:block">
         <div className="">
           <div className="grid grid-cols-3">
-            <div data-aos="fade-right" className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]">
+            <div
+              data-aos="fade-right"
+              className="w-full col-span-2 full__section_l_p bookAnAppointment__bg_large py-[20px] 5xl:py-[25px]"
+            >
               <h5 className="font-family-secondary text-[42px] xl:text-[55px] 5xl:text-[75px] font-normal text-white leading-normal">
                 Book An Appointment
               </h5>
@@ -275,9 +311,9 @@ const BookAnAppointment = () => {
                   <br />
                   <div className="relative">
                     <select
-                      onFocus="this.size=7;"
-                      onBlur="this.size=0;"
-                      onChange="this.size=1; this.blur()"
+                      // onFocus="this.size=7;"
+                      // onBlur="this.size=0;"
+                      // onChange="this.size=1; this.blur()"
                       className="mt-[10px] text-dark-200 w-full py-[10px] px-[20px] pr-[40px] input__bg appearance-none"
                       {...register("services", { required: true })}
                     >
@@ -320,7 +356,6 @@ const BookAnAppointment = () => {
                     </label>
                     <br />
                     <div className="w-full relative mt-[10px] input__bg">
-                      {/* Date Input Field */}
                       <DatePicker
                         selected={selectedDate}
                         onChange={(date) => setSelectedDate(date)}
@@ -328,7 +363,6 @@ const BookAnAppointment = () => {
                         className="py-[10px] pl-[20px] rounded-lg outline-none "
                         dateFormat="MM/dd/yyyy"
                       />
-                      {/* Calendar Icon Inside Input Field */}
                       <AiOutlineCalendar
                         className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
                         onClick={() =>
@@ -371,6 +405,94 @@ const BookAnAppointment = () => {
                       />
                     </div>
                     {errors?.hour && <span>This field is required</span>}
+                  </div>
+                  {/* test  */}
+                  {/* <div className="w-1/2">
+                  <TimePicker onChange={onChange} value={value} />
+                  </div> */}
+                </div>
+
+                <div>
+                  {/* Date Picker */}
+                  <div className="w-1/2 relative">
+                    <label
+                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
+                      htmlFor="day"
+                    >
+                      Day
+                    </label>
+                    <br />
+                    <Controller
+                      name="day"
+                      control={control}
+                      rules={{ required: "This field is required" }}
+                      render={({ field }) => (
+                        <div className="w-full relative mt-[10px] input__bg">
+                          <DatePicker
+                            {...field}
+                            placeholderText="Select Day"
+                            className="py-[10px] pl-[20px] rounded-lg outline-none w-full"
+                            dateFormat="MM/dd/yyyy"
+                            selected={field.value}
+                          />
+                          <AiOutlineCalendar
+                            className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                            onClick={() =>
+                              document
+                                .querySelector(
+                                  ".react-datepicker__input-container input"
+                                )
+                                .focus()
+                            }
+                          />
+                        </div>
+                      )}
+                    />
+                    {errors.day && (
+                      <span className="text-red-500">{errors.day.message}</span>
+                    )}
+                  </div>
+
+                  {/* Time Picker */}
+                  <div className="w-1/2 relative">
+                    <label
+                      className="text-base 5xl:text-lg font-semibold leading-normal text-white"
+                      htmlFor="hour"
+                    >
+                      Hour
+                    </label>
+                    <br />
+                    <Controller
+                      name="hour"
+                      control={control}
+                      rules={{ required: "This field is required" }}
+                      render={({ field }) => (
+                        <div className="relative mt-[10px]">
+                          <TimePicker
+                            {...field}
+                            className="w-full py-[10px] px-[20px] pr-[40px] input__bg"
+                            format="HH:mm"
+                            disableClock={true}
+                            value={field.value}
+                          />
+                          <AiOutlineClockCircle
+                            className="absolute right-[10px] top-[50%] transform -translate-y-[50%] text-yellow-600 cursor-pointer"
+                            onClick={() =>
+                              document
+                                .querySelector(
+                                  ".react-time-picker__wrapper input"
+                                )
+                                .focus()
+                            }
+                          />
+                        </div>
+                      )}
+                    />
+                    {errors.hour && (
+                      <span className="text-red-500">
+                        {errors.hour.message}
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -473,7 +595,10 @@ const BookAnAppointment = () => {
               </form>
             </div>
 
-            <div data-aos="fade-left" className="col-span-1 flex items-center justify-end -ml-[220px]">
+            <div
+              data-aos="fade-left"
+              className="col-span-1 flex items-center justify-end -ml-[220px]"
+            >
               <iframe
                 className="w-[450px] xl:w-[550px] 2xl:w-[650px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[868px] 5xl:h-[470px]"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.181050093408!2d-79.66431002382761!3d43.56984237110612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e1!3m2!1sen!2sbd!4v1725986676475!5m2!1sen!2sbd"
@@ -487,7 +612,6 @@ const BookAnAppointment = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
