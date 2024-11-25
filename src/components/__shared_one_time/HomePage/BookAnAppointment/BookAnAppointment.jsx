@@ -1,25 +1,22 @@
 "use client";
-import { useState } from "react";
+
 import "./BookAnAppointment.css";
 import Link from "next/link";
 import { Controller, useForm } from "react-hook-form";
 import { AiOutlineDown } from "react-icons/ai";
 
-// date picker
 import { AiOutlineCalendar } from "react-icons/ai";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-// hour picker
 import { AiOutlineClockCircle } from "react-icons/ai";
 import TimePicker from "react-time-picker";
 
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
+import { useState } from "react";
 
 const BookAnAppointment = () => {
-  const [value, onChange] = useState("10:00");
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -29,54 +26,57 @@ const BookAnAppointment = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
     const emailTemplate = `
-  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-    <h2>New Message</h2>
-    <p><strong>Name:</strong>${data?.name}</p>
-    <p><strong>Phone:</strong> ${data?.phone}</p>
-    <p><strong>Email:</strong> <a href="johndoe@example.com">${data?.email}</a></p>
-    <p><strong>Services:</strong> ${data?.services} </p>
-    <p><strong>Day:</strong> ${data?.day}</p>
-    <p><strong>Hour:</strong> ${data?.hour}</p>
-    <p><strong>Message:</strong>${data?.message}</p>
-  </div>
-`;
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+      <h2>New Message</h2>
+      <p><strong>Name:</strong> ${data?.name}</p>
+      <p><strong>Phone:</strong> ${data?.phone}</p>
+      <p><strong>Email:</strong> <a href="mailto:${data?.email}">${data?.email}</a></p>
+      <p><strong>Services:</strong> ${data?.services}</p>
+      <p><strong>Day:</strong> ${data?.day}</p>
+      <p><strong>Hour:</strong> ${data?.hour}</p>
+      <p><strong>Message:</strong> ${data?.message}</p>
+    </div>
+  `;
+
     const payload = {
-      projectFor: "kongkon4545@gmail.com",
+      projectFor: "manager@lavishluxnailsandspa.com",
       name: data?.name,
       email: data?.email,
       message: emailTemplate,
     };
-    const url = process.env.NEXT_PUBLIC_API_URL + "/api/send-email";
-    // const res = await fetch(url, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ ...payload }),
-    // });
-    // console.log("res data :", res)
+
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/send-email`;
+
     try {
+      setIsLoading(true);
       const res = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...payload }),
+        body: JSON.stringify(payload),
       });
-      reset();
-      if (!res.ok) {
-        throw new Error(`Failed to send email: ${res.statusText}`);
-      }
 
       const result = await res.json();
+
+      if (!res.ok) {
+        alert(`Failed to send! Please try again.`);
+        return;
+      }
+
+      // Success handling
+      alert("Successfully booked!");
+      reset();
       console.log("Response data:", result);
-      
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert(`Failed to send! Please try again.`);
+    } finally {
+      setIsLoading(false);
     }
   };
+
   return (
     <div id="contact">
       {/* small device  */}
@@ -292,25 +292,34 @@ const BookAnAppointment = () => {
                 target="_blank"
                 href="https://www.fresha.com/a/lavish-lux-nails-spa-mississauga-mississauga-1100-burnhamthorpe-road-west-n55ng2qi/all-offer?menu=true"
               >
-                <button className="bg-primary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom">
-                  <span>Book Now</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="22"
-                    viewBox="0 0 34 22"
-                    fill="none"
-                  >
-                    <path
-                      d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
-                      stroke="white"
-                    />
-                    <path d="M0 10.625H34" stroke="white" />
-                    <path
-                      d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
-                      stroke="white"
-                    />
-                  </svg>
+                <button
+                  disabled={isLoading}
+                  className="bg-primary hover:bg-primary text-base font-semibold text-white py-[8px] px-[20px] flex items-center space-x-3 clip-path-custom"
+                >
+                  {isLoading ? (
+                    "Booking..."
+                  ) : (
+                    <>
+                      <span>Book Now</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="34"
+                        height="22"
+                        viewBox="0 0 34 22"
+                        fill="none"
+                      >
+                        <path
+                          d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25"
+                          stroke="white"
+                        />
+                        <path d="M0 10.625H34" stroke="white" />
+                        <path
+                          d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625"
+                          stroke="white"
+                        />
+                      </svg>
+                    </>
+                  )}
                 </button>
               </Link>
             </div>
