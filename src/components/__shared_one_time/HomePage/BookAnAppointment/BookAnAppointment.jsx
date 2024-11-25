@@ -18,6 +18,10 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
 const BookAnAppointment = () => {
   const [isLoading, setIsLoading] = useState(false);
   const {
@@ -28,12 +32,23 @@ const BookAnAppointment = () => {
     formState: { errors },
   } = useForm();
 
-  dayjs.extend(utc);
-  dayjs.extend(timezone);
+
+
+
+
 
 
   const onSubmit = async (data) => {
-    const dayInEST = dayjs(data?.day).tz("America/Toronto").format("MMMM DD, YYYY");
+    // console.log(data, "data")
+   // Parse the date and convert to the desired timezone (America/Toronto)
+   const inputDate = data?.day
+   const dateInEST = dayjs(new Date(inputDate)).tz('America/Toronto');
+
+  // Format the output
+  const formattedDate = `${dateInEST.format('dddd, MMMM DD, YYYY')} Eastern Standard Time
+  Time zone in Mississauga, ON, Canada (GMT-5)`;
+
+  // console.log(formattedDate, "formattedDate")
 
     const emailTemplate = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
@@ -42,7 +57,7 @@ const BookAnAppointment = () => {
       <p><strong>Phone:</strong> ${data?.phone}</p>
       <p><strong>Email:</strong> <a href="mailto:${data?.email}">${data?.email}</a></p>
       <p><strong>Services:</strong> ${data?.services}</p>
-      <p><strong>Day:</strong> ${dayInEST}</p>
+      <p><strong>Day:</strong> ${formattedDate}</p>
       <p><strong>Hour:</strong> ${data?.hour}</p>
       <p><strong>Message:</strong> ${data?.message}</p>
     </div>
@@ -59,15 +74,17 @@ const BookAnAppointment = () => {
 
     try {
       setIsLoading(true);
-      const res = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      // const res = await fetch(url, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(payload),
+      // });
 
-      const result = await res.json();
+      let res={ok: true}
+
+      // const result = await res.json();
 
       if (!res.ok) {
         alert(`Failed to send! Please try again.`);
