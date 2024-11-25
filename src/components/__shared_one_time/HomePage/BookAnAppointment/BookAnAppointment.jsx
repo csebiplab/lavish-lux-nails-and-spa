@@ -14,6 +14,9 @@ import TimePicker from "react-time-picker";
 import "react-time-picker/dist/TimePicker.css";
 import "react-clock/dist/Clock.css";
 import { useState } from "react";
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
 const BookAnAppointment = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +28,13 @@ const BookAnAppointment = () => {
     formState: { errors },
   } = useForm();
 
+  dayjs.extend(utc);
+  dayjs.extend(timezone);
+
+
   const onSubmit = async (data) => {
+    const dayInEST = dayjs(data?.day).tz("America/Toronto").format("MMMM DD, YYYY");
+
     const emailTemplate = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
       <h2>New Message</h2>
@@ -33,7 +42,7 @@ const BookAnAppointment = () => {
       <p><strong>Phone:</strong> ${data?.phone}</p>
       <p><strong>Email:</strong> <a href="mailto:${data?.email}">${data?.email}</a></p>
       <p><strong>Services:</strong> ${data?.services}</p>
-      <p><strong>Day:</strong> ${data?.day}</p>
+      <p><strong>Day:</strong> ${dayInEST}</p>
       <p><strong>Hour:</strong> ${data?.hour}</p>
       <p><strong>Message:</strong> ${data?.message}</p>
     </div>
