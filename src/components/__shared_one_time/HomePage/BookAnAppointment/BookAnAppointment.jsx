@@ -74,17 +74,15 @@ const BookAnAppointment = () => {
 
     try {
       setIsLoading(true);
-      // const res = await fetch(url, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(payload),
-      // });
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-      let res={ok: true}
-
-      // const result = await res.json();
+      const result = await res.json();
 
       if (!res.ok) {
         alert(`Failed to send! Please try again.`);
