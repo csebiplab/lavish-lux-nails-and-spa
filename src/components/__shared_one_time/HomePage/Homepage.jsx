@@ -7,6 +7,7 @@ import Gallery from './Gallery/Gallery';
 import BookAnAppointment from './BookAnAppointment/BookAnAppointment';
 import Review from './Review/Review';
 import BannerSession from './BannerSession/BannerSession';
+import GoogleReviews from '@/components/GoogleReveiws/GoogleReviews';
 
 const Homepage = () => {
     return (
@@ -17,6 +18,10 @@ const Homepage = () => {
 
             <section>
                 <AboutUs/>
+            </section>
+
+            <section>
+                <GoogleReviews />
             </section>
 
             <section>
