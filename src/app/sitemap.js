@@ -1,6 +1,8 @@
+import { projectfor } from "@/constants/projectfor";
+
 export default async function sitemap() {
     try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/sitemap`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/sitemap?projectFor=${projectfor}`, {
             cache: "no-store",
         });
         const { data } = await response.json();
