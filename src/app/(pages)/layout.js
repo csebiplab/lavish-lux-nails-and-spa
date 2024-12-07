@@ -37,15 +37,15 @@ export async function generateMetadata() {
     const verificationContent= gVerificationData?.data?.[0]?.url
 
     return {
-      title: title,
-      description: description,
-      keywords: keywords,
+      title: title || 'Lavish Lux Nails and SPA',
+      description: description || 'Lavish Lux Nails and SPA',
+      keywords: keywords || 'Lavish Lux Nails and SPA',
       openGraph: {
-        title: title,
-        description: description,
+        title: title || 'Lavish Lux Nails and SPA',
+        description: description || 'Lavish Lux Nails and SPA',
       },
        verification: {
-        google: verificationContent,
+        google: verificationContent || "abcd",
       },
       alternates: {
         canonical: clientUrlWithPath,

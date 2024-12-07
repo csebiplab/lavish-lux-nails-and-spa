@@ -8,16 +8,34 @@ import BookAnAppointment from './BookAnAppointment/BookAnAppointment';
 import Review from './Review/Review';
 import BannerSession from './BannerSession/BannerSession';
 import GoogleReviews from '@/components/GoogleReveiws/GoogleReviews';
+// import { GoogleReviewsThroughApi } from '@/components/GoogleReveiws/GoogleReviewsThroughApi/GoogleReviewsThroughApi';
 
 const Homepage = () => {
     return (
         <div className="custom-container">
             <section>
-                <BannerSession/>
+                <BannerSession />
             </section>
 
             <section>
-                <AboutUs/>
+                <AboutUs />
+            </section>
+
+
+            {/* <section>
+                <GoogleReviewsThroughApi />
+            </section> */}
+
+            <section>
+                <FeelOurLuxurious />
+            </section>
+
+            <section>
+                <Services />
+            </section>
+
+            <section className="padding__top">
+                <OurServices />
             </section>
 
             <section>
@@ -25,27 +43,15 @@ const Homepage = () => {
             </section>
 
             <section>
-                <FeelOurLuxurious/>
+                <Gallery />
             </section>
 
             <section>
-                <Services/>
-            </section>
-
-            <section className="padding__top">
-                <OurServices/>
+                <Review />
             </section>
 
             <section>
-                <Gallery/>
-            </section>
-
-            <section>
-                <Review/>
-            </section>
-
-            <section>
-                <BookAnAppointment/>
+                <BookAnAppointment />
             </section>
         </div>
     );
