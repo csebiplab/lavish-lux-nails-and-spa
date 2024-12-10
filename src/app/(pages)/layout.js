@@ -28,7 +28,7 @@ export async function generateMetadata() {
 
     const { title, description, keywords } = data?.data[0] ?? {};
 
-    const gglverificationResponse = await fetch(`${apiUrl}/api/site-verification`, {
+    const gglverificationResponse = await fetch(`${apiUrl}/api/site-verification?projectFor=${projectfor}`, {
       cache: "no-store",
     });
 
